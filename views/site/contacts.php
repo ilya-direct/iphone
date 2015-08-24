@@ -1,9 +1,9 @@
-<div class="b-titlebar clearfix">
-	<div class="container">
-		<h1 class="text-xs-center">Контакты</h1>
-		<ul class="crumbs text-xs-center"><li></li><li><a href="http://iqserv.ru/">Главная</a></li><li><span>Контакты</span></li></ul>
-	</div>
-</div>
+<?
+$this->title = 'Контакты';
+$this->params['navbar']= true;
+$this->params['breadcrumbs']= [];
+
+?>
 <div class="content shortcodes">
 	<div class="container">
 		<div class="element-wrap content-text margin-40">
@@ -15,26 +15,7 @@
 				<div class="title">
 					<h3 class="lined text-xs-center">Контактная информация</h3>
 				</div>
-				<ul class="b-list b-contact">
-					<li class="contact-phone">
-						<i class="icon-phone"></i><span><strong>Телефон:</strong> 8 (495) 532-49-78</span>
-					</li>
-					<li class="contact-mail">
-						<i class="icon-envelope"></i><strong>E-mail:</strong> <a href="mailto:info@iqserv.ru">info@iqserv.ru</a>
-					</li>
-					<li class="contact-address">
-						<i class="icon-map-marker"></i>
-						<span><strong>Адрес:</strong> г. Москва, м. Китай-Город, Лучников переулок, д.4, стр.2, офис 18</span>
-					</li>
-					<li class="contact-address">
-						<i class="icon-time"></i>
-							<span><strong>Время работы:</strong><br>
-							Пн-Пт: 10:00 - 20:00<br>
-							Суббота: 11:00 - 16:00<br>
-							Воскресенье: Выходной<br>
-							</span>
-					</li>
-				</ul>
+				<?=$this->render('contact-info')?>
 				<div class="gap" style="height: 15px;"></div>
 				<h4 class="text-xs-center margin-20">Следуйте за нами</h4>
 				<ul class="b-social m-varicolored text-xs-center">

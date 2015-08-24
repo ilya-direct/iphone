@@ -1808,15 +1808,17 @@ AppAsset::register($this);
 </ul>
 </div>
 
-<? if($this->params['menu']): ?>
-<div class="b-titlebar-alt clearfix">
+<? if(!empty($this->params['navbar']) and $this->params['navbar']): ?>
+<div class="b-titlebar clearfix">
 	<div class="container">
-		<h1 class="text-xs-center"><?=Html::encode($this->title)?> </h1>
+		<h1 class="text-xs-center"><?=Html::encode($this->title)?></h1>
 		<ul class="crumbs text-xs-center">
 			<li></li>
 			<li><a href="http://iphone/">Главная</a></li>
-			<li><a href="http://iqserv.ru/remont-noutbukov/">Ноутбуки</a></li>
-			<li><span>Packard Bell</span></li>
+			<? $breadcrumbs=empty($this->params['breadcrumbs']) ? [] : $this->params['breadcrumbs'] ;
+				foreach($breadcrumbs as $b) echo $b;
+			?>
+			<li><span><?=Html::encode($this->title)?></span></li>
 		</ul>
 	</div>
 </div>
@@ -1844,22 +1846,7 @@ AppAsset::register($this);
 				<div class="col-sm-6 col-md-4 col-lg-4">
 					<section class="b-widgets-wrap">
 						<h3>Контактная информация</h3>
-						<ul class="b-list b-contact">
-							<li class="contact-phone">
-								<i class="icon-phone"></i><span><strong>Телефон:</strong> +7 (963) 656-83-79</span>
-							</li>
-							<li class="contact-mail">
-								<i class="icon-envelope"></i><strong>E-mail:</strong> ilya-direct@ya.ru
-							</li>
-							<li class="contact-address">
-								<i class="icon-map-marker"></i><span><strong>Адрес:</strong> г. Москва, м. Бауманкая, ул. Фридриха Энгельса, д.21</span>
-							</li>
-							<li class="contact-address">
-								<i class="icon-time"></i><span><strong>Время работы:</strong><br>
-                                        Пн-Пт:  9:00 - 20:00<br/>
-										Сб-Вс: 11:00 - 18:00
-							</li>
-						</ul>
+						<?=$this->render('@app/views/site/contact-info')?>
 					</section>
 				</div>
 				<hr class="dashed hidden-md hidden-lg" style="margin-top: 0px;clear:both;">

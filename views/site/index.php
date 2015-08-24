@@ -1,6 +1,6 @@
 <?
 $this->title = 'BMSTUсервис';
-$this->params['menu']= true;
+$this->params['navbar']= true;
 
 ?>
 <ul class="slider bxslider">
