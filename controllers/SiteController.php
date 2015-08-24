@@ -131,4 +131,9 @@ class SiteController extends Controller
 	</form>
 </div>';
     }
+
+	public function actionRemontplanshetov(){
+
+		return $this->render('contacts');
+	}
 }

@@ -38,6 +38,15 @@ $config = [
             ],
         ],
         'db' => require(__DIR__ . '/db.php'),
+		'urlManager' => [
+			'enablePrettyUrl' => true,
+			'showScriptName' => true,
+			'rules' => [
+				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
+				'<controller:\w+>/<action:\w+>/<c>/<d>' => '<controller>/<action>',
+
+			],
+		],
     ],
     'params' => $params,
 ];
