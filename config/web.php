@@ -40,10 +40,13 @@ $config = [
         'db' => require(__DIR__ . '/db.php'),
 		'urlManager' => [
 			'enablePrettyUrl' => true,
-			'showScriptName' => true,
+			'showScriptName' => false,
+			'enableStrictParsing' => true,
+			'suffix' => '/',
 			'rules' => [
-				'<controller:\w+>/<action:\w+>' => '<controller>/<action>',
-				'<controller:\w+>/<action:\w+>/<c>/<d>' => '<controller>/<action>',
+				'<action:\w+>' => 'site/<action>',
+				'' => 'site/index',
+				'<action:\w+>/<c:\w+>/<d:\w+>' => 'site/<action>',
 
 			],
 		],

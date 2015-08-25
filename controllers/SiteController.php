@@ -132,7 +132,7 @@ class SiteController extends Controller
 </div>';
     }
 
-	public function actionRemontplanshetov(){
+	public function actionRemont_planshetov(){
 
 		return $this->render('contacts');
 	}
