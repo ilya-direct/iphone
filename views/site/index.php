@@ -119,7 +119,8 @@ $this->params['navbar']= false;
 		<div class="gap" style="height: 10px;"></div>
 		<!-- Промо блок -->
 		<section class="b-promo margin-30">
-			<a href="http://iphone/about/vyiezd-mastera-i-kurera/" class="btn big colored">Подробнее</a>	    <h3>Курьерская доставка или выезд мастера!</h3>
+			<a href="http://iphone/about/vyiezd-mastera-i-kurera/" class="btn big colored">Подробнее</a>
+			<h3>Курьерская доставка или выезд мастера!</h3>
 			<p>Вам не обязательно приезжать к нам в сервис, чтобы отремонтировать сломанное устройство</p>
 		</section>
 		<div class="content-text">

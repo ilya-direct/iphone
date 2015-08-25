@@ -18,7 +18,7 @@ AppAsset::register($this);
 	<?= Html::csrfMetaTags() ?>
 	<title><?= Html::encode($this->title) ?></title>
 	<meta name="description" content="профессиональный ремонт смартфонов, планшетов и ноутбуков в Москве по гарантии и в кратчайшие сроки">
-	<base href="http://iphone/">
+	<base href="http://<?=$_SERVER['HTTP_HOST']?>/">
 	<link rel="stylesheet" href="/assets/css/bootstrap.css" type="text/css" />
 	<!--[if lt IE 9]>
 	<style>.header {background:#fff;height:80px;}.footer .b-widgets {overflow:auto;}</style>
@@ -1814,7 +1814,7 @@ AppAsset::register($this);
 		<h1 class="text-xs-center"><?=Html::encode($this->title)?></h1>
 		<ul class="crumbs text-xs-center">
 			<li></li>
-			<li><a href="http://iphone/">Главная</a></li>
+			<li><a href="/">Главная</a></li>
 			<? $breadcrumbs=empty($this->params['breadcrumbs']) ? [] : $this->params['breadcrumbs'] ;
 				foreach($breadcrumbs as $b) echo $b;
 			?>

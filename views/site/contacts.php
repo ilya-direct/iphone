@@ -20,12 +20,12 @@ $this->params['breadcrumbs']= [];
 				<h4 class="text-xs-center margin-20">Следуйте за нами</h4>
 				<ul class="b-social m-varicolored text-xs-center">
 					<!--noindex-->
-					<li><a class="vk" href="https://vk.com/iqserv" rel="nofollow"><i class="icon-vk"></i></a></li>
-					<li><a class="fb" href="https://www.facebook.com/iqserv" rel="nofollow"><i class="icon-facebook"></i></a></li>
-					<li><a class="yt" href="http://www.youtube.com/channel/UCal3dUho9Pgt6MOV48CSPAQ" rel="nofollow"><i class="icon-youtube"></i></a></li>
-					<li><a class="is" href="https://instagram.com/iqserv/"><i class="icon-instagram"></i></a></li>
-					<li><a class="ya" href="https://old.maps.yandex.ru/org/1152820143/" rel="nofollow"><span style="color:#f00">Я</span>ндекс</a></li>
-					<li><a class="ya" href="https://www.google.ru/webhp?sourceid=chrome-instant&ion=1&espv=2&ie=UTF-8#q=iqserv" rel="nofollow">
+					<li><a class="vk" target="_blank" href="https://vk.com/" rel="nofollow"><i class="icon-vk"></i></a></li>
+					<li><a class="fb" target="_blank" href="https://www.facebook.com/" rel="nofollow"><i class="icon-facebook"></i></a></li>
+					<li><a class="yt" target="_blank" href="http://www.youtube.com/" rel="nofollow"><i class="icon-youtube"></i></a></li>
+					<li><a class="is" target="_blank" href="https://instagram.com/"><i class="icon-instagram"></i></a></li>
+					<li><a class="ya" target="_blank" href="https://old.maps.yandex.ru/" rel="nofollow"><span style="color:#f00">Я</span>ндекс</a></li>
+					<li><a class="ya" target="_blank" href="https://www.google.ru/" rel="nofollow">
 							<span style="color:#1B49EB">G</span><span style="color:#EA222D">o</span><span style="color:#F8B717">o</span><span style="color:#1B49EB">g</span><span style="color:#07AB1D">l</span><span style="color:#EA222D">e</span>
 						</a></li>
 					<!--/noindex-->
@@ -79,9 +79,6 @@ $this->params['breadcrumbs']= [];
 		<div class="title">
 			<h3 class="lined text-xs-center">Мы на карте</h3>
 		</div>
-		<!--<div class="b-google-map" style="overflow:hidden;">
-			<div id="map_canvas" class="full-shadow" style="width: 100%; height: 400px;"></div>
-		</div>-->
 		<script type="text/javascript" charset="utf-8" src="https://api-maps.yandex.ru/services/constructor/1.0/js/?sid=xKpCubt0PqVC0hXK-XzxpBrgPvSP5MDu&height=400"></script>
 		<div class="gap" style="height: 20px;"></div>
 	</div>
