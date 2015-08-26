@@ -1854,7 +1854,7 @@ AppAsset::register($this);
 					<section class="b-widgets-wrap">
 						<div class="feedback-form xform" id="form-feedback" data-url="/ajax/feedback/">
 							<h3>Напишите нам</h3>
-							<form class="b-form iq-feedback-form ajax-form" action="/ajax/feedback/" method="post">
+							<?=Html::beginForm('/ajax/feedback/','post',['class'=> "b-form iq-feedback-form ajax-form"]); ?>
 								<input type="hidden" name="form-feedback" value="1">
 								<div class="row bs-row">
 									<div class="col-xs-12">
@@ -1877,7 +1877,7 @@ AppAsset::register($this);
 									</div>
 								</div>
 								<input class="btn-submit btn colored" type="submit" value="Отправить">
-							</form>
+							<? Html::endForm(); ?>
 						</div>
 					</section>
 				</div>

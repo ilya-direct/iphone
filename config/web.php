@@ -22,11 +22,12 @@ $config = [
             'errorAction' => 'site/error',
         ],
         'mailer' => [
+		    'viewPath' => '@app/mail',
             'class' => 'yii\swiftmailer\Mailer',
             // send all mails to a file by default. You have to set
             // 'useFileTransport' to false and configure a transport
             // for the mailer to send real emails.
-            'useFileTransport' => true,
+            'useFileTransport' => false,
         ],
         'log' => [
             'traceLevel' => YII_DEBUG ? 3 : 0,
@@ -46,6 +47,7 @@ $config = [
 			'rules' => [
 				'<action:\w+>' => 'site/<action>',
 				'' => 'site/index',
+				'<action:\w+>/<param:\w+>' => 'site/<action>',
 				'<action:\w+>/<c:\w+>/<d:\w+>' => 'site/<action>',
 
 			],

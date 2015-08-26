@@ -95,9 +95,26 @@ class SiteController extends Controller
     {
         return $this->render('contacts');
     }
-    public function actionAjax()
+    public function actionAjax($param=null)
     {
-
+	    if($param=='feedback' && Yii::$app->request->method==="POST"){
+		    $post=Yii::$app->request->post();
+		    $msg='<div class="b-message success-message" style="margin:0;">';
+		    $flag=Yii::$app->mailer->compose()
+			    ->setTo('ilya-direct@ya.ru')
+			    ->setFrom(['ilya-direct@yandex.ru' => 'BMSTU сервис'])
+			    ->setSubject('Напишите нам')
+			    ->setTextBody($post['email'].' : '.$post['name'].' : '.$post['comment'])
+			    ->send();
+		    /*mail('ilya-direct@ya.ru','Напишите нам',$post['email'].' : '.$post['name'].' : '.$post['comment'])*/
+		    if($flag){
+			    $msg.='Спасибо! Ваше сообщение успешно отправлено.';
+		    }else{
+			    $msg.='Извините, произошла ошибка! Попробуйте позже.';
+		    }
+	        $msg.='</div>';
+		    return  $msg;
+	    }else{
         return
 	        '<div class="title">
 	<p class="intro">
@@ -130,6 +147,7 @@ class SiteController extends Controller
 		</div>
 	</form>
 </div>';
+	    }
     }
 
 	public function actionRemont_planshetov(){
