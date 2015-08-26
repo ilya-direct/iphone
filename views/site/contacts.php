@@ -1,4 +1,5 @@
 <?
+use yii\helpers\Html;
 $this->title = 'Контакты';
 $this->params['navbar']= true;
 $this->params['breadcrumbs']= [];
@@ -41,7 +42,7 @@ $this->params['breadcrumbs']= [];
 						Вы можете оставить свой комментарий или задать любой вопрос
 						воспользовавшись формой обратной связи.</p>
 					<div class="contacts-feedback-form xform" id="contacts-form-feedback" data-url="/ajax/contacts-feedback/">
-						<form class="b-form iq-feedback-form ajax-form" action="/ajax/contacts-feedback/" method="post">
+						<?=Html::beginForm('/ajax/contacts-feedback/','post',['class'=>"b-form iq-feedback-form ajax-form"]); ?>
 							<input type="hidden" name="contacts-form-feedback" value="1">
 							<div class="row bs-row">
 								<div class="col-xs-12">
@@ -70,7 +71,7 @@ $this->params['breadcrumbs']= [];
 								</div>
 							</div>
 							<input class="btn-submit btn colored" type="submit" value="Отправить">
-						</form>
+						<?=Html::endForm(); ?>
 					</div>
 				</section>
 			</div>

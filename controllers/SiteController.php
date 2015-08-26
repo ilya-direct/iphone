@@ -97,61 +97,48 @@ class SiteController extends Controller
     }
     public function actionAjax($param=null)
     {
-	    if($param=='feedback' && Yii::$app->request->method==="POST"){
+	    switch($param){
+	        case 'feedback':
+			case 'service-order':
+			case 'contacts-feedback':
+		    if(!Yii::$app->request->method==="POST") return '';
 		    $post=Yii::$app->request->post();
+		    $topics=[
+				    'feedback' => ['subject'=>'Напишите нам',
+					    'msg_success'=>'Спасибо! Ваше сообщение успешно отправлено.',
+					    'msg_fail'=>'Извините, произошла ошибка! Попробуйте позже.'],
+					'service-order' => ['subject'=>'Оформление заявки',
+						'msg_success'=>'Спасибо! Ваша заявка успешно отправлена. Администратор свяжется с Вами в самое ближайшее время.',
+						'msg_fail'=>'Извините, произошла ошибка! Попробуйте позже или позвоните нам.'],
+			        'contacts-feedback' => ['subject'=>'Обратная связь',
+				        'msg_success'=>'Спасибо! Ваше сообщение успешно отправлено.',
+				        'msg_fail'=>'Извините, на сервере произошла ошибка! Попробуйте позже.']
+			];
 		    $msg='<div class="b-message success-message" style="margin:0;">';
 		    $flag=Yii::$app->mailer->compose()
 			    ->setTo('ilya-direct@ya.ru')
 			    ->setFrom(['ilya-direct@yandex.ru' => 'BMSTU сервис'])
-			    ->setSubject('Напишите нам')
-			    ->setTextBody($post['email'].' : '.$post['name'].' : '.$post['comment'])
+			    ->setSubject( $topics[$param]['subject'].($param=='contacts-feedback' ? ': '. $post['subject']: ''))
+			    ->setTextBody(print_r($post,true))
 			    ->send();
 		    /*mail('ilya-direct@ya.ru','Напишите нам',$post['email'].' : '.$post['name'].' : '.$post['comment'])*/
 		    if($flag){
-			    $msg.='Спасибо! Ваше сообщение успешно отправлено.';
+			    $msg.= $topics[$param]['msg_success'];
 		    }else{
-			    $msg.='Извините, произошла ошибка! Попробуйте позже.';
+			    $msg.= $topics[$param]['msg_fail'];
 		    }
-	        $msg.='</div>';
+		    $msg.='</div>';
 		    return  $msg;
-	    }else{
-        return
-	        '<div class="title">
-	<p class="intro">
-		<strong>Оформите заявку</strong><br>
-		И получите <strong class="colored">5% скидку</strong> на ремонт.
-	</p>
-</div>
-<div class="centered">
-	<form class="b-form iq-service-order service-form" action="/ajax/service-order/" method="post">
-		<input type="hidden" name="form-service-order" value="1">
-		<div class="right-wrap col-lg-6 col-md-6">
-			<div class="input-wrap m-full-width">
-				<i class="icon-user"></i>
-				<input class="field-name" type="text" placeholder="Ваше имя (*)" name="name" data-content="" value="" required>
-			</div>
-			<div class="input-wrap m-full-width">
-				<i class="icon-phone"></i>
-				<input class="field-phone" type="tel" placeholder="Телефон (*)" name="phone" data-content="" value="" required>
-			</div>
-		</div>
-		<div class="left-wrap col-lg-6 col-md-6">
-			<div class="textarea-wrap">
-				<i class="icon-pencil"></i>
-				<textarea class="field-comment" placeholder="Опишите проблему" name="comment" data-content=""></textarea>
-			</div>
-		</div>
-		<div class="clearfix"></div>
-		<div class="submit">
-			<input class="btn-submit btn colored" type="submit" value="Отправить">
-		</div>
-	</form>
-</div>';
-	    }
+		    case 'service-order-form':
+			    return $this->renderPartial('service-order-form');
+		default: return '';
+        }
     }
 
 	public function actionRemont_planshetov(){
 
 		return $this->render('contacts');
 	}
+
+
 }

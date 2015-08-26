@@ -47,7 +47,7 @@ $config = [
 			'rules' => [
 				'<action:\w+>' => 'site/<action>',
 				'' => 'site/index',
-				'<action:\w+>/<param:\w+>' => 'site/<action>',
+				'<action:\w+>/<param:[\-\w]+>' => 'site/<action>',
 				'<action:\w+>/<c:\w+>/<d:\w+>' => 'site/<action>',
 
 			],
