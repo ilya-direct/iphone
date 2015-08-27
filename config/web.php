@@ -45,10 +45,14 @@ $config = [
 			'enableStrictParsing' => true,
 			'suffix' => '/',
 			'rules' => [
-				'<action:\w+>' => 'site/<action>',
+				//'about/<action:\w+>' => 'about/<action>',
 				'' => 'site/index',
-				'<action:\w+>/<param:[\-\w]+>' => 'site/<action>',
-				'<action:\w+>/<c:\w+>/<d:\w+>' => 'site/<action>',
+				'ajax/<param:[\-\w]+>' => 'site/ajax',
+				'<action:[\-\w]+>' => 'site/<action>',
+				'<controller:[\-\w]+>/<action:[\-\w]+>' => '<controller>/<controller>/<action>',
+				'<controller:[\-\w]+>/<subcontroller:[\-\w]+>/<action:[\-\w]+>' => '<controller>/<subcontroller>/<subcontroller>/<action>',
+				//'<action:\w+>/<param:[\-\w]+>' => 'site/<action>',
+				//'<action:\w+>/<c:\w+>/<d:\w+>' => 'site/<action>',
 
 			],
 		],
