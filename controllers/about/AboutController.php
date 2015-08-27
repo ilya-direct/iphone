@@ -9,4 +9,9 @@ class AboutController extends \yii\web\Controller
         return $this->render('/site/about/index');
     }
 
+	public function actionKak_myi_rabotaem()
+    {
+        return $this->render('/site/about/index');
+    }
+
 }

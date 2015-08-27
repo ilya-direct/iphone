@@ -89,7 +89,7 @@ class SiteController extends Controller
 
     public function actionAbout()
     {
-        return $this->render('about');
+        return $this->render('/site/about/index');
     }
     public function actionContacts()
     {
