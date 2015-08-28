@@ -49,8 +49,10 @@ $config = [
 				'' => 'site/index',
 				'ajax/<param:[\-\w]+>' => 'site/ajax',
 				'<action:[\-\w]+>' => 'site/<action>',
-				'<controller:[\-\w]+>/<action:[\-\w]+>' => '<controller>/<controller>/<action>',
-				'<controller:[\-\w]+>/<subcontroller:[\-\w]+>/<action:[\-\w]+>' => '<controller>/<subcontroller>/<subcontroller>/<action>',
+				'<controller:[\-\w]+>/<action:[\-\w]+>' => '<controller>/<action>',
+				//'<controller:[\-\w]+>/<action:[\-\w]+>' => '<controller>/<controller>/<action>',
+				'<folder:[\-\w]+>/<controller:[\-\w]+>/<action:[\-\w]+>' => '<folder>/<controller>/<action>',
+				//'<controller:[\-\w]+>/<subcontroller:[\-\w]+>/<action:[\-\w]+>' => '<controller>/<subcontroller>/<subcontroller>/<action>',
 				//'<action:\w+>/<param:[\-\w]+>' => 'site/<action>',
 				//'<action:\w+>/<c:\w+>/<d:\w+>' => 'site/<action>',
 

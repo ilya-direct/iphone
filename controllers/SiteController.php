@@ -140,5 +140,9 @@ class SiteController extends Controller
 		return $this->render('contacts');
 	}
 
+	public function actionAkcii(){
+
+		return $this->render('/site/akcii/index');
+	}
 
 }

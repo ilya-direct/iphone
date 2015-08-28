@@ -1,10 +1,10 @@
 <?php
 
-namespace app\controllers\about\blog;
+namespace app\controllers\about;
 
 class BlogController extends \yii\web\Controller
 {
-	public function actionIndex()
+	public function actionMenyaem_steklo()
 	{
 		return $this->render('/site/about/index');
 	}

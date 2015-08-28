@@ -4,6 +4,7 @@
 /* @var $content string */
 
 use yii\helpers\Html;
+use yii\helpers\Url;
 use app\assets\AppAsset;
 
 AppAsset::register($this);
@@ -47,11 +48,11 @@ AppAsset::register($this);
 					<div class="top-bar-phone">
 						<div class="phone-mobile hidden-sm hidden-md hidden-lg">
                                     <span class="btn small colored">
-                                        <i class="icon-phone"></i> +7 (963) 656-83-79
+                                        <i class="icon-phone"></i> +7 (963) 656-83-77
                                     </span>
 						</div>
 						<div class="phone-desktop hidden-xs hidden-ms">
-							<i class="icon-phone"></i> +7 (963) 656-83-79
+							<i class="icon-phone"></i> +7 (963) 656-83-77
 						</div>
 						<div class="iq-contacts-time hidden-xs hidden-ms">
 							<i class="icon-time"></i>&nbsp;
@@ -91,7 +92,7 @@ AppAsset::register($this);
 <!-- Главное меню -->
 <ul class="menu">
 <li class="has-mega">
-	<a href="/remont-apple/" data-menu="mega"><i class="icon-apple"></i>Apple</a>
+	<a href="<?=Url::to(['remont_apple'])?>" data-menu="mega"><i class="icon-apple"></i>Apple</a>
 	<ul class="megamenu col-3">
 		<li class="m-submenu first col-1">
 			<a class="mmenu-title" href="remont-apple/iphone/">Ремонт iPhone</a>
@@ -182,9 +183,9 @@ AppAsset::register($this);
 			<a href="remont-telefonov/sony/xperia-e3/">Sony Xperia E3</a>
 		</li>
 		<li class="megamenu-caption">
-			<!--noindex-->
-			<a rel="nofollow" href="remont-telefonov/" class="btn small colored">Смотреть все</a>
-			<!--/noindex-->
+		<!--noindex-->
+		<a rel="nofollow" href="remont-telefonov/" class="btn small colored">Смотреть все</a>
+		<!--/noindex-->
 		</li>
 	</ul>
 </li>
@@ -229,9 +230,9 @@ AppAsset::register($this);
 			<a href="remont_planshetov/nokia/n1/">Nokia N1</a>
 		</li>
 		<li class="megamenu-caption">
-			<!--noindex-->
-			<a rel="nofollow" href="remont_planshetov/" class="btn small colored">Смотреть все</a>
-			<!--/noindex-->
+		<!--noindex-->
+		<a rel="nofollow" href="remont_planshetov/" class="btn small colored">Смотреть все</a>
+		<!--/noindex-->
 		</li>
 	</ul>
 </li>
@@ -274,28 +275,28 @@ AppAsset::register($this);
 	</ul>
 </li>
 <li>
-	<a href="/akczii/" >Акции</a>
+	<a href="/akcii/" >Акции</a>
 </li>
 <li>
 	<a href="/about/" >О нас</a>
 	<ul class="submenu">
 		<li>
-			<a href="/about/kak-myi-rabotaem/" >Как мы работаем</a>
+			<a href="<?=Url::to(['about/kak_my_rabotaem'])?>" >Как мы работаем</a>
 		</li>
 		<li>
-			<a href="/about/vyiezd-mastera-i-kurera/" >Выезд мастера и курьера</a>
+			<a href="<?=Url::to(['about/viezd_mastera_i_kurera'])?>" >Выезд мастера и курьера</a>
 		</li>
 		<li>
-			<a href="/about/garantii/" >Гарантии</a>
+			<a href="<?=Url::to(['about/garantii'])?>" >Гарантии</a>
 		</li>
 		<li>
-			<a href="/about/blog/" >Наш блог</a>
+			<a href="<?=Url::to(['about/blog'])?>" >Наш блог</a>
 		</li>
 		<li>
-			<a href="/about/voprosyi-i-otvetyi/" >Вопросы и ответы</a>
+			<a href="<?=Url::to(['about/voprosi_i_otveti'])?>" >Вопросы и ответы</a>
 		</li>
 		<li>
-			<a href="/about/otzyivyi/" >Отзывы</a>
+			<a href="<?=Url::to(['about/otzivi'])?>" >Отзывы</a>
 		</li>
 	</ul>
 </li>
@@ -1760,42 +1761,42 @@ AppAsset::register($this);
 </li>
 <li>
 	<div>
-		<a href="/akczii/">Акции</a>
+		<a href="/akcii/">Акции</a>
 	</div>
 </li>
 <li>
 	<div>
-		<a href="/about/">О нас</a>
+		<a href="<?=Url::to(['about'])?>">О нас</a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/about/kak-myi-rabotaem/">Как мы работаем</a>
+				<a href="<?=Url::to(['about/kak_my_rabotaem'])?>">Как мы работаем</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/about/vyiezd-mastera-i-kurera/">Выезд мастера и курьера</a>
+				<a href="<?=Url::to(['about/viezd_mastera_i_kurera'])?>">Выезд мастера и курьера</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/about/garantii/">Гарантии</a>
+				<a href="<?=Url::to(['about/garantii'])?>">Гарантии</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/about/blog/">Наш блог</a>
+				<a href="<?=Url::to(['about/blog'])?>">Наш блог</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/about/voprosyi-i-otvetyi/">Вопросы и ответы</a>
+				<a href="<?=Url::to(['about/voprosi_i_otveti'])?>">Вопросы и ответы</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/about/otzyivyi/">Отзывы</a>
+				<a href="<?=Url::to(['about/otzivi'])?>">Отзывы</a>
 			</div>
 		</li>
 	</ul>
@@ -1823,7 +1824,6 @@ AppAsset::register($this);
 	</div>
 </div>
 <? endif; ?>
-
 <?= $content ?>
 <footer class="footer">
 	<div class="b-widgets">
@@ -1833,12 +1833,20 @@ AppAsset::register($this);
 					<section class="b-widgets-wrap">
 						<h3>О нас</h3>
 						<ul class="b-list just-links m-dark">
-							<li><i class="icon-chevron-right"></i><a href="/about/kak-myi-rabotaem/">Как мы работаем</a></li>
-							<li><i class="icon-chevron-right"></i><a href="/about/vyiezd-mastera-i-kurera/">Выезд мастера и курьера</a></li>
-							<li><i class="icon-chevron-right"></i><a href="/about/garantii/">Гарантии</a></li>
-							<li><i class="icon-chevron-right"></i><a href="/about/blog/">Наш блог</a></li>
-							<li><i class="icon-chevron-right"></i><a href="/about/voprosyi-i-otvetyi/">Вопросы и ответы</a></li>
-							<li><i class="icon-chevron-right"></i><a href="/about/otzyivyi/">Отзывы</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/kak_my_rabotaem'])?>">Как мы работаем</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/viezd_mastera_i_kurera'])?>">Выезд мастера и курьера</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/garantii'])?>">Гарантии</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/blog'])?>">Наш блог</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/voprosi_i_otveti'])?>">Вопросы и ответы</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/otzivi'])?>">Отзывы</a></li>
+						</ul>
+						<ul class="b-social m-varicolored margin-10">
+							<!--noindex-->
+							<li><a class="ya" href="https://old.maps.yandex.ru/" rel="nofollow" target="_blank"><span style="color:#f00">Я</span>ндекс</a></li>
+							<li><a class="ya" href="https://www.google.ru/" rel="nofollow" target="_blank">
+									<span style="color:#1B49EB">G</span><span style="color:#EA222D">o</span><span style="color:#F8B717">o</span><span style="color:#1B49EB">g</span><span style="color:#07AB1D">l</span><span style="color:#EA222D">e</span>
+								</a></li>
+							<!--/noindex-->
 						</ul>
 					</section>
 				</div>
@@ -1846,7 +1854,7 @@ AppAsset::register($this);
 				<div class="col-sm-6 col-md-4 col-lg-4">
 					<section class="b-widgets-wrap">
 						<h3>Контактная информация</h3>
-						<?=$this->render('@app/views/site/contact-info')?>
+						<?=$this->render('/site/contact-info')?>
 					</section>
 				</div>
 				<hr class="dashed hidden-md hidden-lg" style="margin-top: 0px;clear:both;">
@@ -1897,11 +1905,11 @@ AppAsset::register($this);
 						<div class="bottom-bar-phone">
 							<div class="phone-mobile hidden-sm hidden-md hidden-lg">
 								<a href="tel:8 (495) 532-49-78" class="btn small colored">
-									<i class="icon-phone"></i> +7 (963) 656-83-79
+									<i class="icon-phone"></i> +7 (963) 656-83-77
 								</a>
 							</div>
 							<div class="phone-desktop hidden-xs hidden-ms">
-								<i class="icon-phone"></i> +7 (963) 656-83-79
+								<i class="icon-phone"></i> +7 (963) 656-83-77
 							</div>
 							<div class="iq-contacts-time hidden-xs hidden-ms">
 								<i class="icon-time"></i>&nbsp;
