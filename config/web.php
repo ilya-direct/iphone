@@ -45,6 +45,7 @@ $config = [
 			'enableStrictParsing' => true,
 			'suffix' => '/',
 			'rules' => [
+				'remont_planshetov/nexus/7'=>'site/remont_planshetov',
 				//'about/<action:\w+>' => 'about/<action>',
 				'' => 'site/index',
 				'ajax/<param:[\-\w]+>' => 'site/ajax',

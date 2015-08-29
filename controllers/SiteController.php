@@ -2,6 +2,7 @@
 
 namespace app\controllers;
 
+use app\models\db\Device;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -11,6 +12,22 @@ use app\models\ContactForm;
 
 class SiteController extends Controller
 {
+	static $config=
+		[
+			'remont-planshetov'=>[
+				'samsung'=>[
+					'Samsung Galaxy Tab A SM-T550',
+					'Samsung Galaxy Tab E SM-T560'
+				],
+				'nexus'=>[
+					'nexus-7',
+					'Nexus 9'
+				],
+				'asus','Xiaomi','Sony Tablet','Nokia'
+			]
+
+
+		];
     public function behaviors()
     {
         return [
@@ -137,12 +154,18 @@ class SiteController extends Controller
 
 	public function actionRemont_planshetov(){
 
-		return $this->render('contacts');
+		$alias='nexus-7';
+		$device=Device::findOne(['alias'=>$alias]);
+		$services=$device->deviceassign;
+		$services;
+		return print_r($services,true);
+		return $this->render('device');
 	}
 
 	public function actionAkcii(){
 
 		return $this->render('/site/akcii/index');
 	}
+
 
 }
