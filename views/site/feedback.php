@@ -100,10 +100,10 @@
 	<hr class="dashed" style="margin-top: 0px;margin-bottom:10px;">
 	<div class="bs-row margin-20 clearfix">
 		<div class="col-sm-6 col-md-6 col-lg-6">
-			<a href="http://iphone/about/otzyivyi/#testimonials" class="btn btn-block iq-btn"><i class="icon-comments"></i>Все отзывы</a>
+			<a href="http://iphone/about/otzivi/#testimonials" class="btn btn-block iq-btn"><i class="icon-comments"></i>Все отзывы</a>
 		</div>
 		<div class="col-sm-6 col-md-6 col-lg-6">
-			<a href="http://iphone/about/otzyivyi/" class="btn btn-block iq-btn"><i class="icon-edit"></i>Оставить свой отзыв</a>
+			<a href="http://iphone/about/otzivi/" class="btn btn-block iq-btn"><i class="icon-edit"></i>Оставить свой отзыв</a>
 		</div>
 	</div>
 </section>

@@ -2,7 +2,10 @@
 
 namespace app\controllers;
 
+use app\models\db\Article;
+use app\models\db\Category;
 use app\models\db\Device;
+use app\models\db\Service;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -153,13 +156,65 @@ class SiteController extends Controller
     }
 
 	public function actionRemont_planshetov(){
+		function correct_values(&$cat){
+			foreach($cat as &$service){
+				if($service['duration']>=60){
+					$service['duration']=floor($service['duration']/60);
+					if($service['duration']==1)
+						$service['duration']='от '.$service['duration'].' часа';
+					else
+						$service['duration']='от '.$service['duration'].' часов';
+				}else{
+					$service['duration']='от '.$service['duration'].' мин.';
+				}
+				$service['guaranty']=$service['guaranty'].' мес.';
 
+				if($service['price']==="0")
+					$service['price']='Бесплатно';
+				elseif(is_null($service['price']))
+					$service['price']='Уточняйте';
+				else{
+					if(preg_match('/^(\d+)(\d{3})$/u',$service['price'],$matches))
+						$service['price']=$matches[1].' '.$matches[2];
+				}
+			}
+		}
+		$db=new \yii\db\Connection(Yii::$app->db);
 		$alias='nexus-7';
-		$device=Device::findOne(['alias'=>$alias]);
-		$services=$device->deviceassign;
-		$services;
-		return print_r($services,true);
-		return $this->render('device');
+		$model=new \stdClass();
+		$model->device=Device::findOne(['alias'=>$alias]);
+		$model->cat0=$db->createCommand('SELECT s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
+			inner join deviceassign da on (da.service_id=s.id)
+			inner join device d on (d.id=da.device_id)
+		WHERE s.category_id is null AND d.alias=:alias
+		order by s.pos')->bindValue(':alias',$alias)->queryAll();
+		correct_values($model->cat0);
+
+		$cats=$db->createCommand('
+		SELECT DISTINCT c.id,c.name FROM service s
+			inner join deviceassign da on (da.service_id=s.id)
+			inner join device d on (d.id=da.device_id)
+			inner join category c on (c.id=s.category_id)
+		WHERE d.alias=:alias order by s.category_id')->bindValue(':alias', $alias)->queryAll();
+		$categories=[];
+		foreach($cats as $cat){
+			$categories[$cat['name']]=$db->createCommand(
+				'SELECT s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
+			inner join deviceassign da on (da.service_id=s.id)
+			inner join device d on (d.id=da.device_id)
+		WHERE s.category_id=:cid AND d.alias=:alias
+		order by s.pos')->bindValues([':alias'=>$alias,'cid'=>$cat['id']])->queryAll();
+		}
+		foreach($categories as &$cat){
+			correct_values($cat);
+		}
+		$model->categories=$categories;
+		$model->article=Article::findOne(['id'=>$model->device->article_id]);
+		$model->title='Ремонт '.$model->device->name;
+//		ob_get_clean();
+//		var_dump($model);
+//		return ob_get_clean();
+		return $this->render('device',['model'=>$model]);
 	}
 
 	public function actionAkcii(){
