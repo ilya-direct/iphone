@@ -1,9 +1,5 @@
 <?
 use yii\helpers\Html;
-$this->title = $model->title;
-$this->params['navbar']= true;
-$this->params['breadcrumbs']= [];
-
 ?>
 <div class="content shortcodes">
 <div class="container">
@@ -12,7 +8,7 @@ $this->params['breadcrumbs']= [];
 		<!-- Главное изображение -->
 		<div class="element-wrap content-text">
 			<div class="img-wrap">
-				<img class="centered" src="/assets/images/devices/<?=$model->device->imagename?>" alt="<?=$model->title?>">
+				<img class="centered" src="/assets/images/devices/<?=$model->device->imagename?>" alt="<?=$this->title?>">
 			</div>
 		</div>
 	</div>

@@ -17,9 +17,12 @@ class SiteController extends Controller
 {
 	static $config=
 		[
-			'remont-apple',
+			'remont-apple'=>[
+				'type'=>'category1',
+				'title'=>'Ремонт Apple',
+			],
 			'remont-telefonov',
-			'remont-planshetov'=>[
+			'remont_planshetov'=>[
 				'type'=>'category1',
 				'title'=>'Ремонт планшетов',
 				'items'=>[
@@ -33,7 +36,7 @@ class SiteController extends Controller
 						'type'=>'category2',
 						'title'=>'Ремонт планшетов Nexus',
 						'items'=>[
-							'nexus-7'=>[
+							'7'=>[
 								'type'=>'device',
 								'title'=>'Ремонт Nexus 7',
 							],
@@ -44,8 +47,33 @@ class SiteController extends Controller
 				]
 			],
 			'remont-noutbukov',
-			'akcii',
-			'about',
+			'akcii'=>[
+				'type'=>'link',
+				'title'=>'Акции',
+				'items'=>[],
+			],
+			'about'=>[
+				'type'=>'link',
+				'title'=>'О нас',
+				'items'=>[
+					'blog'=>[
+						'type'=>'link',
+						'title'=>'Наш блог'
+					],
+					'garantii'=>[
+						'type'=>'link',
+						'title'=>'Гарантии'
+					],
+					'kak_my_rabotaem'=>[
+						'type'=>'link',
+						'title'=>'Как мы работаем'
+					],
+					'otzivi'=>[
+						'type'=>'link',
+						'title'=>'Отзывы'
+					],
+				],
+			],
 			'contacts',
 
 		];
@@ -85,24 +113,46 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex()
+    public function actionIndex($url)
     {
-        return $this->render('index');
-    }
-
-    public function actionLogin()
-    {
-        if (!\Yii::$app->user->isGuest) {
-            return $this->goHome();
-        }
-
-        $model = new LoginForm();
-        if ($model->load(Yii::$app->request->post()) && $model->login()) {
-            return $this->goBack();
-        }
-        return $this->render('login', [
-            'model' => $model,
-        ]);
+	    $parts=explode('/',$url);
+	    if($parts[0]=='ajax'){
+		    array_shift($parts);
+		    $url=implode('/',$parts);
+		    return $this->actionAjax($url);
+	    }
+	    $urlobj=self::$config;
+	    $max=count($parts)-1;
+	    $breadcrumbs=[];
+	    $breadcrumb=new \stdClass();
+	    $link='/';
+	    try {
+		    for ($i = 0; $i < $max; ++$i) {
+			    $urlobj = $urlobj[$parts[$i]];
+			    $link.=$parts[$i].'/';
+			    $breadcrumb->link=$link;
+			    $breadcrumb->title=empty($urlobj['title']) ? '' : $urlobj['title'];
+			    $breadcrumbs[]=clone $breadcrumb;
+			    $urlobj=$urlobj['items'];
+		    }
+		    $urlobj = $urlobj[$parts[$i]];
+		    /*$link.=$parts[$i].'/';
+		    $breadcrumb->link=$link;
+		    $breadcrumb->title=empty($urlobj['title']) ? '' : $urlobj['title'];
+		    $breadcrumbs[]=clone $breadcrumb;*/
+	    }catch (\Exception $e){
+		    throw new \yii\web\HttpException(404, 'Page not exists');
+	    }
+	    Yii::$app->view->title = empty($urlobj['title']) ? '' : $urlobj['title'];
+	    Yii::$app->view->params['navbar'] = empty($urlobj['title']) ? true : $urlobj['title'];
+	    Yii::$app->view->params['breadcrumbs']= $breadcrumbs;
+	    if($urlobj['type']==='device'){
+		    array_shift($parts);
+		    $alias=implode('-',$parts);
+		    return $this->actionDevice($alias);
+	    }
+	    $viewpath=isset($urlobj['viewpath']) ? $urlobj['viewpath'] : $url;
+        return $this->render('/site/'.$viewpath);
     }
     public function actionAbout()
     {
@@ -152,7 +202,7 @@ class SiteController extends Controller
         }
     }
 
-	public function actionRemont_planshetov(){
+	public function actionDevice($alias){
 		function correct_values(&$cat){
 			foreach($cat as &$service){
 				if($service['duration']>=60){
@@ -177,7 +227,6 @@ class SiteController extends Controller
 			}
 		}
 		$db=new \yii\db\Connection(Yii::$app->db);
-		$alias='nexus-7';
 		$model=new \stdClass();
 		$model->device=Device::findOne(['alias'=>$alias]);
 		$model->cat0=$db->createCommand('SELECT s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
@@ -207,7 +256,7 @@ class SiteController extends Controller
 		}
 		$model->categories=$categories;
 		$model->article=Article::findOne(['id'=>$model->device->article_id]);
-		$model->title='Ремонт '.$model->device->name;
+		Yii::$app->view->title='Ремонт '.$model->device->name;
 //		ob_get_clean();
 //		var_dump($model);
 //		return ob_get_clean();

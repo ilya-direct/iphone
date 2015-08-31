@@ -1817,7 +1817,7 @@ AppAsset::register($this);
 			<li></li>
 			<li><a href="/">Главная</a></li>
 			<? $breadcrumbs=empty($this->params['breadcrumbs']) ? [] : $this->params['breadcrumbs'] ;
-				foreach($breadcrumbs as $b) echo $b;
+				foreach($breadcrumbs as $b) echo '<li><a href="'.$b->link.'">'.$b->title.'</a></li>';
 			?>
 			<li><span><?=Html::encode($this->title)?></span></li>
 		</ul>

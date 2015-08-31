@@ -1,9 +1,6 @@
 <?
 use yii\helpers\Html;
 $this->title = 'Гарантии';
-$this->params['navbar']= true;
-$this->params['breadcrumbs']= [$breadcrumb];
-
 ?>
 <div class="content">
 	<div class="container">
