@@ -17,18 +17,36 @@ class SiteController extends Controller
 {
 	static $config=
 		[
+			'remont-apple',
+			'remont-telefonov',
 			'remont-planshetov'=>[
-				'samsung'=>[
-					'Samsung Galaxy Tab A SM-T550',
-					'Samsung Galaxy Tab E SM-T560'
-				],
-				'nexus'=>[
-					'nexus-7',
-					'Nexus 9'
-				],
-				'asus','Xiaomi','Sony Tablet','Nokia'
-			]
-
+				'type'=>'category1',
+				'title'=>'Ремонт планшетов',
+				'items'=>[
+					'samsung'=>[
+						'type'=>'category2',
+						'title'=>'Ремонт планшетов Samsung',
+						'Samsung Galaxy Tab A SM-T550',
+						'Samsung Galaxy Tab E SM-T560'
+					],
+					'nexus'=>[
+						'type'=>'category2',
+						'title'=>'Ремонт планшетов Nexus',
+						'items'=>[
+							'nexus-7'=>[
+								'type'=>'device',
+								'title'=>'Ремонт Nexus 7',
+							],
+							'Nexus 9'
+						]
+					],
+					'asus','Xiaomi','Sony Tablet','Nokia'
+				]
+			],
+			'remont-noutbukov',
+			'akcii',
+			'about',
+			'contacts',
 
 		];
     public function behaviors()
@@ -86,27 +104,6 @@ class SiteController extends Controller
             'model' => $model,
         ]);
     }
-
-    public function actionLogout()
-    {
-        Yii::$app->user->logout();
-
-        return $this->goHome();
-    }
-
-    public function actionContact()
-    {
-        $model = new ContactForm();
-        if ($model->load(Yii::$app->request->post()) && $model->contact(Yii::$app->params['adminEmail'])) {
-            Yii::$app->session->setFlash('contactFormSubmitted');
-
-            return $this->refresh();
-        }
-        return $this->render('contact', [
-            'model' => $model,
-        ]);
-    }
-
     public function actionAbout()
     {
         return $this->render('/site/about/index');
