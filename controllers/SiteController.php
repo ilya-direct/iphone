@@ -21,7 +21,30 @@ class SiteController extends Controller
 				'type'=>'category1',
 				'title'=>'Ремонт Apple',
 			],
-			'remont-telefonov',
+			'remont-telefonov'=>[
+				'type'=>'category1',
+				'title'=>'Ремонт планшетов',
+				'items'=>[
+					'samsung'=>[
+						'type'=>'category1',
+						'title'=>'Ремонт планшетов',
+						'items'=>[
+							'galaxy-s'=>[
+								'type'=>'category1',
+								'title'=>'Ремонт планшетов',
+								'items'=>[
+									's6'=>[
+										'type'=>'device',
+										'title'=>'Ремонт планшетов',
+										'items'=>[
+										]
+									]
+								]
+							]
+						]
+					]
+				]
+			],
 			'remont_planshetov'=>[
 				'type'=>'category1',
 				'title'=>'Ремонт планшетов',
@@ -113,8 +136,9 @@ class SiteController extends Controller
         ];
     }
 
-    public function actionIndex($url)
-    {
+    public function actionIndex($url){
+	    if(empty($url))
+		    return $this->render('/site/index');
 	    $parts=explode('/',$url);
 	    if($parts[0]=='ajax'){
 		    array_shift($parts);
@@ -257,6 +281,7 @@ class SiteController extends Controller
 		$model->categories=$categories;
 		$model->article=Article::findOne(['id'=>$model->device->article_id]);
 		Yii::$app->view->title='Ремонт '.$model->device->name;
+		$model->device->imagename=empty($model->device->imagename) ? $alias.'.jpg' : $model->device->imagename;
 //		ob_get_clean();
 //		var_dump($model);
 //		return ob_get_clean();
