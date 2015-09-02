@@ -238,7 +238,11 @@ class SiteController extends Controller
 				}else{
 					$service['duration']='от '.$service['duration'].' мин.';
 				}
-				$service['guaranty']=$service['guaranty'].' мес.';
+
+				if(is_null($service['guaranty']))
+					$service['guaranty']='&minus;';
+				else
+					$service['guaranty']=$service['guaranty'].' мес.';
 
 				if($service['price']==="0")
 					$service['price']='Бесплатно';
