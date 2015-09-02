@@ -26,5 +26,16 @@ class HelloController extends Controller
     public function actionIndex($message = 'hello world')
     {
         echo $message . "\n";
+		exec('mysqldump -uroot -proot iphone > c:/wamp/www/iphone/iphone.sql');
     }
+
+	public function actionRestore_db(){
+		$path='c:/wamp/www/iphone/iphone.sql';
+		/*$h=fopen($path,"w");
+		fprintf($h,"no format!");
+		fclose($h);*/
+
+		exec('mysql -uroot -proot iphone < '.$path);
+//exec('mysql -hmysql.hostinger.ru -uu182420072_root -pqwerty123 u182420072_1 < walletbackup.sql');
+	}
 }
