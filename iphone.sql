@@ -113,7 +113,7 @@ CREATE TABLE `deviceassign` (
   PRIMARY KEY (`id`),
   KEY `fk_deviceassign_device1_idx` (`device_id`),
   KEY `fk_deviceassign_service1_idx` (`service_id`)
-) ENGINE=InnoDB AUTO_INCREMENT=20 DEFAULT CHARSET=utf8;
+) ENGINE=InnoDB AUTO_INCREMENT=23 DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
 --
@@ -122,7 +122,7 @@ CREATE TABLE `deviceassign` (
 
 LOCK TABLES `deviceassign` WRITE;
 /*!40000 ALTER TABLE `deviceassign` DISABLE KEYS */;
-INSERT INTO `deviceassign` VALUES (1,0,5,NULL,2,1,NULL),(2,5990,30,6,2,2,'Модель 2013 года'),(3,4990,30,6,2,2,'Модель 2012 года'),(4,NULL,20,NULL,2,3,NULL),(5,990,20,1,2,4,NULL),(6,1290,30,3,2,5,'При попадании влаги выключите устройство и не подключайте к зарядному устройству!'),(7,990,40,3,2,6,NULL),(8,990,20,6,2,7,NULL),(9,2990,10,1,2,8,NULL),(10,1490,30,6,2,9,NULL),(11,NULL,30,6,2,10,NULL),(12,NULL,30,6,2,11,NULL),(13,NULL,30,6,2,12,NULL),(14,1490,40,3,2,13,NULL),(15,1490,30,3,2,14,NULL),(16,1290,120,6,2,15,NULL),(17,1990,40,6,2,16,NULL),(18,NULL,180,6,2,17,NULL),(19,NULL,120,6,2,18,NULL);
+INSERT INTO `deviceassign` VALUES (1,0,5,NULL,2,1,NULL),(2,5990,30,6,2,2,'Модель 2013 года'),(3,4990,30,6,2,2,'Модель 2012 года'),(4,NULL,20,NULL,2,3,NULL),(5,990,20,1,2,4,NULL),(6,1290,30,3,2,5,'При попадании влаги выключите устройство и не подключайте к зарядному устройству!'),(7,990,40,3,2,6,NULL),(8,990,20,6,2,7,NULL),(9,2990,10,1,2,8,NULL),(10,1490,30,6,2,9,NULL),(11,NULL,30,6,2,10,NULL),(12,NULL,30,6,2,11,NULL),(13,NULL,30,6,2,12,NULL),(14,1490,40,3,2,13,NULL),(15,1490,30,3,2,14,NULL),(16,1290,120,6,2,15,NULL),(17,1990,40,6,2,16,NULL),(18,NULL,180,6,2,17,NULL),(19,NULL,120,6,2,18,NULL),(20,0,5,NULL,3,1,NULL),(21,10900,60,6,3,2,'Оригинальный дисплей в сборе стекло + экран!'),(22,2500,30,6,3,3,NULL);
 /*!40000 ALTER TABLE `deviceassign` ENABLE KEYS */;
 UNLOCK TABLES;
 
@@ -164,4 +164,4 @@ UNLOCK TABLES;
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2015-09-02 12:26:34
+-- Dump completed on 2015-09-02 13:13:27
