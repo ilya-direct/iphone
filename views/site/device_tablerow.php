@@ -6,7 +6,7 @@
 		<div class="collapsible collapse-xs collapsed">
 			<div class="collapse-container">
 				<div class="iq-service-details">
-					<?=$serv['smalldesc']?>
+					<p><?=$serv['smalldesc']?></p>
 					<? if(!empty($serv['warning'])):?>
 						<p class="b-message message-info iq-service-info">
 							<i class="icon-warning-sign"></i>
@@ -32,7 +32,7 @@
 			<a href="#"
 			   class="btn-ajax-popup b-dashed"
 			   data-fancybox-href="/ajax/service-inform-price/"
-			   data-params="resource-id=722&group-id=1&price-id=6"><b>Уточняйте</b></a>
+			   data-params="deviceassign_id=<?=$serv['deviceassign_id'];?>"><b>Уточняйте</b></a>
 		<? }else{ ?>
 			<b> <span><?=$serv['price']?></span> <i class="icon-rub"></i></b>
 			<div class="buttons">
@@ -41,7 +41,7 @@
 				   class="btn btn-xs small btn-ajax-popup"
 				   style="margin:10px 0 0;font-size:11px;padding:1px 7px;white-space:pre;"
 				   data-fancybox-href="/ajax/service-order-item/"
-				   data-params="device_id=<?=$device_id?>&service_id=<?=$serv['id']?>"><i class="icon-ok"></i>Заказать сейчас</a>
+				   data-params="deviceassign_id=<?=$serv['deviceassign_id'];?>"><i class="icon-ok"></i>Заказать сейчас</a>
 			</div>
 		<? } ?>
 

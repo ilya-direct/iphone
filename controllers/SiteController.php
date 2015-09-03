@@ -5,7 +5,9 @@ namespace app\controllers;
 use app\models\db\Article;
 use app\models\db\Category;
 use app\models\db\Device;
+use app\models\db\Deviceassign;
 use app\models\db\Service;
+use app\models\db\ApplicationForm;
 use Yii;
 use yii\filters\AccessControl;
 use yii\web\Controller;
@@ -23,7 +25,8 @@ class SiteController extends Controller
 			],
 			'remont-telefonov'=>[
 				'type'=>'category1',
-				'title'=>'Ремонт планшетов',
+				'title'=>'Ремонт телефонов',
+				'breadcrumb'=>'Телефоны',
 				'items'=>[
 					'samsung'=>[
 						'type'=>'category1',
@@ -48,6 +51,7 @@ class SiteController extends Controller
 			'remont_planshetov'=>[
 				'type'=>'category1',
 				'title'=>'Ремонт планшетов',
+				'breadcrumb'=>'Планшеты',
 				'items'=>[
 					'samsung'=>[
 						'type'=>'category2',
@@ -97,7 +101,11 @@ class SiteController extends Controller
 					],
 				],
 			],
-			'contacts',
+			'contacts'=>[
+				'type'=>'link',
+				'title'=>'Контакты',
+				'items'=>[],
+			],
 
 		];
     public function behaviors()
@@ -155,7 +163,7 @@ class SiteController extends Controller
 			    $urlobj = $urlobj[$parts[$i]];
 			    $link.=$parts[$i].'/';
 			    $breadcrumb->link=$link;
-			    $breadcrumb->title=empty($urlobj['title']) ? '' : $urlobj['title'];
+			    $breadcrumb->title=empty($urlobj['breadcrumb']) ? $urlobj['title'] : $urlobj['breadcrumb'];
 			    $breadcrumbs[]=clone $breadcrumb;
 			    $urlobj=$urlobj['items'];
 		    }
@@ -178,14 +186,7 @@ class SiteController extends Controller
 	    $viewpath=isset($urlobj['viewpath']) ? $urlobj['viewpath'] : $url;
         return $this->render('/site/'.$viewpath);
     }
-    public function actionAbout()
-    {
-        return $this->render('/site/about/index');
-    }
-    public function actionContacts()
-    {
-        return $this->render('contacts');
-    }
+
     public function actionAjax($param=null)
     {
 	    switch($param){
@@ -222,7 +223,23 @@ class SiteController extends Controller
 		    return  $msg;
 		    case 'service-order-form':
 			    return $this->renderPartial('service-order-form');
-		default: return '';
+		    case 'service-order-item':
+		    case 'service-inform-price':
+				if(yii::$app->request->method=="POST"){
+					$model = new ApplicationForm();
+					$model->load([$model->formName()=>Yii::$app->request->post()]);
+					$da=Deviceassign::findOne(['id'=>$model->deviceassign_id]);
+					$model->service=$da->service->name;
+					$model->device=$da->device->name;
+					$model->price=$da->price;
+					$model->save();
+					return 'ок';
+				}else{
+				    $da=yii::$app->request->get()['deviceassign_id'];
+					$da=Deviceassign::findOne(['id'=>$da]);
+				    return $this->renderPartial('/site/ajax/'.$param,['service'=>$da->service->name,'device'=>$da->device->name,'da'=>$da->id]);
+				}
+		    default: return '';
         }
     }
 
@@ -249,15 +266,23 @@ class SiteController extends Controller
 				elseif(is_null($service['price']))
 					$service['price']='Уточняйте';
 				else{
-					if(preg_match('/^(\d+)(\d{3})$/u',$service['price'],$matches))
+					if( ((int)$service['price']) %10 ===1 ) {
+						$suf='от ';
+						$service['price']--;
+					}else{
+						$suf='';
+					}
+					if(preg_match('/^(\d+)(\d{3})$/u',$service['price'],$matches)){
 						$service['price']=$matches[1].' '.$matches[2];
+					}
+					$service['price']=$suf.$service['price'];
 				}
 			}
 		}
 		$db=new \yii\db\Connection(Yii::$app->db);
 		$model=new \stdClass();
 		$model->device=Device::findOne(['alias'=>$alias]);
-		$model->cat0=$db->createCommand('SELECT s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
+		$model->cat0=$db->createCommand('SELECT da.id as deviceassign_id,s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
 			inner join deviceassign da on (da.service_id=s.id)
 			inner join device d on (d.id=da.device_id)
 		WHERE s.category_id is null AND d.alias=:alias
@@ -273,7 +298,7 @@ class SiteController extends Controller
 		$categories=[];
 		foreach($cats as $cat){
 			$categories[$cat['name']]=$db->createCommand(
-				'SELECT s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
+				'SELECT da.id as deviceassign_id,s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
 			inner join deviceassign da on (da.service_id=s.id)
 			inner join device d on (d.id=da.device_id)
 		WHERE s.category_id=:cid AND d.alias=:alias
@@ -291,11 +316,4 @@ class SiteController extends Controller
 //		return ob_get_clean();
 		return $this->render('device',['model'=>$model]);
 	}
-
-	public function actionAkcii(){
-
-		return $this->render('/site/akcii/index');
-	}
-
-
 }

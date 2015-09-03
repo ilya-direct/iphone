@@ -71,7 +71,7 @@ use yii\helpers\Html;
 </thead>
 <tbody>
 <? foreach($model->cat0 as $serv):?>
-	<?=$this->render('device_tablerow',['serv'=>$serv,'display'=>true,'device_id'=>$model->device->id])?>
+	<?=$this->render('device_tablerow',['serv'=>$serv,'display'=>true])?>
 <? endforeach;?>
 <? foreach($model->categories as $name=>$services): ?>
 <tr class="tbl-group">
@@ -84,7 +84,7 @@ use yii\helpers\Html;
 	</th>
 </tr>
 <? foreach($services as $serv): ?>
-	<?=$this->render('device_tablerow',['serv'=>$serv,'display'=>false,'device_id'=>$model->device->id])?>
+	<?=$this->render('device_tablerow',['serv'=>$serv,'display'=>false])?>
 <? endforeach?>
 <?endforeach;?>
 </tbody>
