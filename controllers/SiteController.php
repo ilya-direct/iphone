@@ -183,6 +183,9 @@ class SiteController extends Controller
 		    $alias=implode('-',$parts);
 		    return $this->actionDevice($alias);
 	    }
+	    if($urlobj['type']==='category'){
+		    return $this->actionCategory1(reset($parts));
+	    }
 	    $viewpath=isset($urlobj['viewpath']) ? $urlobj['viewpath'] : $url;
         return $this->render('/site/'.$viewpath);
     }
@@ -315,5 +318,24 @@ class SiteController extends Controller
 //		var_dump($model);
 //		return ob_get_clean();
 		return $this->render('device',['model'=>$model]);
+	}
+
+
+	public function actionCategory1($cat){
+		$categories=[
+			'remont-apple'=> 1,
+			'remont-telefonov'=> 2,
+			'remont-planshetov'=> 3,
+			'remont-noutbukov'=> 4,
+		];
+		if(!array_key_exiss($cat,$categories))
+			throw new \yii\web\HttpException(404, 'Page not exists');
+
+
+		$db=new \yii\db\Connection(Yii::$app->db);
+		$db->createCommand(
+			'SELECT DISTINCT brand,
+		order by s.pos')->bindValues([':alias'=>$alias,'cid'=>$cat['id']])->queryColumn();
+
 	}
 }
