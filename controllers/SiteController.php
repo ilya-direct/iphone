@@ -27,9 +27,11 @@ class SiteController extends Controller
 				'type'=>'category1',
 				'title'=>'Ремонт телефонов',
 				'breadcrumb'=>'Телефоны',
+				'category_type'=>2,
 				'items'=>[
 					'samsung'=>[
-						'type'=>'category1',
+						'name'=>'Samsung',
+						'type'=>'category2',
 						'title'=>'Ремонт планшетов',
 						'items'=>[
 							'galaxy-s'=>[
@@ -45,7 +47,9 @@ class SiteController extends Controller
 								]
 							]
 						]
-					]
+					],
+					'nexus'=>['name'=>'Nexus'],
+					'meizu'=>['name'=>'Meizu'],
 				]
 			],
 			'remont_planshetov'=>[
@@ -183,8 +187,8 @@ class SiteController extends Controller
 		    $alias=implode('-',$parts);
 		    return $this->actionDevice($alias);
 	    }
-	    if($urlobj['type']==='category'){
-		    return $this->actionCategory1(reset($parts));
+	    if($urlobj['type']==='category1'){
+		    return $this->actionCategory1($urlobj,$url);
 	    }
 	    $viewpath=isset($urlobj['viewpath']) ? $urlobj['viewpath'] : $url;
         return $this->render('/site/'.$viewpath);
@@ -321,21 +325,33 @@ class SiteController extends Controller
 	}
 
 
-	public function actionCategory1($cat){
+	public function actionCategory1($cat,$baselink){
 		$categories=[
 			'remont-apple'=> 1,
 			'remont-telefonov'=> 2,
 			'remont-planshetov'=> 3,
 			'remont-noutbukov'=> 4,
 		];
-		if(!array_key_exiss($cat,$categories))
-			throw new \yii\web\HttpException(404, 'Page not exists');
-
 
 		$db=new \yii\db\Connection(Yii::$app->db);
-		$db->createCommand(
-			'SELECT DISTINCT brand,
-		order by s.pos')->bindValues([':alias'=>$alias,'cid'=>$cat['id']])->queryColumn();
+		$type=2;
+		$menu=[];
+		$menu_item=new \stdClass();
+
+		foreach($cat['items'] as $name => $item){
+			$names[]=$name;
+			$menu_item->link='/'.$baselink.'/'.$name.'/';
+			$menu_item->title=$item['name'];
+			$menu[$name]=clone $menu_item;
+			foreach($item['items'] as $subname => $subitem){
+
+			}
+			$devices=Device::find()->where(['level'=>2,'type'=>$type])->andWhere('alias like "'.$name.'%"')->all();
+			$device_categories[$name]=$devices;
+		}
+
+		return $this->render('/site/category1',['categories'=>$device_categories,'menu'=>$menu,'brands'=>$names]);
+		//return print_r($device_categories,true);
 
 	}
 }
