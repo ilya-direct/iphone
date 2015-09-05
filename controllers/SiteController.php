@@ -26,30 +26,60 @@ class SiteController extends Controller
 			'remont-telefonov'=>[
 				'type'=>'category1',
 				'title'=>'Ремонт телефонов',
+				'article_name'=>'Срочный ремонт телефонов не дорого с гарантией',
 				'breadcrumb'=>'Телефоны',
 				'category_type'=>2,
 				'items'=>[
 					'samsung'=>[
 						'name'=>'Samsung',
 						'type'=>'category2',
-						'title'=>'Ремонт планшетов',
+						'title'=>'Ремонт Samsung',
 						'items'=>[
+							'galaxy-alpha'=>[
+								'type'=>'device',
+								'name'=>'Samsung Galaxy Alpha',
+								'title'=>'Samsung Galaxy Alpha',
+							],
+
+							'galaxy-a'=>[
+								'type'=>'category2',
+								'name'=>'Samsung Galaxy A',
+								'img'=>'devices/samsung-galaxy-a.jpg',
+								'items'=>[
+								]
+							],
 							'galaxy-s'=>[
-								'type'=>'category1',
-								'title'=>'Ремонт планшетов',
+								'type'=>'category2',
+								'name'=>'Samsung Galaxy S',
+								'title'=>'Samsung Galaxy S',
+								'img'=>'devices/samsung-galaxy-s.jpg',
+								'article_name'=>'Ремонт Samsung Galaxy S всего модельного ряда',
 								'items'=>[
 									's6'=>[
 										'type'=>'device',
-										'title'=>'Ремонт планшетов',
+										'name'=>'Samsung Galaxy S6',
+										'title'=>'Samsung Galaxy S6',
 										'items'=>[
 										]
 									]
 								]
-							]
-						]
+							],
+							'galaxy-note'=>[
+								'type'=>'category2',
+								'name'=>'Samsung Galaxy Note',
+								'img'=>'devices/samsung-galaxy-note.jpg',
+								'items'=>[]
+							],
+						],
 					],
-					'nexus'=>['name'=>'Nexus'],
-					'meizu'=>['name'=>'Meizu'],
+					'nexus'=>[
+						'name'=>'Nexus',
+						'items'=>[],
+					],
+					'meizu'=>[
+						'name'=>'Meizu',
+						'items'=>[],
+						],
 				]
 			],
 			'remont_planshetov'=>[
@@ -183,12 +213,11 @@ class SiteController extends Controller
 	    Yii::$app->view->params['navbar'] = empty($urlobj['title']) ? true : $urlobj['title'];
 	    Yii::$app->view->params['breadcrumbs']= $breadcrumbs;
 	    if($urlobj['type']==='device'){
-		    array_shift($parts);
-		    $alias=implode('-',$parts);
-		    return $this->actionDevice($alias);
-	    }
-	    if($urlobj['type']==='category1'){
+		    return $this->actionDevice($urlobj['name']);
+	    }elseif($urlobj['type']==='category1'){
 		    return $this->actionCategory1($urlobj,$url);
+	    }elseif($urlobj['type']==='category2'){
+		    return $this->actionCategory2($urlobj,$url);
 	    }
 	    $viewpath=isset($urlobj['viewpath']) ? $urlobj['viewpath'] : $url;
         return $this->render('/site/'.$viewpath);
@@ -250,7 +279,7 @@ class SiteController extends Controller
         }
     }
 
-	public function actionDevice($alias){
+	public function actionDevice($name){
 		function correct_values(&$cat){
 			foreach($cat as &$service){
 				if($service['duration']>=60){
@@ -288,12 +317,15 @@ class SiteController extends Controller
 		}
 		$db=new \yii\db\Connection(Yii::$app->db);
 		$model=new \stdClass();
-		$model->device=Device::findOne(['alias'=>$alias]);
+		$model->device=Device::findOne(['name'=>$name]);
+		if(!$model->device)
+			throw new \yii\web\HttpException(404, 'Page not exists');
+
 		$model->cat0=$db->createCommand('SELECT da.id as deviceassign_id,s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
 			inner join deviceassign da on (da.service_id=s.id)
 			inner join device d on (d.id=da.device_id)
-		WHERE s.category_id is null AND d.alias=:alias
-		order by s.pos')->bindValue(':alias',$alias)->queryAll();
+		WHERE s.category_id is null AND d.id=:id
+		order by s.pos')->bindValue(':id',$model->device->id)->queryAll();
 		correct_values($model->cat0);
 
 		$cats=$db->createCommand('
@@ -301,15 +333,15 @@ class SiteController extends Controller
 			inner join deviceassign da on (da.service_id=s.id)
 			inner join device d on (d.id=da.device_id)
 			inner join category c on (c.id=s.category_id)
-		WHERE d.alias=:alias order by s.category_id')->bindValue(':alias', $alias)->queryAll();
+		WHERE d.id=:id order by s.category_id')->bindValue(':id', $model->device->id)->queryAll();
 		$categories=[];
 		foreach($cats as $cat){
 			$categories[$cat['name']]=$db->createCommand(
 				'SELECT da.id as deviceassign_id,s.id,s.name,s.smalldesc,da.warning,da.price,da.duration,da.guaranty FROM service s
 			inner join deviceassign da on (da.service_id=s.id)
 			inner join device d on (d.id=da.device_id)
-		WHERE s.category_id=:cid AND d.alias=:alias
-		order by s.pos')->bindValues([':alias'=>$alias,'cid'=>$cat['id']])->queryAll();
+		WHERE s.category_id=:cid AND d.id=:id
+		order by s.pos')->bindValues([':id'=>$model->device->id,'cid'=>$cat['id']])->queryAll();
 		}
 		foreach($categories as &$cat){
 			correct_values($cat);
@@ -317,7 +349,7 @@ class SiteController extends Controller
 		$model->categories=$categories;
 		$model->article=Article::findOne(['id'=>$model->device->article_id]);
 		Yii::$app->view->title='Ремонт '.$model->device->name;
-		$model->device->imagename=empty($model->device->imagename) ? $alias.'.jpg' : $model->device->imagename;
+		$model->device->imagename=empty($model->device->imagename) ? $model->device->alias.'.jpg' : $model->device->imagename;
 //		ob_get_clean();
 //		var_dump($model);
 //		return ob_get_clean();
@@ -325,33 +357,62 @@ class SiteController extends Controller
 	}
 
 
-	public function actionCategory1($cat,$baselink){
-		$categories=[
-			'remont-apple'=> 1,
-			'remont-telefonov'=> 2,
-			'remont-planshetov'=> 3,
-			'remont-noutbukov'=> 4,
-		];
+	public function actionCategory1($urlobj,$baselink){
+
+		if($urlobj['type']!=='category1')
+			throw new \yii\web\HttpException(404, 'Page not exists');
 
 		$db=new \yii\db\Connection(Yii::$app->db);
-		$type=2;
 		$menu=[];
 		$menu_item=new \stdClass();
-
-		foreach($cat['items'] as $name => $item){
-			$names[]=$name;
-			$menu_item->link='/'.$baselink.'/'.$name.'/';
-			$menu_item->title=$item['name'];
-			$menu[$name]=clone $menu_item;
-			foreach($item['items'] as $subname => $subitem){
-
+		foreach($urlobj['items'] as $catalias => $category){
+			$names[]=$catalias;
+			$menu_item->link='/'.$baselink.'/'.$catalias.'/';
+			$menu_item->title=$category['name'];
+			$menu[$catalias]=clone $menu_item;
+			$devices=[];
+			foreach($category['items'] as $itemalias => $item){
+				if($item['type']=='category2'){
+					$devices[$itemalias]['name']=$item['name'];
+					$devices[$itemalias]['imagename']=$item['img'];
+				}elseif($item['type']=='device'){
+					$devices[$itemalias]=$db->createCommand('select * from device where name=:name')->bindValue('name',$item['name'])->queryOne();
+					$devices[$itemalias]['imagename']='devices/'.$devices[$itemalias]['imagename'];
+				}
+				$devices[$itemalias]['link']=$menu_item->link.$itemalias.'/';
 			}
-			$devices=Device::find()->where(['level'=>2,'type'=>$type])->andWhere('alias like "'.$name.'%"')->all();
-			$device_categories[$name]=$devices;
+			$device_categories[$catalias]=$devices;
 		}
-
-		return $this->render('/site/category1',['categories'=>$device_categories,'menu'=>$menu,'brands'=>$names]);
+		if(!empty($urlobj['article_name'])){
+			$text=$db->createCommand('select `fulltext` from category_article where name=:name')->bindValue('name',$urlobj['article_name'])->queryScalar();
+		}
+		if(empty($text)) $text='';
+		return $this->render('/site/category1',['categories'=>$device_categories,'menu'=>$menu,'brands'=>$names,'text'=>$text]);
 		//return print_r($device_categories,true);
 
+	}
+	public function actionCategory2($urlobj,$baselink){
+		if($urlobj['type']!=='category2')
+			throw new \yii\web\HttpException(404, 'Page not exists');
+
+		$db=new \yii\db\Connection(Yii::$app->db);
+		$menu=[];
+		$menu_item=new \stdClass();
+		$devices=[];
+		foreach($urlobj['items'] as $itemalias => $item){
+			if($item['type']=='device'){
+				$devices[$itemalias]=$db->createCommand('select * from device where name=:name')->bindValue('name',$item['name'])->queryOne();
+				$devices[$itemalias]['imagename']='devices/'.$devices[$itemalias]['imagename'];
+			}elseif($item['type']=='category2'){
+				$devices[$itemalias]['name']=$item['name'];
+				$devices[$itemalias]['imagename']=$item['img'];
+			}
+			$devices[$itemalias]['link']='/'.$baselink.'/'.$itemalias.'/';
+		}
+		if(!empty($urlobj['article_name'])){
+			$text=$db->createCommand('select `fulltext` from category_article where name=:name')->bindValue('name',$urlobj['article_name'])->queryScalar();
+		}
+		if(empty($text)) $text='';
+		return $this->render('/site/category2',['devices'=>$devices,'text'=>$text]);
 	}
 }
