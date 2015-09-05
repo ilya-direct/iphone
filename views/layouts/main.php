@@ -92,7 +92,7 @@ AppAsset::register($this);
 <!-- Главное меню -->
 <ul class="menu">
 <li class="has-mega">
-	<a href="<?=Url::to(['remont_apple'])?>" data-menu="mega"><i class="icon-apple"></i>Apple</a>
+	<a href="<?=Url::to(['remont-apple'])?>" data-menu="mega"><i class="icon-apple"></i>Apple</a>
 	<ul class="megamenu col-3">
 		<li class="m-submenu first col-1">
 			<a class="mmenu-title" href="remont-apple/iphone/">Ремонт iPhone</a>
@@ -190,48 +190,48 @@ AppAsset::register($this);
 	</ul>
 </li>
 <li class="has-mega">
-	<a href="/remont_planshetov/" >Планшеты</a>
+	<a href="/remont-planshetov/" >Планшеты</a>
 	<ul class="megamenu col-3">
 		<li class="m-submenu first col-1">
-			<a class="mmenu-title" href="remont_planshetov/samsung/">Ремонт Samsung</a>
-			<a href="remont_planshetov/samsung/samsung-galaxy-tab-a-sm-t550/">Samsung Galaxy Tab A SM-T550</a>
-			<a href="remont_planshetov/samsung/remont-samsung-galaxy-tab-e-sm-t560/">Samsung Galaxy Tab E SM-T560</a>
-			<a href="remont_planshetov/samsung/remont-samsung-galaxy-tab-a-sm-t355/">Samsung Galaxy Tab A SM-T355</a>
-			<a href="remont_planshetov/samsung/galaxy-tab-4-70-sm-t230/">Samsung Galaxy Tab 4 7.0" SM-T230</a>
-			<a href="remont_planshetov/samsung/galaxy-tab-4-10-1-sm-t530/">Samsung Galaxy Tab 4 10.1" SM-T530</a>
-			<a href="remont_planshetov/samsung/galaxy-tab-s-10-5-sm-t800/">Samsung Galaxy Tab S 10.5" SM-T800</a>
-			<a href="remont_planshetov/samsung/galaxy-tab-s-84-sm-t700/">Samsung Galaxy Tab S 8.4" SM-T700</a>
-			<a href="remont_planshetov/samsung/galaxy-note-gt-n8000/">Samsung Galaxy Note 10.1" GT-N8000</a>
-			<a href="remont_planshetov/samsung/galaxy-note-101-p6050/">Samsung Galaxy Note 10.1" SM-P6050</a>
-			<a href="remont_planshetov/samsung/galaxy-note-pro-122-sm-p905/">Samsung Galaxy Note Pro 12.2" SM-P905</a>
-			<a href="remont_planshetov/samsung/galaxy-note-80-gt-n5100/">Samsung Galaxy Note 8.0" GT-N5100</a>
+			<a class="mmenu-title" href="remont-planshetov/samsung/">Ремонт Samsung</a>
+			<a href="remont-planshetov/samsung/samsung-galaxy-tab-a-sm-t550/">Samsung Galaxy Tab A SM-T550</a>
+			<a href="remont-planshetov/samsung/remont-samsung-galaxy-tab-e-sm-t560/">Samsung Galaxy Tab E SM-T560</a>
+			<a href="remont-planshetov/samsung/remont-samsung-galaxy-tab-a-sm-t355/">Samsung Galaxy Tab A SM-T355</a>
+			<a href="remont-planshetov/samsung/galaxy-tab-4-70-sm-t230/">Samsung Galaxy Tab 4 7.0" SM-T230</a>
+			<a href="remont-planshetov/samsung/galaxy-tab-4-10-1-sm-t530/">Samsung Galaxy Tab 4 10.1" SM-T530</a>
+			<a href="remont-planshetov/samsung/galaxy-tab-s-10-5-sm-t800/">Samsung Galaxy Tab S 10.5" SM-T800</a>
+			<a href="remont-planshetov/samsung/galaxy-tab-s-84-sm-t700/">Samsung Galaxy Tab S 8.4" SM-T700</a>
+			<a href="remont-planshetov/samsung/galaxy-note-gt-n8000/">Samsung Galaxy Note 10.1" GT-N8000</a>
+			<a href="remont-planshetov/samsung/galaxy-note-101-p6050/">Samsung Galaxy Note 10.1" SM-P6050</a>
+			<a href="remont-planshetov/samsung/galaxy-note-pro-122-sm-p905/">Samsung Galaxy Note Pro 12.2" SM-P905</a>
+			<a href="remont-planshetov/samsung/galaxy-note-80-gt-n5100/">Samsung Galaxy Note 8.0" GT-N5100</a>
 		</li>
 		<li class="m-submenu col-2">
-			<a class="mmenu-title" href="remont_planshetov/nexus/">Ремонт Nexus</a>
-			<a href="remont_planshetov/nexus/7/">Nexus 7</a>
-			<a href="remont_planshetov/nexus/9/">Nexus 9</a>
-			<a class="mmenu-title" href="remont_planshetov/xiaomi/">Ремонт Xiaomi</a>
-			<a href="remont_planshetov/xiaomi/mi-pad/">Xiaomi Mi Pad</a>
-			<a class="mmenu-title" href="remont_planshetov/sony/">Ремонт Sony Tablet</a>
-			<a href="remont_planshetov/sony/xperia-z4-tablet/">Sony Xperia Z4 Tablet</a>
-			<a href="remont_planshetov/sony/xperia-z3-tablet-compact/">Sony Xperia Z3 Compact Tablet</a>
-			<a href="remont_planshetov/sony/xperia-tablet-z2/">Sony Xperia Z2 Tablet</a>
-			<a href="remont_planshetov/sony/xperia-tablet-z/">Sony Xperia Z Tablet</a>
-			<a href="remont_planshetov/sony/xperia-tablet-s/">Sony Xperia Tablet S</a>
+			<a class="mmenu-title" href="remont-planshetov/nexus/">Ремонт Nexus</a>
+			<a href="remont-planshetov/nexus/7/">Nexus 7</a>
+			<a href="remont-planshetov/nexus/9/">Nexus 9</a>
+			<a class="mmenu-title" href="remont-planshetov/xiaomi/">Ремонт Xiaomi</a>
+			<a href="remont-planshetov/xiaomi/mi-pad/">Xiaomi Mi Pad</a>
+			<a class="mmenu-title" href="remont-planshetov/sony/">Ремонт Sony Tablet</a>
+			<a href="remont-planshetov/sony/xperia-z4-tablet/">Sony Xperia Z4 Tablet</a>
+			<a href="remont-planshetov/sony/xperia-z3-tablet-compact/">Sony Xperia Z3 Compact Tablet</a>
+			<a href="remont-planshetov/sony/xperia-tablet-z2/">Sony Xperia Z2 Tablet</a>
+			<a href="remont-planshetov/sony/xperia-tablet-z/">Sony Xperia Z Tablet</a>
+			<a href="remont-planshetov/sony/xperia-tablet-s/">Sony Xperia Tablet S</a>
 		</li>
 		<li class="m-submenu col-3">
-			<a class="mmenu-title" href="remont_planshetov/asus/">Ремонт Asus</a>
-			<a href="remont_planshetov/asus/fonepad-7/">Asus Fonepad 7</a>
-			<a href="remont_planshetov/asus/transformer-pad-tf103c/">Asus Transformer Pad (TF103C)</a>
-			<a href="remont_planshetov/asus/transformer-pad-tf701t/">ASUS Transformer Pad (TF701T)</a>
-			<a href="remont_planshetov/asus/memo-pad-hd-8-me180a/">Asus MeMO Pad HD 8 (ME180A)</a>
-			<a class="mmenu-title" href="remont_planshetov/nokia/">Ремонт Nokia</a>
-			<a href="remont_planshetov/nokia/lumia-2520/">Nokia Lumia 2520</a>
-			<a href="remont_planshetov/nokia/n1/">Nokia N1</a>
+			<a class="mmenu-title" href="remont-planshetov/asus/">Ремонт Asus</a>
+			<a href="remont-planshetov/asus/fonepad-7/">Asus Fonepad 7</a>
+			<a href="remont-planshetov/asus/transformer-pad-tf103c/">Asus Transformer Pad (TF103C)</a>
+			<a href="remont-planshetov/asus/transformer-pad-tf701t/">ASUS Transformer Pad (TF701T)</a>
+			<a href="remont-planshetov/asus/memo-pad-hd-8-me180a/">Asus MeMO Pad HD 8 (ME180A)</a>
+			<a class="mmenu-title" href="remont-planshetov/nokia/">Ремонт Nokia</a>
+			<a href="remont-planshetov/nokia/lumia-2520/">Nokia Lumia 2520</a>
+			<a href="remont-planshetov/nokia/n1/">Nokia N1</a>
 		</li>
 		<li class="megamenu-caption">
 		<!--noindex-->
-		<a rel="nofollow" href="remont_planshetov/" class="btn small colored">Смотреть все</a>
+		<a rel="nofollow" href="remont-planshetov/" class="btn small colored">Смотреть все</a>
 		<!--/noindex-->
 		</li>
 	</ul>
@@ -281,10 +281,10 @@ AppAsset::register($this);
 	<a href="/about/" >О нас</a>
 	<ul class="submenu">
 		<li>
-			<a href="<?=Url::to(['about/kak_my_rabotaem'])?>" >Как мы работаем</a>
+			<a href="<?=Url::to(['about/kak-my-rabotaem'])?>" >Как мы работаем</a>
 		</li>
 		<li>
-			<a href="<?=Url::to(['about/viezd_mastera_i_kurera'])?>" >Выезд мастера и курьера</a>
+			<a href="<?=Url::to(['about/vyezd-mastera-i-kurera'])?>" >Выезд мастера и курьера</a>
 		</li>
 		<li>
 			<a href="<?=Url::to(['about/garantii'])?>" >Гарантии</a>
@@ -293,7 +293,7 @@ AppAsset::register($this);
 			<a href="<?=Url::to(['about/blog'])?>" >Наш блог</a>
 		</li>
 		<li>
-			<a href="<?=Url::to(['about/voprosi_i_otveti'])?>" >Вопросы и ответы</a>
+			<a href="<?=Url::to(['about/voprosi-i-otveti'])?>" >Вопросы и ответы</a>
 		</li>
 		<li>
 			<a href="<?=Url::to(['about/otzivi'])?>" >Отзывы</a>
@@ -1480,217 +1480,217 @@ AppAsset::register($this);
 </li>
 <li>
 <div>
-	<a href="/remont_planshetov/">Планшеты</a>
+	<a href="/remont-planshetov/">Планшеты</a>
 	<span class="btn-submenu"></span>                </div>
 <ul class="mob-submenu">
 <li>
 	<div>
-		<a href="/remont_planshetov/samsung/">Ремонт Samsung</a>
+		<a href="/remont-planshetov/samsung/">Ремонт Samsung</a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/samsung-galaxy-tab-a-sm-t550/">Samsung Galaxy Tab A SM-T550</a>
+				<a href="/remont-planshetov/samsung/samsung-galaxy-tab-a-sm-t550/">Samsung Galaxy Tab A SM-T550</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/remont-samsung-galaxy-tab-e-sm-t560/">Samsung Galaxy Tab E SM-T560</a>
+				<a href="/remont-planshetov/samsung/remont-samsung-galaxy-tab-e-sm-t560/">Samsung Galaxy Tab E SM-T560</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/remont-samsung-galaxy-tab-a-sm-t355/">Samsung Galaxy Tab A SM-T355</a>
+				<a href="/remont-planshetov/samsung/remont-samsung-galaxy-tab-a-sm-t355/">Samsung Galaxy Tab A SM-T355</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-4-70-sm-t230/">Samsung Galaxy Tab 4 7.0" SM-T230</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-4-70-sm-t230/">Samsung Galaxy Tab 4 7.0" SM-T230</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-4-10-1-sm-t530/">Samsung Galaxy Tab 4 10.1" SM-T530</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-4-10-1-sm-t530/">Samsung Galaxy Tab 4 10.1" SM-T530</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-s-10-5-sm-t800/">Samsung Galaxy Tab S 10.5" SM-T800</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-s-10-5-sm-t800/">Samsung Galaxy Tab S 10.5" SM-T800</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-s-84-sm-t700/">Samsung Galaxy Tab S 8.4" SM-T700</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-s-84-sm-t700/">Samsung Galaxy Tab S 8.4" SM-T700</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-note-gt-n8000/">Samsung Galaxy Note 10.1" GT-N8000</a>
+				<a href="/remont-planshetov/samsung/galaxy-note-gt-n8000/">Samsung Galaxy Note 10.1" GT-N8000</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-note-101-p6050/">Samsung Galaxy Note 10.1" SM-P6050</a>
+				<a href="/remont-planshetov/samsung/galaxy-note-101-p6050/">Samsung Galaxy Note 10.1" SM-P6050</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-note-pro-122-sm-p905/">Samsung Galaxy Note Pro 12.2" SM-P905</a>
+				<a href="/remont-planshetov/samsung/galaxy-note-pro-122-sm-p905/">Samsung Galaxy Note Pro 12.2" SM-P905</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-note-80-gt-n5100/">Samsung Galaxy Note 8.0" GT-N5100</a>
+				<a href="/remont-planshetov/samsung/galaxy-note-80-gt-n5100/">Samsung Galaxy Note 8.0" GT-N5100</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-pro-84-sm-t320/">Samsung Galaxy Tab PRO 8.4" SM-T320</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-pro-84-sm-t320/">Samsung Galaxy Tab PRO 8.4" SM-T320</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-pro-t520/">Samsung Galaxy Tab PRO 10.1" SM-T520</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-pro-t520/">Samsung Galaxy Tab PRO 10.1" SM-T520</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-77-p6800/">Samsung Galaxy Tab 7.7" P6800</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-77-p6800/">Samsung Galaxy Tab 7.7" P6800</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-p7300/">Samsung Galaxy Tab 8.9" GT-P7300</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-p7300/">Samsung Galaxy Tab 8.9" GT-P7300</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-2-p5100/">Samsung Galaxy Tab 2 10.1" GT-P5100</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-2-p5100/">Samsung Galaxy Tab 2 10.1" GT-P5100</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-2-p3100/">Samsung Galaxy Tab 2 7" GT-P3100</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-2-p3100/">Samsung Galaxy Tab 2 7" GT-P3100</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-3-80-sm-t310/">Samsung Galaxy Tab 3 8.0" SM-T310</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-3-80-sm-t310/">Samsung Galaxy Tab 3 8.0" SM-T310</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-3-p5200/">Samsung Galaxy Tab 3 10.1" GT-P5200</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-3-p5200/">Samsung Galaxy Tab 3 10.1" GT-P5200</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/samsung/galaxy-tab-3-t210/">Samsung Galaxy Tab 3 7.0" SM-T210</a>
+				<a href="/remont-planshetov/samsung/galaxy-tab-3-t210/">Samsung Galaxy Tab 3 7.0" SM-T210</a>
 			</div>
 		</li>
 	</ul>
 </li>
 <li>
 	<div>
-		<a href="/remont_planshetov/nexus/">Ремонт Nexus</a>
+		<a href="/remont-planshetov/nexus/">Ремонт Nexus</a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont_planshetov/nexus/7/">Nexus 7</a>
+				<a href="/remont-planshetov/nexus/7/">Nexus 7</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/nexus/9/">Nexus 9</a>
+				<a href="/remont-planshetov/nexus/9/">Nexus 9</a>
 			</div>
 		</li>
 	</ul>
 </li>
 <li>
 	<div>
-		<a href="/remont_planshetov/xiaomi/">Ремонт Xiaomi</a>
+		<a href="/remont-planshetov/xiaomi/">Ремонт Xiaomi</a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont_planshetov/xiaomi/mi-pad/">Xiaomi Mi Pad</a>
+				<a href="/remont-planshetov/xiaomi/mi-pad/">Xiaomi Mi Pad</a>
 			</div>
 		</li>
 	</ul>
 </li>
 <li>
 	<div>
-		<a href="/remont_planshetov/sony/">Ремонт Sony Tablet </a>
+		<a href="/remont-planshetov/sony/">Ремонт Sony Tablet </a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont_planshetov/sony/xperia-z4-tablet/">Sony Xperia Z4 Tablet</a>
+				<a href="/remont-planshetov/sony/xperia-z4-tablet/">Sony Xperia Z4 Tablet</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/sony/xperia-z3-tablet-compact/">Sony Xperia Z3 Compact Tablet</a>
+				<a href="/remont-planshetov/sony/xperia-z3-tablet-compact/">Sony Xperia Z3 Compact Tablet</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/sony/xperia-tablet-z2/">Sony Xperia Z2 Tablet </a>
+				<a href="/remont-planshetov/sony/xperia-tablet-z2/">Sony Xperia Z2 Tablet </a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/sony/xperia-tablet-z/">Sony Xperia Z Tablet</a>
+				<a href="/remont-planshetov/sony/xperia-tablet-z/">Sony Xperia Z Tablet</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/sony/xperia-tablet-s/">Sony Xperia Tablet S</a>
+				<a href="/remont-planshetov/sony/xperia-tablet-s/">Sony Xperia Tablet S</a>
 			</div>
 		</li>
 	</ul>
 </li>
 <li>
 	<div>
-		<a href="/remont_planshetov/asus/">Ремонт Asus</a>
+		<a href="/remont-planshetov/asus/">Ремонт Asus</a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont_planshetov/asus/fonepad-7/">Asus Fonepad 7</a>
+				<a href="/remont-planshetov/asus/fonepad-7/">Asus Fonepad 7</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/asus/transformer-pad-tf103c/">Asus Transformer Pad (TF103C)</a>
+				<a href="/remont-planshetov/asus/transformer-pad-tf103c/">Asus Transformer Pad (TF103C)</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/asus/transformer-pad-tf701t/">ASUS Transformer Pad (TF701T)</a>
+				<a href="/remont-planshetov/asus/transformer-pad-tf701t/">ASUS Transformer Pad (TF701T)</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/asus/memo-pad-hd-8-me180a/">Asus MeMO Pad HD 8 (ME180A)</a>
+				<a href="/remont-planshetov/asus/memo-pad-hd-8-me180a/">Asus MeMO Pad HD 8 (ME180A)</a>
 			</div>
 		</li>
 	</ul>
 </li>
 <li>
 	<div>
-		<a href="/remont_planshetov/nokia/">Ремонт Nokia</a>
+		<a href="/remont-planshetov/nokia/">Ремонт Nokia</a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont_planshetov/nokia/lumia-2520/">Nokia Lumia 2520</a>
+				<a href="/remont-planshetov/nokia/lumia-2520/">Nokia Lumia 2520</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont_planshetov/nokia/n1/">Nokia N1</a>
+				<a href="/remont-planshetov/nokia/n1/">Nokia N1</a>
 			</div>
 		</li>
 	</ul>
@@ -1766,17 +1766,17 @@ AppAsset::register($this);
 </li>
 <li>
 	<div>
-		<a href="<?=Url::to(['about'])?>">О нас</a>
+		<a href="/about/">О нас</a>
 		<span class="btn-submenu"></span>                </div>
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="<?=Url::to(['about/kak_my_rabotaem'])?>">Как мы работаем</a>
+				<a href="<?=Url::to(['about/kak-my-rabotaem'])?>">Как мы работаем</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="<?=Url::to(['about/viezd_mastera_i_kurera'])?>">Выезд мастера и курьера</a>
+				<a href="<?=Url::to(['about/vyezd-mastera-i-kurera'])?>">Выезд мастера и курьера</a>
 			</div>
 		</li>
 		<li>
@@ -1791,7 +1791,7 @@ AppAsset::register($this);
 		</li>
 		<li>
 			<div>
-				<a href="<?=Url::to(['about/voprosi_i_otveti'])?>">Вопросы и ответы</a>
+				<a href="<?=Url::to(['about/voprosi-i-otveti'])?>">Вопросы и ответы</a>
 			</div>
 		</li>
 		<li>
@@ -1833,11 +1833,11 @@ AppAsset::register($this);
 					<section class="b-widgets-wrap">
 						<h3>О нас</h3>
 						<ul class="b-list just-links m-dark">
-							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/kak_my_rabotaem'])?>">Как мы работаем</a></li>
-							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/viezd_mastera_i_kurera'])?>">Выезд мастера и курьера</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/kak-my-rabotaem'])?>">Как мы работаем</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/vyezd-mastera-i-kurera'])?>">Выезд мастера и курьера</a></li>
 							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/garantii'])?>">Гарантии</a></li>
 							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/blog'])?>">Наш блог</a></li>
-							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/voprosi_i_otveti'])?>">Вопросы и ответы</a></li>
+							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/voprosi-i-otveti'])?>">Вопросы и ответы</a></li>
 							<li><i class="icon-chevron-right"></i><a href="<?=Url::to(['about/otzivi'])?>">Отзывы</a></li>
 						</ul>
 						<ul class="b-social m-varicolored margin-10">

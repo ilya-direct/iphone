@@ -125,7 +125,7 @@ class SiteController extends Controller
 						'type'=>'link',
 						'title'=>'Гарантии'
 					],
-					'kak_my_rabotaem'=>[
+					'kak-my-rabotaem'=>[
 						'type'=>'link',
 						'title'=>'Как мы работаем'
 					],
@@ -133,6 +133,14 @@ class SiteController extends Controller
 						'type'=>'link',
 						'title'=>'Отзывы'
 					],
+					'vyezd-mastera-i-kurera'=>[
+						'type'=>'link',
+						'title'=>'Выезд мастера и курьера',
+					],
+					'voprosi-i-otveti'=>[
+						'type'=>'link',
+						'title'=>'Вопросы и ответы'
+					]
 				],
 			],
 			'contacts'=>[

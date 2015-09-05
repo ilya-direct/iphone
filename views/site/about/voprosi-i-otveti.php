@@ -1,9 +1,5 @@
 <?
 use yii\helpers\Html;
-$this->title = 'Вопросы и ответы';
-$this->params['navbar']= true;
-$this->params['breadcrumbs']= [$breadcrumb];
-
 ?>
 <div class="content">
 <div class="container">

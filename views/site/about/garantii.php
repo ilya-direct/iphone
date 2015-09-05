@@ -1,6 +1,5 @@
 <?
 use yii\helpers\Html;
-$this->title = 'Гарантии';
 ?>
 <div class="content">
 	<div class="container">
