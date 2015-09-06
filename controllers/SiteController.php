@@ -148,7 +148,6 @@ class SiteController extends Controller
 				'title'=>'Ремонт телефонов',
 				'article_name'=>'Срочный ремонт телефонов не дорого с гарантией',
 				'breadcrumb'=>'Телефоны',
-				'category_type'=>2,
 				'items'=>[
 					'samsung'=>[
 						'name'=>'Samsung',
@@ -193,13 +192,58 @@ class SiteController extends Controller
 						],
 					],
 					'nexus'=>[
-						'name'=>'Nexus',
-						'items'=>[],
+						'type'=>'category2',
+						'name'=>'Ремонт Nexus',
+						'items'=>[
+							'6'=>[
+								'name'=>'Nexus 6',
+								'type'=>'device',
+							],
+							'5'=>[
+								'name'=>'Nexus 5',
+								'type'=>'device',
+							],
+							'4'=>[
+								'name'=>'Nexus 4',
+								'type'=>'device',
+							],
+						],
 					],
 					'meizu'=>[
+						'type'=>'category2',
+						'title'=>'Ремонт Meizu',
 						'name'=>'Meizu',
-						'items'=>[],
+						'items'=>[
+							'mx5'=>[
+								'type'=>'device',
+								'name'=>'Meizu MX5',
+							],
+							'm2-note'=>[
+								'type'=>'device',
+								'name'=>'Meizu M2 Note',
+							],
+							'mx4-pro'=>[
+								'type'=>'device',
+								'name'=>'Meizu MX4 Pro',
+							],
+							'mx4'=>[
+								'type'=>'device',
+								'name'=>'Meizu MX4',
+							],
+							'm1-note'=>[
+								'type'=>'device',
+								'name'=>'Meizu M1 Note',
+							],
+							'mx3'=>[
+								'type'=>'device',
+								'name'=>'Meizu MX3',
+							],
+							'mx2'=>[
+								'type'=>'device',
+								'name'=>'Meizu MX2',
+							],
 						],
+					],
 				]
 			],
 			'remont_planshetov'=>[
@@ -227,7 +271,50 @@ class SiteController extends Controller
 					'asus','Xiaomi','Sony Tablet','Nokia'
 				]
 			],
-			'remont-noutbukov',
+			'remont-noutbukov'=>[
+				'type'=>'category2',
+				'title'=>'Ремонт ноутбуков',
+				'article_name'=>'Ремонт ноутбука на дому в Москве? Без проблем!',
+				'items'=>[
+					'asus'=>[
+						'type'=>'device',
+						'name'=>'Asus',
+					],
+					'acer'=>[
+						'type'=>'device',
+						'name'=>'Acer',
+					],
+					'hp'=>[
+						'type'=>'device',
+						'name'=>'HP',
+					],
+					'dell'=>[
+						'type'=>'device',
+						'name'=>'Dell',
+					],
+					'samsung'=>[
+						'type'=>'device',
+						'name'=>'Samsung',
+					],
+					'lenovo'=>[
+						'type'=>'device',
+						'name'=>'Lenovo',
+					],
+					'sony'=>[
+						'type'=>'device',
+						'name'=>'Sony',
+					],
+					'toshiba'=>[
+						'type'=>'device',
+						'name'=>'Toshiba',
+					],
+					'packard-bell'=>[
+						'type'=>'device',
+						'name'=>'Packard Bell',
+					],
+				]
+
+			],
 			'akcii'=>[
 				'type'=>'link',
 				'title'=>'Акции',
