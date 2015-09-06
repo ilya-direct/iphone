@@ -244,6 +244,75 @@ class SiteController extends Controller
 							],
 						],
 					],
+					'oneplus'=>[
+						'type'=>'category2',
+						'title'=>'Ремонт телефонов OnePlus',
+						'items'=>[
+							'2'=>[
+								'type'=>'device',
+								'name'=>'OnePlus 2',
+							],
+							'one'=>[
+								'type'=>'device',
+								'name'=>'OnePlus One',
+							],
+						]
+					],
+					'huawei'=>[
+						'type'=>'category2',
+						'title'=>'Ремонт телефонов Huawei',
+						'items'=>[
+							'mate-s'=>[
+								'type'=>'device',
+								'name'=>'Huawei Mate S',
+							],
+							'g8'=>[
+								'type'=>'device',
+								'name'=>'Huawei G8',
+							],
+							'honor-p8'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor P8',
+							],
+							'honor-p8-lite'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor P8 Lite',
+							],
+							'honor-p8-max'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor P8 Max',
+							],
+							'honor-6-plus'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor 6 Plus',
+							],
+							'honor-6'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor 6',
+							],
+							'honor-4x'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor 4X',
+							],
+							'honor-4c'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor 4C',
+							],
+							'honor-3x'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor 3X',
+							],
+							'honor-3c'=>[
+								'type'=>'device',
+								'name'=>'Huawei Honor 3C',
+							],
+							'ascend-mate-7'=>[
+								'type'=>'device',
+								'name'=>'Huawei Ascend Mate 7',
+							],
+						]
+					],
+
 				]
 			],
 			'remont_planshetov'=>[
@@ -274,15 +343,18 @@ class SiteController extends Controller
 			'remont-noutbukov'=>[
 				'type'=>'category2',
 				'title'=>'Ремонт ноутбуков',
+				'breadcrumb'=>'Ноутбуки',
 				'article_name'=>'Ремонт ноутбука на дому в Москве? Без проблем!',
 				'items'=>[
 					'asus'=>[
 						'type'=>'device',
 						'name'=>'Asus',
+						'title'=>'Ремонт ноутбуков Asus',
 					],
 					'acer'=>[
 						'type'=>'device',
 						'name'=>'Acer',
+						'title'=>'Ремонт ноутбуков Acer',
 					],
 					'hp'=>[
 						'type'=>'device',
@@ -291,27 +363,44 @@ class SiteController extends Controller
 					'dell'=>[
 						'type'=>'device',
 						'name'=>'Dell',
+						'title'=>'Ремонт ноутбуков Dell',
 					],
 					'samsung'=>[
 						'type'=>'device',
 						'name'=>'Samsung',
+						'title'=>'Ремонт ноутбуков Samsung',
 					],
 					'lenovo'=>[
 						'type'=>'device',
 						'name'=>'Lenovo',
+						'title'=>'Ремонт ноутбуков Lenovo',
 					],
 					'sony'=>[
 						'type'=>'device',
 						'name'=>'Sony',
+						'title'=>'Ремонт ноутбуков Sony',
 					],
 					'toshiba'=>[
 						'type'=>'device',
 						'name'=>'Toshiba',
+						'title'=>'Ремонт ноутбуков Toshiba',
 					],
 					'packard-bell'=>[
 						'type'=>'device',
 						'name'=>'Packard Bell',
+						'title'=>'Ремонт ноутбуков Toshiba',
 					],
+					'zamena-matrici'=>[
+						'type'=>'device',
+						'name'=>'Matrisa noutbuka',
+						'title'=>'Замена матрицы ноутбука',
+					],
+					'remont-klaviaturi'=>[
+						'type'=>'device',
+						'name'=>'Klaviatura noutbuka',
+						'title'=>'Ремонт клавиатуры ноутбука',
+					],
+
 				]
 
 			],
@@ -435,7 +524,7 @@ class SiteController extends Controller
 	    Yii::$app->view->params['navbar'] = empty($urlobj['title']) ? true : $urlobj['title'];
 	    Yii::$app->view->params['breadcrumbs']= $breadcrumbs;
 	    if($urlobj['type']==='device'){
-		    return $this->actionDevice($urlobj['name']);
+		    return $this->actionDevice($urlobj);
 	    }elseif($urlobj['type']==='category1'){
 		    return $this->actionCategory1($urlobj,$url);
 	    }elseif($urlobj['type']==='category2'){
@@ -501,7 +590,7 @@ class SiteController extends Controller
         }
     }
 
-	public function actionDevice($name){
+	public function actionDevice($urlobj){
 		function correct_values(&$cat){
 			foreach($cat as &$service){
 				if($service['duration']>=60){
@@ -539,7 +628,7 @@ class SiteController extends Controller
 		}
 		$db=new \yii\db\Connection(Yii::$app->db);
 		$model=new \stdClass();
-		$model->device=Device::findOne(['name'=>$name]);
+		$model->device=Device::findOne(['name'=>$urlobj['name']]);
 		if(!$model->device)
 			throw new \yii\web\HttpException(404, 'Page not exists');
 
@@ -570,9 +659,12 @@ class SiteController extends Controller
 		}
 		$model->categories=$categories;
 		$model->article=Article::findOne(['id'=>$model->device->article_id]);
-		Yii::$app->view->title='Ремонт '.$model->device->name;
+		Yii::$app->view->title=empty($urlobj['title']) ? 'Ремонт '.$model->device->name : $urlobj['title'];
 		Yii::$app->view->params['title-alt']=true;
-		$model->device->imagename=empty($model->device->imagename) ? $model->device->alias.'.jpg' : $model->device->imagename;
+		if(empty($model->device->imagename) ){
+			$model->device->imagename=mb_strtolower($model->device->name);
+			$model->device->imagename=str_replace(' ','-',$model->device->imagename).'.jpg';
+		}
 //		ob_get_clean();
 //		var_dump($model);
 //		return ob_get_clean();
@@ -602,6 +694,10 @@ class SiteController extends Controller
 					$device=$db->createCommand('select * from device where name=:name')->bindValue('name',$item['name'])->queryOne();
 					if(!$device) continue;
 					$devices[$itemalias]=$device;
+					if(empty($devices[$itemalias]['imagename'])){
+						$devices[$itemalias]['imagename']=mb_strtolower($devices[$itemalias]['name']);
+						$devices[$itemalias]['imagename']=str_replace(' ','-',$devices[$itemalias]['imagename']).'.jpg';
+					}
 					$devices[$itemalias]['imagename']='devices/'.$devices[$itemalias]['imagename'];
 				}
 				$devices[$itemalias]['link']=$menu_item->link.$itemalias.'/';
@@ -626,7 +722,13 @@ class SiteController extends Controller
 		$devices=[];
 		foreach($urlobj['items'] as $itemalias => $item){
 			if($item['type']=='device'){
-				$devices[$itemalias]=$db->createCommand('select * from device where name=:name')->bindValue('name',$item['name'])->queryOne();
+				$device=$db->createCommand('select * from device where name=:name')->bindValue('name',$item['name'])->queryOne();
+				if(!$device) continue;
+				$devices[$itemalias]=$device;
+				if(empty($devices[$itemalias]['imagename'])){
+					$devices[$itemalias]['imagename']=mb_strtolower($devices[$itemalias]['name']);
+					$devices[$itemalias]['imagename']=str_replace(' ','-',$devices[$itemalias]['imagename']).'.jpg';
+				}
 				$devices[$itemalias]['imagename']='devices/'.$devices[$itemalias]['imagename'];
 			}elseif($item['type']=='category2'){
 				$devices[$itemalias]['name']=$item['name'];
@@ -640,4 +742,5 @@ class SiteController extends Controller
 		if(empty($text)) $text='';
 		return $this->render('/site/category2',['devices'=>$devices,'text'=>$text]);
 	}
+
 }

@@ -267,10 +267,10 @@ AppAsset::register($this);
 			<a href="/remont-noutbukov/packard-bell/" >Packard Bell</a>
 		</li>
 		<li>
-			<a href="/remont-noutbukov/zamena-matriczyi/" >Замена матрицы ноутбука</a>
+			<a href="/remont-noutbukov/zamena-matrici/" >Замена матрицы ноутбука</a>
 		</li>
 		<li>
-			<a href="/remont-noutbukov/remont-klaviaturyi/" >Ремонт клавиатуры ноутбука</a>
+			<a href="/remont-noutbukov/remont-klaviaturi/" >Ремонт клавиатуры ноутбука</a>
 		</li>
 	</ul>
 </li>
@@ -1749,12 +1749,12 @@ AppAsset::register($this);
 		</li>
 		<li>
 			<div>
-				<a href="/remont-noutbukov/zamena-matriczyi/">Замена матрицы ноутбука</a>
+				<a href="/remont-noutbukov/zamena-matrici/">Замена матрицы ноутбука</a>
 			</div>
 		</li>
 		<li>
 			<div>
-				<a href="/remont-noutbukov/remont-klaviaturyi/">Ремонт клавиатуры ноутбука</a>
+				<a href="/remont-noutbukov/remont-klaviaturi/">Ремонт клавиатуры ноутбука</a>
 			</div>
 		</li>
 	</ul>
