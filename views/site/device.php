@@ -57,6 +57,7 @@ use yii\helpers\Html;
 	</div>
 </section>
 <!-- Стоимость ремонта -->
+<? if(!empty($model->cat0) && !empty($model->categories)): ?>
 <section class="element-wrap iq-services-prices margin-20">
 <h2 class="lined centered margin-30">Стоимость ремонта  «<?=$model->device->name?>»</h2>
 <div class="b-table">
@@ -94,6 +95,7 @@ use yii\helpers\Html;
 <div class="element-wrap margin-30 iq-prices-notes">
 	<p><span class="star">*</span> Сроки ремонта зависят от наличия требуемых запчастей и загруженности мастеров.<br /><span class="star">**</span> Все цены на сайте указаны в рублях с учетом запчастей.</p>
 </div>
+<? endif; ?>
 <!-- Форма заявки -->
 <div class="element-wrap">
 	<div class="bs-row">

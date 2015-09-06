@@ -21,7 +21,127 @@ class SiteController extends Controller
 		[
 			'remont-apple'=>[
 				'type'=>'category1',
-				'title'=>'Ремонт Apple',
+				'name'=>'Apple',
+				'items'=>[
+					'iphone'=>[
+						'type'=>'category2',
+						'name'=>'Ремонт iPhone',
+						'items'=>[
+							'6-plus'=>[
+								'type'=>'device',
+								'name'=>'iPhone 6 Plus',
+							],
+							'6'=>[
+								'type'=>'device',
+								'name'=>'iPhone 6',
+							],
+							'5c'=>[
+								'type'=>'device',
+								'name'=>'iPhone 5c',
+							],
+							'5s'=>[
+								'type'=>'device',
+								'name'=>'iPhone 5s',
+							],
+							'5'=>[
+								'type'=>'device',
+								'name'=>'iPhone 5',
+							],
+							'4'=>[
+								'type'=>'device',
+								'name'=>'iPhone 4/4S',
+							],
+							'3'=>[
+								'type'=>'device',
+								'name'=>'iPhone 3G/3GS',
+							]
+						]
+					],
+					'ipad'=>[
+						'type'=>'category2',
+						'name'=>'Ремонт iPad',
+						'items'=>[
+							'air-2'=>[
+								'type'=>'device',
+								'name'=>'iPad Air 2',
+							],
+							'air'=>[
+								'type'=>'device',
+								'name'=>'iPad Air',
+							],
+							'mini-3'=>[
+								'type'=>'device',
+								'name'=>'iPad mini 3',
+							],
+							'mini-2'=>[
+								'type'=>'device',
+								'name'=>'iPad mini 2',
+							],
+							'mini'=>[
+								'type'=>'device',
+								'name'=>'iPad mini',
+							],
+							'4'=>[
+								'type'=>'device',
+								'name'=>'iPad 4',
+							],
+							'3'=>[
+								'type'=>'device',
+								'name'=>'iPad 3',
+							],
+							'2'=>[
+								'type'=>'device',
+								'name'=>'iPad 2',
+							]
+						]
+					],
+					'macbook'=>[
+						'type'=>'category2',
+						'name'=>'Ремонт MacBook',
+						'items'=>[
+							'air'=>[
+								'type'=>'device',
+								'name'=>'MacBook Air',
+							],
+							'pro'=>[
+								'type'=>'device',
+								'name'=>'MacBook Pro',
+							],
+							'pro-retina-15'=>[
+								'type'=>'device',
+								'name'=>'MacBook Pro Retina 15"',
+							],
+							'pro-retina-13'=>[
+								'type'=>'device',
+								'name'=>'MacBook Pro Retina 13"',
+							],
+							'pro-retina-12'=>[
+								'type'=>'device',
+								'name'=>'MacBook Retina 12"',
+							],
+						],
+					],
+					'imac'=>[
+						'type'=>'category2',
+						'name'=>'iMac',
+						'items'=>[
+							'imac'=>[
+								'type'=>'device',
+								'name'=>'iMac',
+							]
+						]
+					],
+					'apple-watch'=>[
+						'type'=>'category2',
+						'name'=>'Apple Watch',
+						'items'=>[
+							'apple-watch'=>[
+								'type'=>'device',
+								'name'=>'Apple Watch',
+							]
+						]
+					],
+				],
 			],
 			'remont-telefonov'=>[
 				'type'=>'category1',
@@ -111,7 +231,12 @@ class SiteController extends Controller
 			'akcii'=>[
 				'type'=>'link',
 				'title'=>'Акции',
-				'items'=>[],
+				'items'=>[
+					'privedi-druga'=>[
+						'type'=>'link',
+						'title'=>'Приведи друга'
+					]
+				]
 			],
 			'about'=>[
 				'type'=>'link',
@@ -205,7 +330,9 @@ class SiteController extends Controller
 			    $urlobj = $urlobj[$parts[$i]];
 			    $link.=$parts[$i].'/';
 			    $breadcrumb->link=$link;
-			    $breadcrumb->title=empty($urlobj['breadcrumb']) ? $urlobj['title'] : $urlobj['breadcrumb'];
+			    $breadcrumb->title=empty($urlobj['breadcrumb']) ?
+				    (empty($urlobj['title']) ? $urlobj['name'] : $urlobj['title']) :
+				    $urlobj['breadcrumb'];
 			    $breadcrumbs[]=clone $breadcrumb;
 			    $urlobj=$urlobj['items'];
 		    }
@@ -217,7 +344,7 @@ class SiteController extends Controller
 	    }catch (\Exception $e){
 		    throw new \yii\web\HttpException(404, 'Page not exists');
 	    }
-	    Yii::$app->view->title = empty($urlobj['title']) ? '' : $urlobj['title'];
+	    Yii::$app->view->title = empty($urlobj['title']) ? $urlobj['name'] : $urlobj['title'];
 	    Yii::$app->view->params['navbar'] = empty($urlobj['title']) ? true : $urlobj['title'];
 	    Yii::$app->view->params['breadcrumbs']= $breadcrumbs;
 	    if($urlobj['type']==='device'){
@@ -357,6 +484,7 @@ class SiteController extends Controller
 		$model->categories=$categories;
 		$model->article=Article::findOne(['id'=>$model->device->article_id]);
 		Yii::$app->view->title='Ремонт '.$model->device->name;
+		Yii::$app->view->params['title-alt']=true;
 		$model->device->imagename=empty($model->device->imagename) ? $model->device->alias.'.jpg' : $model->device->imagename;
 //		ob_get_clean();
 //		var_dump($model);
@@ -384,7 +512,9 @@ class SiteController extends Controller
 					$devices[$itemalias]['name']=$item['name'];
 					$devices[$itemalias]['imagename']=$item['img'];
 				}elseif($item['type']=='device'){
-					$devices[$itemalias]=$db->createCommand('select * from device where name=:name')->bindValue('name',$item['name'])->queryOne();
+					$device=$db->createCommand('select * from device where name=:name')->bindValue('name',$item['name'])->queryOne();
+					if(!$device) continue;
+					$devices[$itemalias]=$device;
 					$devices[$itemalias]['imagename']='devices/'.$devices[$itemalias]['imagename'];
 				}
 				$devices[$itemalias]['link']=$menu_item->link.$itemalias.'/';

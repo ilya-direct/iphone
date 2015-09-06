@@ -92,7 +92,7 @@ AppAsset::register($this);
 <!-- Главное меню -->
 <ul class="menu">
 <li class="has-mega">
-	<a href="<?=Url::to(['remont-apple'])?>" data-menu="mega"><i class="icon-apple"></i>Apple</a>
+	<a href="/remont-apple/" data-menu="mega"><i class="icon-apple"></i>Apple</a>
 	<ul class="megamenu col-3">
 		<li class="m-submenu first col-1">
 			<a class="mmenu-title" href="remont-apple/iphone/">Ремонт iPhone</a>
@@ -120,10 +120,10 @@ AppAsset::register($this);
 			<a href="remont-apple/macbook/air/">MacBook Air</a>
 			<a href="remont-apple/macbook/pro/">MacBook Pro</a>
 			<a href="remont-apple/macbook/pro-retina-15/">MacBook Pro Retina 15"</a>
-			<a href="remont-apple/macbook/pro-retina/">MacBook Pro Retina 13"</a>
+			<a href="remont-apple/macbook/pro-retina-13/">MacBook Pro Retina 13"</a>
 			<a href="remont-apple/macbook/retina-12/">MacBook Retina 12"</a>
 			<a class="mmenu-title" href="remont-apple/imac/">Ремонт iMac</a>
-			<a class="mmenu-title" href="remont-apple/remont-apple-watch/">Ремонт Apple Watch</a>
+			<a class="mmenu-title" href="remont-apple/apple-watch/">Ремонт Apple Watch</a>
 		</li>
 	</ul>
 </li>
@@ -424,7 +424,7 @@ AppAsset::register($this);
 				</li>
 				<li>
 					<div>
-						<a href="/remont-apple/macbook/pro-retina/">MacBook Pro Retina 13"</a>
+						<a href="/remont-apple/macbook/pro-retina-13/">MacBook Pro Retina 13"</a>
 					</div>
 				</li>
 				<li>
@@ -441,7 +441,7 @@ AppAsset::register($this);
 		</li>
 		<li>
 			<div>
-				<a href="/remont-apple/remont-apple-watch/">Ремонт Apple Watch</a>
+				<a href="/remont-apple/apple-watch/">Ремонт Apple Watch</a>
 			</div>
 		</li>
 	</ul>
@@ -1810,7 +1810,7 @@ AppAsset::register($this);
 </div>
 
 <? if(!empty($this->params['navbar']) and $this->params['navbar']): ?>
-<div class="b-titlebar clearfix">
+<div class="b-titlebar<?=empty($this->params['title-alt'])? '' :'-alt';?> clearfix">
 	<div class="container">
 		<h1 class="text-xs-center"><?=Html::encode($this->title)?></h1>
 		<ul class="crumbs text-xs-center">
