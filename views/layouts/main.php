@@ -73,7 +73,7 @@ AppAsset::register($this);
 				</div>
 				<div class="top-bar-buttons">
 					<a href="#" class="btn small colored btn-ajax-popup"
-					   data-fancybox-href="/ajax/service-order-form/">Оставить заявку</a>
+					   data-fancybox-href="/ajax/service-order/">Оставить заявку</a>
 				</div>
 			</div>
 		</div>

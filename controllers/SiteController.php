@@ -13,7 +13,7 @@ use yii\filters\AccessControl;
 use yii\web\Controller;
 use yii\filters\VerbFilter;
 use app\models\LoginForm;
-use app\models\ContactForm;
+use app\models\OrderForm;
 
 class SiteController extends Controller
 {
@@ -538,7 +538,6 @@ class SiteController extends Controller
     {
 	    switch($param){
 	        case 'feedback':
-			case 'service-order':
 			case 'contacts-feedback':
 		    if(!Yii::$app->request->method==="POST") return '';
 		    $post=Yii::$app->request->post();
@@ -547,7 +546,7 @@ class SiteController extends Controller
 					    'msg_success'=>'Спасибо! Ваше сообщение успешно отправлено.',
 					    'msg_fail'=>'Извините, произошла ошибка! Попробуйте позже.'],
 					'service-order' => ['subject'=>'Оформление заявки',
-						'msg_success'=>'Спасибо! Ваша заявка успешно отправлена. Администратор свяжется с Вами в самое ближайшее время.',
+						'msg_success'=>'Спасибо! Ваша заявка успешно отправлена. Менеджер свяжется с Вами в самое ближайшее время.',
 						'msg_fail'=>'Извините, произошла ошибка! Попробуйте позже или позвоните нам.'],
 			        'contacts-feedback' => ['subject'=>'Обратная связь',
 				        'msg_success'=>'Спасибо! Ваше сообщение успешно отправлено.',
@@ -568,8 +567,18 @@ class SiteController extends Controller
 		    }
 		    $msg.='</div>';
 		    return  $msg;
-		    case 'service-order-form':
-			    return $this->renderPartial('service-order-form');
+		    case 'service-order':
+				$form=new OrderForm();
+				if(yii::$app->request->method=="POST"){
+				    $form->load(\Yii::$app->request->post());
+				    if ($form->validate()) {
+					    $msg='<div class="b-message success-message" style="margin:0;">';
+					    $msg.='Спасибо! Ваша заявка успешно отправлена. Менеджер свяжется с Вами в самое ближайшее время.';
+					    $msg.='</div>';
+					    return $msg;
+				    }
+				}
+			    return $this->renderPartial('service-order-form',['model'=>$form]);
 		    case 'service-order-item':
 		    case 'service-inform-price':
 				if(yii::$app->request->method=="POST"){

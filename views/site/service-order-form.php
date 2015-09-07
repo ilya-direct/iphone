@@ -1,5 +1,6 @@
 <?php
 	use yii\helpers\Html;
+	use yii\widgets\ActiveForm;
 ?>
 <div class="title">
 	<p class="intro">
@@ -8,27 +9,19 @@
 	</p>
 </div>
 <div class="centered">
-	<?=Html::beginForm('/ajax/service-order/','post',['class'=>"b-form iq-service-order service-form"]); ?>
-		<input type="hidden" name="form-service-order" value="1">
+	<? $form = ActiveForm::begin(['options' => [
+		'class' => 'b-form iq-service-order service-form',
+		'fieldConfig' => ['class'=>'input-wrap m-full-width']]]) ?>
 		<div class="right-wrap col-lg-6 col-md-6">
-			<div class="input-wrap m-full-width">
-				<i class="icon-user"></i>
-				<input class="field-name" type="text" placeholder="Ваше имя (*)" name="name" data-content="" value="" required>
-			</div>
-			<div class="input-wrap m-full-width">
-				<i class="icon-phone"></i>
-				<input class="field-phone" type="tel" placeholder="Телефон (*)" name="phone" data-content="" value="" required>
-			</div>
+			<?= $form->field($model, 'name',['options'=>['class'=>'input-wrap m-full-width'],'template'=>'<i class="icon-user"></i>{input}{error}'])->textInput(['class' => 'field-name','placeholder'=>'Ваше имя (*)']); ?>
+			<?= $form->field($model, 'phone',['options'=>['class'=>'input-wrap m-full-width'],'template'=>'<i class="icon-phone"></i>{input}{error}'])->textInput(['class' => 'field-name','placeholder'=>'Телефон (*)']); ?>
 		</div>
 		<div class="left-wrap col-lg-6 col-md-6">
-			<div class="textarea-wrap">
-				<i class="icon-pencil"></i>
-				<textarea class="field-comment" placeholder="Опишите проблему" name="comment" data-content=""></textarea>
-			</div>
+				<?= $form->field($model, 'comment',['options'=>['class'=>'textarea-wrap'],'template'=>'<i class="icon-pencil"></i>{input}{error}'])->textarea(['class' => 'field-name','placeholder'=>'Опишите проблему']); ?>
 		</div>
 		<div class="clearfix"></div>
 		<div class="submit">
-			<input class="btn-submit btn colored" type="submit" value="Отправить">
+			<?= Html::submitButton('Отправить', ['class' => 'btn-submit btn colored']) ?>
 		</div>
-	<?=Html::endForm(); ?>
+	<?php ActiveForm::end() ?>
 </div>
