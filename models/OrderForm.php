@@ -13,6 +13,7 @@ class OrderForm extends Model
     public $name;
     public $phone;
     public $comment;
+	public $device_id;
 
     /**
      * @return array the validation rules.

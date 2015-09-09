@@ -569,7 +569,7 @@ class SiteController extends Controller
 		    return  $msg;
 		    case 'service-order':
 				$form=new OrderForm();
-				if(yii::$app->request->method=="POST"){
+				if(yii::$app->request->isPost){
 				    $form->load(\Yii::$app->request->post());
 				    if ($form->validate()) {
 					    $msg='<div class="success-message">';
@@ -577,6 +577,8 @@ class SiteController extends Controller
 					    $msg.='</div>';
 					    return $msg;
 				    }
+				}elseif(yii::$app->request->isGet){
+					$form->load(\Yii::$app->request->get());
 				}
 			    return $this->renderPartial('service-order-form',['model'=>$form]);
 		    case 'service-order-item':
