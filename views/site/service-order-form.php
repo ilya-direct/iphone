@@ -9,9 +9,8 @@
 	</p>
 </div>
 <div class="centered">
-	<? $form = ActiveForm::begin(['options' => [
-		'class' => 'b-form iq-service-order service-form',
-		'fieldConfig' => ['class'=>'input-wrap m-full-width']]]) ?>
+	<? $form = ActiveForm::begin(['action'=>'/ajax/service-order/',
+		'options' => ['class' => 'b-form iq-service-order service-form']]);?>
 		<div class="right-wrap col-lg-6 col-md-6">
 			<?= $form->field($model, 'name',['options'=>['class'=>'input-wrap m-full-width'],'template'=>'<i class="icon-user"></i>{input}{error}'])->textInput(['class' => 'field-name','placeholder'=>'Ваше имя (*)']); ?>
 			<?= $form->field($model, 'phone',['options'=>['class'=>'input-wrap m-full-width'],'template'=>'<i class="icon-phone"></i>{input}{error}'])->textInput(['class' => 'field-name','placeholder'=>'Телефон (*)']); ?>

@@ -20,6 +20,8 @@ class AppAsset extends AssetBundle
     public $css = [
     ];
     public $js = [
+	    'assets/js/jquery-1.9.1.js',
+	    'assets/js/bootstrap.js'
     ];
     public $depends = [
     ];

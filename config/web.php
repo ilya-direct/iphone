@@ -62,6 +62,16 @@ $config = [
 
 			],
 		],
+	    'assetManager' => [
+		    'bundles' => [
+			    'yii\web\JqueryAsset' => [
+				    'sourcePath' => null,   // do not publish the bundle
+				    'js' => [
+					    '/assets/js/jquery-1.9.1.js',  // use custom jquery
+				    ]
+			    ],
+		    ],
+	    ],
     ],
     'params' => $params,
 ];

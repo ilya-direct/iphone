@@ -22,10 +22,19 @@ class OrderForm extends Model
         return [
 	        ['name', 'required', 'message' => 'Заполните имя'],
 	        ['phone', 'required', 'message' => 'Заполните телефон'],
+	        ['phone', 'validatePhone'],
 	        [['name', 'phone'], 'required'],
         ];
     }
 
+	public function validatePhone($attribute)
+	{
+		$value = $this->$attribute;
+
+		if (!preg_match('/^((8|\+7)[\- ]?)?(\(?\d{3}\)?[\- ]?)?[\d\- ]{7,10}$/',$value)) {
+			$this->addError($attribute, "Формат: +7 XXX XXX XX XX");
+		}
+	}
 
 	public function attributeLabels()
 	{

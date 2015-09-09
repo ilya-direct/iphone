@@ -101,7 +101,7 @@ use yii\helpers\Html;
 	<div class="bs-row">
 		<div class="col-lg-push-2 col-lg-8 col-md-push-2 col-md-8 col-sm-push-2 col-sm-8">
 			<div class="service-form xform b-box gray" id="form-service-order" data-url="/ajax/service-order/">
-				<?//$this->render('service-order-form')?>
+				<?=$this->render('service-order-form',['model'=>$model->form])?>
 			</div>
 		</div>
 	</div>

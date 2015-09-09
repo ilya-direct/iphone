@@ -1936,11 +1936,8 @@ AppAsset::register($this);
 	</div>
 </footer>
 </div>
-
-<script src="/assets/js/jquery-1.9.1.js"></script>
-<script type="text/javascript" src="/assets/js/bootstrap.js"></script>
-<script>window.params = {};</script>
 <?php $this->endBody() ?>
+<script>window.params = {};</script>
 </body>
 </html>
 <?php $this->endPage() ?>

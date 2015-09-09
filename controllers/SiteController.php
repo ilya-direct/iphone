@@ -572,7 +572,7 @@ class SiteController extends Controller
 				if(yii::$app->request->method=="POST"){
 				    $form->load(\Yii::$app->request->post());
 				    if ($form->validate()) {
-					    $msg='<div class="b-message success-message" style="margin:0;">';
+					    $msg='<div class="success-message">';
 					    $msg.='Спасибо! Ваша заявка успешно отправлена. Менеджер свяжется с Вами в самое ближайшее время.';
 					    $msg.='</div>';
 					    return $msg;
@@ -677,6 +677,8 @@ class SiteController extends Controller
 //		ob_get_clean();
 //		var_dump($model);
 //		return ob_get_clean();
+		$model->form=new OrderForm();
+		//$model->form->load(Yii::$app->request->post());
 		return $this->render('device',['model'=>$model]);
 	}
 
