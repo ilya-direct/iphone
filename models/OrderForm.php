@@ -14,6 +14,7 @@ class OrderForm extends Model
     public $phone;
     public $comment;
 	public $device_id;
+	public $deviceassign_id;
 
     /**
      * @return array the validation rules.
@@ -25,6 +26,9 @@ class OrderForm extends Model
 	        ['phone', 'required', 'message' => 'Заполните телефон'],
 	        ['phone', 'validatePhone'],
 	        [['name', 'phone'], 'required'],
+	        ['comment','trim'],
+	        ['device_id','integer'],
+	        ['deviceassign_id','integer'],
         ];
     }
 

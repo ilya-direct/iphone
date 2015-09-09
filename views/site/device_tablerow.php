@@ -31,7 +31,7 @@
 		<? }elseif($serv['price']==='Уточняйте'){ ?>
 			<a href="#"
 			   class="btn-ajax-popup b-dashed"
-			   data-fancybox-href="/ajax/service-inform-price/"
+			   data-fancybox-href="/ajax/service-order/"
 			   data-params="deviceassign_id=<?=$serv['deviceassign_id'];?>"><b>Уточняйте</b></a>
 		<? }else{ ?>
 			<b> <span><?=$serv['price']?></span> <i class="icon-rub"></i></b>
@@ -40,7 +40,7 @@
 				<a href="#"
 				   class="btn btn-xs small btn-ajax-popup"
 				   style="margin:10px 0 0;font-size:11px;padding:1px 7px;white-space:pre;"
-				   data-fancybox-href="/ajax/service-order-item/"
+				   data-fancybox-href="/ajax/service-order/"
 				   data-params="deviceassign_id=<?=$serv['deviceassign_id'];?>"><i class="icon-ok"></i>Заказать сейчас</a>
 			</div>
 		<? } ?>

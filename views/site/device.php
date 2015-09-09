@@ -21,7 +21,7 @@ use yii\helpers\Html;
 				<div class="element-wrap content-text">
 					<a href="#" class="btn btn-block big colored btn-ajax-popup"
 					   data-fancybox-href="/ajax/service-order/"
-					   data-resource-id="<?=$model->device->id?>">
+					   data-params="device_id=<?=$model->device->id?>">
 						Оставить заявку на ремонт
 					</a>
 				</div>

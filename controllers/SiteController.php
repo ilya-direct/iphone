@@ -578,25 +578,21 @@ class SiteController extends Controller
 					    return $msg;
 				    }
 				}elseif(yii::$app->request->isGet){
-					$form->load(\Yii::$app->request->get());
+					$form->device_id=empty($_GET['device_id']) ? null : $_GET['device_id'];
+					$form->deviceassign_id=empty($_GET['deviceassign_id']) ? null : $_GET['deviceassign_id'];
 				}
-			    return $this->renderPartial('service-order-form',['model'=>$form]);
-		    case 'service-order-item':
-		    case 'service-inform-price':
-				if(yii::$app->request->method=="POST"){
-					$model = new ApplicationForm();
-					$model->load([$model->formName()=>Yii::$app->request->post()]);
-					$da=Deviceassign::findOne(['id'=>$model->deviceassign_id]);
-					$model->service=$da->service->name;
-					$model->device=$da->device->name;
-					$model->price=$da->price;
-					$model->save();
-					return 'ок';
-				}else{
-				    $da=yii::$app->request->get()['deviceassign_id'];
-					$da=Deviceassign::findOne(['id'=>$da]);
-				    return $this->renderPartial('/site/ajax/'.$param,['service'=>$da->service->name,'device'=>$da->device->name,'da'=>$da->id]);
+				$param=[];
+				if(!empty($form->deviceassign_id)){
+					$deviceassign=Deviceassign::findOne($form->deviceassign_id);
+					$param['title']='Ремонт '.$deviceassign->device->name;
+					$param['service']=$deviceassign->service->name;
+					if(empty($deviceassign->price))
+						$param['get_price']=true;
+				}elseif(!empty($form->device_id)){
+					$device=Device::findOne($form->device_id);
+					$param['title']='Ремонт '.$device->name;
 				}
+			    return $this->renderPartial('service-order-form',['model'=>$form,'param'=>$param]);
 		    default: return '';
         }
     }
