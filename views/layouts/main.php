@@ -156,7 +156,7 @@ AppAsset::register($this);
 		</li>
 		<li class="m-submenu col-3">
 			<a class="mmenu-title" href="remont-telefonov/huawei/">Ремонт Huawei</a>
-			<a href="remont-telefonov/huawei/remont-huawei-g8/">Huawei G8</a>
+			<a href="remont-telefonov/huawei/g8/">Huawei G8</a>
 			<a href="remont-telefonov/huawei/p8/">Huawei Honor P8</a>
 			<a href="remont-telefonov/huawei/p8-lite/">Huawei Honor P8 Lite</a>
 			<a href="remont-telefonov/huawei/p8-max/">Huawei Honor P8 Max</a>
@@ -166,10 +166,13 @@ AppAsset::register($this);
 			<a href="remont-telefonov/huawei/honor-4c/">Huawei Honor 4C</a>
 			<a href="remont-telefonov/huawei/honor-3x/">Huawei Honor 3X</a>
 			<a href="remont-telefonov/huawei/honor-3c/">Huawei Honor 3C</a>
-			<a href="remont-telefonov/huawei/ascend-mate7/">Huawei Ascend Mate 7</a>
+			<a href="remont-telefonov/huawei/ascend-mate-7/">Huawei Ascend Mate 7</a>
 		</li>
 		<li class="m-submenu col-4">
 			<a class="mmenu-title" href="remont-telefonov/sony/">Ремонт Sony Xperia</a>
+			<a href="remont-telefonov/sony/xperia-z5-premium/">Sony Xperia Z5 Premium</a>
+			<a href="remont-telefonov/sony/xperia-z5/">Sony Xperia Z5</a>
+			<a href="remont-telefonov/sony/xperia-z5-compact/">Sony Xperia Z5 Compact</a>
 			<a href="remont-telefonov/sony/xperia-z4/">Sony Xperia Z4</a>
 			<a href="remont-telefonov/sony/xperia-z3/">Sony Xperia Z3</a>
 			<a href="remont-telefonov/sony/xperia-z3-compact/">Sony Xperia Z3 Compact</a>
@@ -177,10 +180,7 @@ AppAsset::register($this);
 			<a href="remont-telefonov/sony/xperia-z1/">Sony Xperia Z1</a>
 			<a href="remont-telefonov/sony/xperia-z1-compact/">Sony Xperia Z1 Compact</a>
 			<a href="remont-telefonov/sony/xperia-z-ultra/">Sony Xperia Z Ultra</a>
-			<a href="remont-telefonov/sony/xperia-z-l36/">Sony Xperia Z</a>
-			<a href="remont-telefonov/sony/xperia-c3/">Sony Xperia C3</a>
-			<a href="remont-telefonov/sony/xperia-t3/">Sony Xperia T3</a>
-			<a href="remont-telefonov/sony/xperia-e3/">Sony Xperia E3</a>
+			<a href="remont-telefonov/sony/xperia-z/">Sony Xperia Z</a>
 		</li>
 		<li class="megamenu-caption">
 		<!--noindex-->

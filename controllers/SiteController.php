@@ -165,6 +165,18 @@ class SiteController extends Controller
 								'name'=>'Samsung Galaxy A',
 								'img'=>'devices/samsung-galaxy-a.jpg',
 								'items'=>[
+									'7'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy A7'
+									],
+									'5'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy A5'
+									],
+									'3'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy A3'
+									],
 								]
 							],
 							'galaxy-s'=>[
@@ -174,20 +186,62 @@ class SiteController extends Controller
 								'img'=>'devices/samsung-galaxy-s.jpg',
 								'article_name'=>'Ремонт Samsung Galaxy S всего модельного ряда',
 								'items'=>[
-									's6'=>[
+									'6-edge'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy S6 EDGE',
+									],
+									'6'=>[
 										'type'=>'device',
 										'name'=>'Samsung Galaxy S6',
-										'title'=>'Samsung Galaxy S6',
-										'items'=>[
-										]
-									]
+									],
+									'5'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy S5',
+									],
+									'4'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy S4',
+									],
+									'4-mini'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy S4 mini',
+									],
+									'3'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy S3',
+									],
+									'2'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy S2',
+									],
 								]
 							],
 							'galaxy-note'=>[
 								'type'=>'category2',
 								'name'=>'Samsung Galaxy Note',
 								'img'=>'devices/samsung-galaxy-note.jpg',
-								'items'=>[]
+								'items'=>[
+									'5'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy Note 5'
+									],
+									'4'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy Note 4'
+									],
+									'3'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy Note 3'
+									],
+									'2'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy Note 2'
+									],
+									'edge'=>[
+										'type'=>'device',
+										'name'=>'Samsung Galaxy Note Edge'
+									],
+								]
 							],
 						],
 					],
@@ -246,6 +300,7 @@ class SiteController extends Controller
 					],
 					'oneplus'=>[
 						'type'=>'category2',
+						'name'=>'oneplus',
 						'title'=>'Ремонт телефонов OnePlus',
 						'items'=>[
 							'2'=>[
@@ -260,6 +315,7 @@ class SiteController extends Controller
 					],
 					'huawei'=>[
 						'type'=>'category2',
+						'name'=>'huawei',
 						'title'=>'Ремонт телефонов Huawei',
 						'items'=>[
 							'mate-s'=>[
@@ -270,17 +326,17 @@ class SiteController extends Controller
 								'type'=>'device',
 								'name'=>'Huawei G8',
 							],
-							'honor-p8'=>[
+							'p8'=>[
 								'type'=>'device',
-								'name'=>'Huawei Honor P8',
+								'name'=>'Huawei P8',
 							],
-							'honor-p8-lite'=>[
+							'p8-lite'=>[
 								'type'=>'device',
-								'name'=>'Huawei Honor P8 Lite',
+								'name'=>'Huawei P8 Lite',
 							],
-							'honor-p8-max'=>[
+							'p8-max'=>[
 								'type'=>'device',
-								'name'=>'Huawei Honor P8 Max',
+								'name'=>'Huawei P8 Max',
 							],
 							'honor-6-plus'=>[
 								'type'=>'device',
@@ -310,8 +366,60 @@ class SiteController extends Controller
 								'type'=>'device',
 								'name'=>'Huawei Ascend Mate 7',
 							],
-						]
+						],
 					],
+					'sony'=>[
+						'type'=>'cateory1',
+						'name'=>'Sony',
+						'title'=>'Ремонт Sony',
+						'items'=>[
+							'xperia-z5-premium'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z5 Premium',
+							],
+							'xperia-z5'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z5',
+							],
+							'xperia-z5-compact'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z5 Compact',
+							],
+							'xperia-z4'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z4',
+							],
+							'xperia-z3'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z3',
+							],
+							'xperia-z3-compact'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z3 Compact',
+							],
+							'xperia-z2'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z2',
+							],
+							'xperia-z1'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z1',
+							],
+							'xperia-z1-compact'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z1 Compact',
+							],
+							'xperia-z-ultra'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z Ultra',
+							],
+							'xperia-z'=>[
+								'type'=>'device',
+								'name'=>'Sony Xperia Z',
+							],
+						]
+
+					]
 
 				]
 			],
