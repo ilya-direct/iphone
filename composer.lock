@@ -27,7 +27,7 @@
             "extra": {
                 "bower-asset-main": [
                     "less/bootstrap.less",
-                    "dist/js/bootstrap.js"
+                    "dist/js/bootstrap2.js"
                 ],
                 "bower-asset-ignore": [
                     "/.*",
