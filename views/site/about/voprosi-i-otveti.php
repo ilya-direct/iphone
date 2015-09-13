@@ -5,7 +5,7 @@ use yii\helpers\Html;
 <div class="container">
 	<div class="bs-row">				<div class="col-md-9 col-lg-9">
 			<div class="element-wrap">
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Александр</span>
@@ -20,7 +20,7 @@ use yii\helpers\Html;
 						<p>Как правило на данный ремонт требуется до 2-3 недель с учетом заказа запчастей. Три месяца достаточКак правило на данный ремонт требуется до 2-3 недель с учетом заказа запчастей. Три месяца достаточно долгий срок. Привозите ноутбук к нам мы произведем диагностику. Если ноутбук ремонтно пригоден готовы восстановить его.но долгий срок. Привозите ноутбук к нам мы произведем диагностику. Если ноутбук ремонтно пригоден готовы восстановить его.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Леонид</span>
@@ -36,7 +36,7 @@ use yii\helpers\Html;
 							Стоимость замены матрицы на Вашем ноутбуке составит 7900 руб. В стоимость включена запчасть и работа мастера. Установка матрицы LP156WHA-SLL1 к сожалению не возможна так как она не совместима с Вашим ноутбуком.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Cергей</span>
@@ -51,7 +51,7 @@ use yii\helpers\Html;
 						<p>Здравствуйте Сергей! Данная услуга у нас составляет 900 руб. По времени займет 5-10 минут.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Макс</span>
@@ -66,7 +66,7 @@ use yii\helpers\Html;
 						<p>Здравствуйте Максим. Данная поломка достаточно частое явление. Время ремонта составит 30-40 минут. Стоимость 1590 руб. запчасти и работа. Если у Вас возникнут вопросы, обращайте, будем рады помочь!</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Мария</span>
@@ -82,7 +82,7 @@ use yii\helpers\Html;
 							Замена разъема наушников на iPad 2 стоит у нас 1900 рублей, включая запчасти и работу. Мы можем решить Вашу проблему, но Вы к сожалению не оставили контактные данные для связи с Вам. Свяжитесь по возможности с нами любым удобным способом для Вас.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Дмитрий</span>
@@ -97,7 +97,7 @@ use yii\helpers\Html;
 						<p>Причин может быть несколько, от выхода из строя дисплея до программного сбоя. Точную стоимость и причину мы можем сказать только после проведения диагностики которая у нас бесплатная.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue"></span>
@@ -112,7 +112,7 @@ use yii\helpers\Html;
 						<p>К сожалению Вы не оставили контактный е-майл, для того что бы мы могли с Вами связаться. Но тем не менее отвечаем на Ваш вопрос. Скорей всего проблема на программном уровне. В данном случае требуется диагностика самого аппарата. Если полифонический звук при входящем вызове не воспроизводится значит проблема в самом динамике. Точную неисправность можно сказать после проведения диагностики. Стоимость ремонта будет зависть от сложности работ. Более точную информацию Вы можете уточнить у наших мастеров, приехав к нам в сервисный центр.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Антон</span>
@@ -128,7 +128,7 @@ use yii\helpers\Html;
 							Проблема в самой камере. Проблему можно решить только путем замены на новую. Стоимость услуги составляет 2500 руб. в стоимость входят запчасти и работа. Вы можете вызвать мастера, либо приехать к нам в сервисный центр.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Влад</span>
@@ -144,7 +144,7 @@ use yii\helpers\Html;
 							Стоимость работ по замене матрицы на вашем ноутбуке составит 4990 руб. В стоимость входит работа и запчасти.</p>
 					</div>
 				</div>
-				<div class="b-spoiler m-alt iq-faq">
+				<div class="b-spoiler m-alt bmstu-faq">
 					<div class="spoiler-title active faq">
 						<div class="faq-info">
 							<span class="faq-author blue">Димтрий</span>

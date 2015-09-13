@@ -30,7 +30,7 @@ use yii\helpers\Html;
 		</div>
 	</div>
 </div>
-<section class="element-wrap iq-advantages margin-20">
+<section class="element-wrap bmstu-advantages margin-20">
 	<h3 class="lined centered margin-40">Наши преимущества</h3>
 	<div class="bs-row">
 		<div class="col-md-4 col-lg-4">
@@ -58,16 +58,16 @@ use yii\helpers\Html;
 </section>
 <!-- Стоимость ремонта -->
 <? if(!empty($model->cat0) && !empty($model->categories)): ?>
-<section class="element-wrap iq-services-prices margin-20">
+<section class="element-wrap bmstu-services-prices margin-20">
 <h2 class="lined centered margin-30">Стоимость ремонта  «<?=$model->device->name?>»</h2>
 <div class="b-table">
-<table class="iq-services-prices-table margin-20">
+<table class="bmstu-services-prices-table margin-20">
 <thead>
 <tr>
-	<td class="col-1 iq-col-title">Наименование услуги</td>
-	<td class="col-2 centered iq-col-price">Стоимость</td>
-	<td class="col-3 centered iq-col-time">Сроки ремонта*</td>
-	<td class="col-4 centered iq-col-warranty">Гарантия</td>
+	<td class="col-1 bmstu-col-title">Наименование услуги</td>
+	<td class="col-2 centered bmstu-col-price">Стоимость</td>
+	<td class="col-3 centered bmstu-col-time">Сроки ремонта*</td>
+	<td class="col-4 centered bmstu-col-warranty">Гарантия</td>
 </tr>
 </thead>
 <tbody>
@@ -78,7 +78,7 @@ use yii\helpers\Html;
 <tr class="tbl-group">
 	<th colspan="4">
 		<a href="#" class="tbl-collapse">
-			<span class="iq-service-title"><?=$name?></span>
+			<span class="bmstu-service-title"><?=$name?></span>
 			<i class="icon-chevron-down down"></i>
 			<i class="icon-chevron-up up"></i>
 		</a>
@@ -92,7 +92,7 @@ use yii\helpers\Html;
 </table>
 </div>
 </section>
-<div class="element-wrap margin-30 iq-prices-notes">
+<div class="element-wrap margin-30 bmstu-prices-notes">
 	<p><span class="star">*</span> Сроки ремонта зависят от наличия требуемых запчастей и загруженности мастеров.<br /><span class="star">**</span> Все цены на сайте указаны в рублях с учетом запчастей.</p>
 </div>
 <? endif; ?>
@@ -106,11 +106,11 @@ use yii\helpers\Html;
 		</div>
 	</div>
 </div>
-<section class="element-wrap iq-block-services-feedback margin-0">
+<section class="element-wrap bmstu-block-services-feedback margin-0">
 	<?=$this->render('feedback+more-about-us') ?>
 </section>
 <? if(!empty($model->article)): ?>
-<div class="element-wrap margin-10 iq-bottom-text content-text">
+<div class="element-wrap margin-10 bmstu-bottom-text content-text">
 	<h2><?=$model->article->title?></h2>
 	<?=$model->article->text?>
 	<div class="collapse-buttons text-xs-center">

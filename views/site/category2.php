@@ -1,7 +1,7 @@
 <div class="content shortcodes">
 <div class="container">
 <div class="element-wrap centered">
-	<ul class="iq-services-gallery iq-services-brand">
+	<ul class="bmstu-services-gallery bmstu-services-brand">
 		<? foreach($devices as $device): ?>
 		<li class="item">
 			<div class="b-service">
@@ -20,7 +20,7 @@
 	<?=$text?>
 </div>
 <div class="gap" style="height: 20px;"></div>
-<section class="element-wrap iq-block-services-feedback margin-0">
+<section class="element-wrap bmstu-block-services-feedback margin-0">
 	<?=$this->render('feedback+more-about-us');?>
 </section>
 </div>

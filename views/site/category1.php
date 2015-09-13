@@ -1,6 +1,6 @@
 <div class="content">
 <div class="container">
-<div id="iq-gallery-desktop" class="b-tabs m-nav-left margin-40 iq-tabs iq-services-types hidden-xs hidden-sm">
+<div id="bmstu-gallery-desktop" class="b-tabs m-nav-left margin-40 bmstu-tabs bmstu-services-types hidden-xs hidden-sm">
 <ul class="tabs-nav">
 	<li class="active"><a href="<?=$menu[$brands[0]]->link?>"><span><?=$menu[$brands[0]]->title;?></span></a></li>
 	<? for($i=1;$i<count($brands);$i++): ?>
@@ -10,7 +10,7 @@
 <div class="tabs-content">
 <? for($i=0;$i<count($brands);$i++): ?>
 <div class="tab<?=($i==0) ? ' active': '';?>">
-	<ul class="iq-services-gallery centered">
+	<ul class="bmstu-services-gallery centered">
 		<?foreach($categories[$brands[$i]] as $item): ?>
 		<li class="item">
 			<div class="b-service">
@@ -30,7 +30,7 @@
 <? endfor; ?>
 </div>
 </div>
-<div id="iq-gallery-mobile" class="b-accordion iq-accordion iq-services-types hidden-md hidden-lg">
+<div id="bmstu-gallery-mobile" class="b-accordion bmstu-accordion bmstu-services-types hidden-md hidden-lg">
 	<? for($i=0;$i<count($brands);$i++): ?>
 	<div class="b-spoiler m-alt">
 		<div class="spoiler-title"><span><?=$menu[$brands[$i]]->title?></span></div>
@@ -42,7 +42,7 @@
 	<?=$text?>
 </div>
 <div class="gap" style="height: 20px;"></div>
-<section class="element-wrap iq-block-services-feedback margin-0">
+<section class="element-wrap bmstu-block-services-feedback margin-0">
 	<?=$this->render('feedback+more-about-us');?>
 </section>
 </div>

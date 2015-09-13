@@ -1,11 +1,3 @@
-/*!
- * Bootstrap v3.3.4 (http://getbootstrap.com)
- * Copyright 2011-2015 Twitter, Inc.
- * Licensed under MIT (https://github.com/twbs/bootstrap/blob/master/LICENSE)
- *//*!
- * Generated using the Bootstrap Customizer (http://getbootstrap.com/customize/?id=9298cf24bf4330a64b25)
- * Config saved to config.json and https://gist.github.com/9298cf24bf4330a64b25
- *//*! normalize.css v3.0.2 | MIT License | git.io/normalize */
 html {
     font-family: sans-serif;
     -ms-text-size-adjust: 100%;
@@ -2007,7 +1999,7 @@ hr {
     padding: 10px;
 }
 
-.iq-testimonials .bx-wrapper .bx-viewport {
+.bmstu-testimonials .bx-wrapper .bx-viewport {
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -7784,7 +7776,7 @@ i.m-square {
     border-bottom: none;
 }
 
-.iq-services-prices-table .tbl-group th {
+.bmstu-services-prices-table .tbl-group th {
     padding: 0;
 }
 
@@ -9711,11 +9703,11 @@ i.ita {
     border-top: 1px solid #e4e4e4;
 }
 
-.content.iq-service {
+.content.bmstu-service {
     border: none;
 }
 
-.content.iq-service .container, .content.iq-service .layout {
+.content.bmstu-service .container, .content.bmstu-service .layout {
     padding-top: 20px;
     padding-bottom: 20px;
 }
@@ -12053,40 +12045,40 @@ dl.Zebra_Accordion dt.Zebra_Accordion_Expanded {
     text-align: justify;
 }
 
-.iq-list-unstyled {
+.bmstu-list-unstyled {
     list-style: none;
     margin: 0;
     padding: 0;
 }
 
-.iq-page-heading {
+.bmstu-page-heading {
     font-size: 26px;
     line-height: 1.4;
 }
 
-.iq-text ol, .iq-text ul {
+.bmstu-text ol, .bmstu-text ul {
     list-style-position: inside;
 }
 
-.b-tabs.iq-tabs .tabs-nav a {
+.b-tabs.bmstu-tabs .tabs-nav a {
     color: #65686d;
 }
 
-.iq-services-buttons {
+.bmstu-services-buttons {
     text-align: right;
 }
 
-.iq-services-gallery {
+.bmstu-services-gallery {
     padding: 20px 0 0;
     margin: 0 -5px;
     font-size: 0;
 }
 
-ul.iq-services-gallery {
+ul.bmstu-services-gallery {
     list-style: none;
 }
 
-.iq-services-gallery .item {
+.bmstu-services-gallery .item {
     display: inline-block;
     margin: 0 0 30px;
     padding: 0 5px;
@@ -12098,33 +12090,33 @@ ul.iq-services-gallery {
     box-sizing: border-box;
 }
 
-.iq-services-gallery .item > .b-service {
+.bmstu-services-gallery .item > .b-service {
     margin: 0 auto;
     padding: 0;
 }
 
-.iq-services-gallery .image-wrap {
+.bmstu-services-gallery .image-wrap {
     text-align: center;
 }
 
-.iq-services-gallery .image-wrap > a {
+.bmstu-services-gallery .image-wrap > a {
     display: inline-block;
 }
 
-.iq-services-gallery .image-wrap > a > img {
+.bmstu-services-gallery .image-wrap > a > img {
     vertical-align: bottom;
     max-width: 100%;
     height: auto;
 }
 
-.iq-services-gallery .title {
+.bmstu-services-gallery .title {
     font-size: 14px;
     line-height: 1.4;
     padding: 0 15px 0;
     margin: 10px 0;
 }
 
-.iq-services-prices .iq-service-title {
+.bmstu-services-prices .bmstu-service-title {
     font-size: 16px;
     font-weight: bold;
     font-family: 'OpenSansSemiboldRegular', arial, sans-serif;
@@ -12132,49 +12124,49 @@ ul.iq-services-gallery {
     margin: 10px 0;
 }
 
-.iq-services-prices .iq-service-title a {
+.bmstu-services-prices .bmstu-service-title a {
     color: #5489de;
     text-decoration: underline;
     -webkit-transition: none;
     transition: none;
 }
 
-.iq-service-price b > span {
+.bmstu-service-price b > span {
     font-family: OpenSansSemiboldRegular, Arial, sans-serif;
     font-size: 16px;
     font-weight: normal;
 }
 
-.iq-service-price .iq-old-price {
+.bmstu-service-price .bmstu-old-price {
     color: #c4c4c4;
 }
 
-.iq-service-price .iq-old-price b > span {
+.bmstu-service-price .bmstu-old-price b > span {
     font-size: 14px;
     text-decoration: line-through;
 }
 
-.iq-service-price .iq-old-price b .icon-rub {
+.bmstu-service-price .bmstu-old-price b .icon-rub {
     font-size: 13px;
 }
 
-.iq-old-price .iq-price-value {
+.bmstu-old-price .bmstu-price-value {
     text-decoration: line-through;
 }
 
-.iq-price {
+.bmstu-price {
     font-size: 14px;
     font-weight: normal;
     font-family: "OpenSansSemiboldRegular", Arial, sans-serif;
     line-height: 1.4;
 }
 
-.iq-price.big {
+.bmstu-price.big {
     font-size: 36px;
     margin-bottom: 14px;
 }
 
-.iq-price.old {
+.bmstu-price.old {
     color: #c4c4c4;
     font-size: 18px;
     line-height: 1;
@@ -12184,59 +12176,59 @@ ul.iq-services-gallery {
     margin-bottom: 12px;
 }
 
-.iq-price.empty, .iq-price.free {
+.bmstu-price.empty, .bmstu-price.free {
     font-size: 22px;
     padding: 22px 0;
 }
 
-.iq-price .iq-price-prefix {
+.bmstu-price .bmstu-price-prefix {
     font-size: 70%;
 }
 
-.iq-price .iq-price-currency {
+.bmstu-price .bmstu-price-currency {
     font-size: 80%;
 }
 
-.iq-service-info .iq-diag, .iq-service-info .iq-time, .iq-service-info .iq-warranty {
+.bmstu-service-info .bmstu-diag, .bmstu-service-info .bmstu-time, .bmstu-service-info .bmstu-warranty {
     font-size: 14px;
     line-height: 1.4;
     margin: 8px 0;
 }
 
-.iq-service-info.bb-dashed {
+.bmstu-service-info.bb-dashed {
     border-bottom: 1px dashed;
     padding-bottom: 5px;
     margin-bottom: 15px;
 }
 
-.message-info.iq-service-info {
+.message-info.bmstu-service-info {
     padding: 8px;
     position: relative;
     margin-bottom: 15px;
 }
 
-.iq-services-prices .iq-service-title a:hover, .iq-services-prices .iq-service-title a:focus {
+.bmstu-services-prices .bmstu-service-title a:hover, .bmstu-services-prices .bmstu-service-title a:focus {
     text-decoration: none;
 }
 
-.message-info.iq-service-info > i {
+.message-info.bmstu-service-info > i {
     display: none;
     position: absolute;
     left: 15px;
     top: 8px;
 }
 
-.iq-services-prices-notes p {
+.bmstu-services-prices-notes p {
     margin: 0;
 }
 
-.b-accordion.iq-accordion {
+.b-accordion.bmstu-accordion {
     border: 1px solid #dfdfdf;
     border-bottom-width: 0;
     box-shadow: 0 2px 3px rgba(0, 0, 0, 0.02);
 }
 
-.b-accordion.iq-accordion .spoiler-title {
+.b-accordion.bmstu-accordion .spoiler-title {
     background: #fafafa url(/assets/images/btn-soc.png) repeat-x top;
     border: none;
     border-bottom: 1px solid #dfdfdf;
@@ -12255,18 +12247,18 @@ ul.iq-services-gallery {
     transition: background-color 0.2s ease;
 }
 
-.b-accordion.iq-accordion .spoiler-title.active {
+.b-accordion.bmstu-accordion .spoiler-title.active {
     background: #fff;
     border-bottom: 2px solid #5489de;
     color: #313538;
 }
 
-.b-accordion.iq-accordion .spoiler-title:before {
+.b-accordion.bmstu-accordion .spoiler-title:before {
     background: transparent;
     border: none;
 }
 
-.b-accordion.iq-accordion .spoiler-title.active:before {
+.b-accordion.bmstu-accordion .spoiler-title.active:before {
     background: transparent;
     border: none;
     color: #313538;
@@ -12275,80 +12267,80 @@ ul.iq-services-gallery {
     box-shadow: none;
 }
 
-.b-accordion.iq-accordion .spoiler-content {
+.b-accordion.bmstu-accordion .spoiler-content {
     border-bottom: 1px solid #dfdfdf;
 }
 
-.b-accordion.iq-accordion .spoiler-content > p {
+.b-accordion.bmstu-accordion .spoiler-content > p {
     padding: 12px;
     margin: 0;
 }
 
-.iq-testimonials {
+.bmstu-testimonials {
     position: relative;
 }
 
-.iq-testimonials .title {
+.bmstu-testimonials .title {
     padding-right: 60px;
 }
 
-.iq-testimonials .controls {
+.bmstu-testimonials .controls {
     position: absolute;
     top: 3px;
     right: 0;
     background: #fff;
 }
 
-.iq-testimonials .controls > .prev, .iq-testimonials .controls > .next {
+.bmstu-testimonials .controls > .prev, .bmstu-testimonials .controls > .next {
     display: inline-block;
     margin: 0 4px;
 }
 
-.iq-testimonials .controls > .prev > a, .iq-testimonials .controls > .next > a {
+.bmstu-testimonials .controls > .prev > a, .bmstu-testimonials .controls > .next > a {
     display: inline-block;
     padding: 0 4px;
     font-size: 16px;
 }
 
-.iq-testimonials a.disabled {
+.bmstu-testimonials a.disabled {
     color: #cecece;
     cursor: default;
 }
 
-.iq-testimonials .bx-viewport {
+.bmstu-testimonials .bx-viewport {
     height: auto !important;
 }
 
-.iq-testimonials .bx-viewport .recall-text > p {
+.bmstu-testimonials .bx-viewport .recall-text > p {
     margin: 0;
     padding: 0;
     height: 63px;
     overflow: hidden;
 }
 
-.iq-testimonials .bx-viewport .recall-text.open > p {
+.bmstu-testimonials .bx-viewport .recall-text.open > p {
     height: auto;
     transition: all .1s ease-in-out;
 }
 
-.iq-testimonials .b-recall {
+.bmstu-testimonials .b-recall {
     margin-bottom: 10px;
 }
 
-.iq-testimonial-form .field-comment {
+.bmstu-testimonial-form .field-comment {
     height: 78px;
 }
 
-.b-spoiler.iq-faq {
+.b-spoiler.bmstu-faq {
     border-bottom: 1px dashed #dee1e2;
     margin-bottom: 10px;
 }
 
-.b-spoiler.iq-faq > .spoiler-title {
+.b-spoiler.bmstu-faq > .spoiler-title {
     border: none;
 }
 
-.b-spoiler.iq-faq > .spoiler-content {
+.b-spoiler.bmstu-faq > .spoiler-content {
     border: none;
     border-left: 2px solid #5489de;
     padding: 0;
@@ -12356,7 +12348,7 @@ ul.iq-services-gallery {
     margin-bottom: 20px;
 }
 
-.b-spoiler.iq-faq > .spoiler-content > p {
+.b-spoiler.bmstu-faq > .spoiler-content > p {
     padding: 0 20px;
     margin: 0;
 }
@@ -12372,7 +12364,7 @@ ul.iq-services-gallery {
     margin: 5px 0;
 }
 
-.btn.iq-btn {
+.btn.bmstu-btn {
     padding-left: 0;
     padding-right: 0;
     text-align: center;
@@ -12392,17 +12384,17 @@ ul.iq-services-gallery {
     margin: 4px 0;
 }
 
-.bottom-bar-phone .phone-desktop, .b-top-bar .iq-contacts-address, .b-top-bar .iq-contacts-time {
+.bottom-bar-phone .phone-desktop, .b-top-bar .bmstu-contacts-address, .b-top-bar .bmstu-contacts-time {
     color: #bbbfc2;
 }
 
-.b-top-bar .iq-contacts-address {
+.b-top-bar .bmstu-contacts-address {
     font-size: 12px;
     line-height: 1.5;
     padding: 12px 0;
 }
 
-.b-top-bar .iq-contacts-time, .bottom-bar-phone .iq-contacts-time {
+.b-top-bar .bmstu-contacts-time, .bottom-bar-phone .bmstu-contacts-time {
     font-size: 11px;
     line-height: 1;
     margin: 8px 0;
@@ -12453,11 +12445,11 @@ ul.iq-services-gallery {
     white-space: nowrap;
 }
 
-.b-table table.iq-services-prices-table {
+.b-table table.bmstu-services-prices-table {
     margin-bottom: 10px;
 }
 
-table.iq-services-prices-table thead td.iq-col-title, table.iq-services-prices-table thead td.iq-col-price, table.iq-services-prices-table thead td.iq-col-time, table.iq-services-prices-table thead td.iq-col-warranty {
+table.bmstu-services-prices-table thead td.bmstu-col-title, table.bmstu-services-prices-table thead td.bmstu-col-price, table.bmstu-services-prices-table thead td.bmstu-col-time, table.bmstu-services-prices-table thead td.bmstu-col-warranty {
     word-break: normal;
 }
 
@@ -13077,7 +13069,7 @@ ul.slider li {
     background: #5489de;
 }
 
-.iq-testimonials .bx-wrapper .bx-viewport {
+.bmstu-testimonials .bx-wrapper .bx-viewport {
     border: none;
     -webkit-box-shadow: none;
     -moz-box-shadow: none;
@@ -13413,26 +13405,26 @@ ul.slider li {
     padding: 8px;
 }
 
-.iq-services-prices-table .col-1 {
+.bmstu-services-prices-table .col-1 {
     width: 65%;
 }
 
-.iq-services-prices-table .col-2 {
+.bmstu-services-prices-table .col-2 {
     width: 35%;
 }
 
-.iq-services-prices-table .col-3, .iq-services-prices-table .col-4 {
+.bmstu-services-prices-table .col-3, .bmstu-services-prices-table .col-4 {
     display: none;
     width: 0;
 }
 
 @media screen and (min-width: 768px) {
-    .message-info.iq-service-info {
+    .message-info.bmstu-service-info {
         padding-left: 40px;
         padding-right: 40px;
     }
 
-    .message-info.iq-service-info > i {
+    .message-info.bmstu-service-info > i {
         display: inline-block;
     }
 
@@ -13456,15 +13448,15 @@ ul.slider li {
         padding: 8px 12px;
     }
 
-    .iq-services-prices-table .col-1 {
+    .bmstu-services-prices-table .col-1 {
         width: 65%;
     }
 
-    .iq-services-prices-table .col-2 {
+    .bmstu-services-prices-table .col-2 {
         width: 20%;
     }
 
-    .iq-services-prices-table .col-3 {
+    .bmstu-services-prices-table .col-3 {
         display: table-cell;
         width: 15%;
     }
@@ -13532,15 +13524,15 @@ ul.slider li {
         line-height: 24px;
     }
 
-    .iq-services-prices-table .col-1 {
+    .bmstu-services-prices-table .col-1 {
         width: 65%;
     }
 
-    .iq-services-prices-table .col-2 {
+    .bmstu-services-prices-table .col-2 {
         width: 15%;
     }
 
-    .iq-services-prices-table .col-3, .iq-services-prices-table .col-4 {
+    .bmstu-services-prices-table .col-3, .bmstu-services-prices-table .col-4 {
         display: table-cell;
         width: 10%;
     }
@@ -13594,61 +13586,61 @@ ul.slider li {
         margin-right: auto;
     }
 
-    .iq-services-buttons {
+    .bmstu-services-buttons {
         text-align: center;
     }
 
-    .iq-services-buttons .btn, .iq-services-buttons a.btn {
+    .bmstu-services-buttons .btn, .bmstu-services-buttons a.btn {
         display: block;
         margin-right: 0;
     }
 
-    .iq-hidden-xs {
+    .bmstu-hidden-xs {
         display: none !important;
     }
 }
 
 @media screen and (min-width: 496px) and (max-width: 782px) {
-    .iq-hidden-sm {
+    .bmstu-hidden-sm {
         display: none !important;
     }
 }
 
 @media screen and (min-width: 783px) and (max-width: 1038px) {
-    .iq-hidden-md {
+    .bmstu-hidden-md {
         display: none !important;
     }
 }
 
 @media screen and (min-width: 1039px) {
-    .iq-hidden-lg {
+    .bmstu-hidden-lg {
         display: none !important;
     }
 }
 
 @media screen and (min-width: 495px) {
-    .iq-services-gallery .item {
+    .bmstu-services-gallery .item {
         width: 50%;
     }
 }
 
 @media screen and (min-width: 783px) {
-    .iq-services-buttons {
+    .bmstu-services-buttons {
         text-align: right;
     }
 
-    .iq-services-buttons .btn, .iq-services-buttons a.btn {
+    .bmstu-services-buttons .btn, .bmstu-services-buttons a.btn {
         margin-right: 0;
         margin-left: 7px;
     }
 
-    .iq-services-gallery .item {
+    .bmstu-services-gallery .item {
         width: 33.33%;
     }
 }
 
 @media screen and (min-width: 1039px) {
-    .iq-services-gallery .item {
+    .bmstu-ervices-gallery .item {
         width: 25%;
     }
 }

@@ -42,7 +42,7 @@ $this->params['breadcrumbs']= [];
 						Вы можете оставить свой комментарий или задать любой вопрос
 						воспользовавшись формой обратной связи.</p>
 					<div class="contacts-feedback-form xform" id="contacts-form-feedback" data-url="/ajax/contacts-feedback/">
-						<?=Html::beginForm('/ajax/contacts-feedback/','post',['class'=>"b-form iq-feedback-form ajax-form"]); ?>
+						<?=Html::beginForm('/ajax/contacts-feedback/','post',['class'=>"b-form bmstu-feedback-form ajax-form"]); ?>
 							<input type="hidden" name="contacts-form-feedback" value="1">
 							<div class="row bs-row">
 								<div class="col-xs-12">

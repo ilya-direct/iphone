@@ -1,14 +1,14 @@
 <tr <?=$display ? '': 'style="display:none;"'?>>
 	<td class="col-1">
-		<div class="iq-service-title">
+		<div class="bmstu-service-title">
 			<?=$serv['name']?>
 		</div>
 		<div class="collapsible collapse-xs collapsed">
 			<div class="collapse-container">
-				<div class="iq-service-details">
+				<div class="bmstu-service-details">
 					<p><?=$serv['smalldesc']?></p>
 					<? if(!empty($serv['warning'])):?>
-						<p class="b-message message-info iq-service-info">
+						<p class="b-message message-info bmstu-service-info">
 							<i class="icon-warning-sign"></i>
 							<?=$serv['warning']?>
 						</p>
@@ -25,7 +25,7 @@
 			</a>
 		</div>
 	</td>
-	<td class="col-2 centered iq-service-price">
+	<td class="col-2 centered bmstu-service-price">
 		<? if($serv['price']==='Бесплатно'){ ?>
 		<span class="blue"><b>Бесплатно</b></span>
 		<? }elseif($serv['price']==='Уточняйте'){ ?>

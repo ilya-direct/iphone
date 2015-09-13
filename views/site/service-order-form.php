@@ -37,7 +37,7 @@
 	<? endif;?>
 <div class="centered">
 	<? $form = ActiveForm::begin(['action'=>'/ajax/service-order/',
-		'options' => ['class' => 'b-form iq-service-order service-form']]);?>
+		'options' => ['class' => 'b-form bmstu-service-order service-form']]);?>
 		<?=Html::hiddenInput($model->formName().'[device_id]', $model->device_id) ?>
 		<?=Html::hiddenInput($model->formName().'[deviceassign_id]', $model->deviceassign_id) ?>
 		<?if(empty($param['get_price'])){ ?>

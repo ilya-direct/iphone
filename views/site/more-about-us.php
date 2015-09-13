@@ -1,5 +1,5 @@
 <!-- Подробности о нас -->
-<section class="element-wrap iq-details-about-us">
+<section class="element-wrap bmstu-details-about-us">
 	<h3 class="lined margin-20">Подробнее о нас</h3>
 	<ul class="b-list iconok m-circle">
 		<li>Мы обеспечены профессиональным оборудованием, с помощью которого проводим точную диагностику и ремонт</li>

@@ -9,7 +9,7 @@ use yii\helpers\Html;
 		<h4 class="text-center"><?=$device?><br><span style="font-size:13px"><?=$service?></span></h4>
 	</div>
 	<div class="centered">
-		<?=Html::beginForm('/ajax/service-order-item/','post',['class'=>"b-form iq-service-order-item service-form"]); ?>
+		<?=Html::beginForm('/ajax/service-order-item/','post',['class'=>"b-form bmstu-service-order-item service-form"]); ?>
 			<input type="hidden" name="deviceassign_id" value="<?=$da?>">
 			<div class="input-wrap m-full-width">
 				<i class="icon-user"></i>

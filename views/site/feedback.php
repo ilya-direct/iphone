@@ -1,11 +1,11 @@
 <!-- Отзывы -->
-<section class="element-wrap margin-0 iq-testimonials" id="iq-testimonials">
+<section class="element-wrap margin-0 bmstu-testimonials" id="bmstu-testimonials">
 	<h3 class="lined margin-20 title">Отзывы</h3>
 	<div class="controls">
 		<span class="prev"></span>
 		<span class="next"></span>
 	</div>
-	<ul class="bxlider iq-list-unstyled" id="iq-testimonials-slider">
+	<ul class="bxlider bmstu-list-unstyled" id="bmstu-testimonials-slider">
 		<li>
 			<div class="b-recall">
 				<div class="recall-text"><p>Очень славные ребята у вас работают. Сломался Хуавей Хонор-6. Поехал в рем мастрскую на Щелковской. Пообещали починить за 5 000 рэ и 2 недели. Срок меня не устроил и я поехал сюда. В IQСервис у меня взяли телефон, и за 10 (десять) сек все исправили. Там разъем просто засорился. В общем, молодцы. Хорошие специалисты, а главное - честные!</p></div>
@@ -100,10 +100,10 @@
 	<hr class="dashed" style="margin-top: 0px;margin-bottom:10px;">
 	<div class="bs-row margin-20 clearfix">
 		<div class="col-sm-6 col-md-6 col-lg-6">
-			<a href="http://iphone/about/otzivi/#testimonials" class="btn btn-block iq-btn"><i class="icon-comments"></i>Все отзывы</a>
+			<a href="http://iphone/about/otzivi/#testimonials" class="btn btn-block bmstu-btn"><i class="icon-comments"></i>Все отзывы</a>
 		</div>
 		<div class="col-sm-6 col-md-6 col-lg-6">
-			<a href="http://iphone/about/otzivi/" class="btn btn-block iq-btn"><i class="icon-edit"></i>Оставить свой отзыв</a>
+			<a href="http://iphone/about/otzivi/" class="btn btn-block bmstu-btn"><i class="icon-edit"></i>Оставить свой отзыв</a>
 		</div>
 	</div>
 </section>

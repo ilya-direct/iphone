@@ -36,7 +36,7 @@ AppAsset::register($this);
 		<div class="bs-row">
 			<div class="col-sm-3 col-md-4 col-lg-4 hidden-xs hidden-ms">
 				<div class="top-bar-text hidden-sm">
-					<div class="iq-contacts-address">
+					<div class="bmstu-contacts-address">
 						г. Москва, м. Бауманкая<br>
 						ул. Фридриха Энгельса, д.21
 					</div>
@@ -53,7 +53,7 @@ AppAsset::register($this);
 						<div class="phone-desktop hidden-xs hidden-ms">
 							<i class="icon-phone"></i> +7 (963) 656-83-77
 						</div>
-						<div class="iq-contacts-time hidden-xs hidden-ms">
+						<div class="bmstu-contacts-time hidden-xs hidden-ms">
 							<i class="icon-time"></i>&nbsp;
 							Пн-Пт: 9:00 - 20:00,
 							Сб-Вс: 11:00 - 18:00
@@ -148,7 +148,7 @@ AppAsset::register($this);
 					<section class="b-widgets-wrap">
 						<div class="feedback-form xform" id="form-feedback" data-url="/ajax/feedback/">
 							<h3>Напишите нам</h3>
-							<?=Html::beginForm('/ajax/feedback/','post',['class'=> "b-form iq-feedback-form ajax-form"]); ?>
+							<?=Html::beginForm('/ajax/feedback/','post',['class'=> "b-form bmstu-feedback-form ajax-form"]); ?>
 								<input type="hidden" name="form-feedback" value="1">
 								<div class="row bs-row">
 									<div class="col-xs-12">
@@ -197,7 +197,7 @@ AppAsset::register($this);
 							<div class="phone-desktop hidden-xs hidden-ms">
 								<i class="icon-phone"></i> +7 (963) 656-83-77
 							</div>
-							<div class="iq-contacts-time hidden-xs hidden-ms">
+							<div class="bmstu-contacts-time hidden-xs hidden-ms">
 								<i class="icon-time"></i>&nbsp;
 								Пн-Пт:  9:00 - 20:00,
 								Сб-Вс: 11:00 - 18:00

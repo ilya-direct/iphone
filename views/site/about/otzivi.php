@@ -6,7 +6,7 @@ use yii\helpers\Html;
 		<div class="bs-row">				<div class="col-md-9 col-lg-9">
 				<div class="service-form xform" id="form-testimonial" data-url="/ajax/testimonial/">
 					<h2 class="text-xs-center margin-20 lined">Оставьте свой отзыв</h2>
-					<form class="b-form iq-testimonial-form margin-30"  action="/ajax/testimonial/" method="post">
+					<form class="b-form bmstu-testimonial-form margin-30"  action="/ajax/testimonial/" method="post">
 						<input type="hidden" name="form-testimonial" value="1">
 						<div class="row bs-row">
 							<div class="col-sm-4 col-md-4 col-lg-4">
@@ -34,7 +34,7 @@ use yii\helpers\Html;
 						</div>
 					</form>
 				</div>
-				<div class="element-wrap iq-pages-testimonials" id="testimonials-all">
+				<div class="element-wrap bmstu-pages-testimonials" id="testimonials-all">
 					<h2 class="text-xs-center lined margin-20">Все отзывы</h2>
 					<div class="b-recall">
 						<div class="recall-text">Очень славные ребята у вас работают. Сломался Хуавей Хонор-6. Поехал в рем мастрскую на Щелковской. Пообещали починить за 5 000 рэ и 2 недели. Срок меня не устроил и я поехал сюда. В IQСервис у меня взяли телефон, и за 10 (десять) сек все исправили. Там разъем просто засорился. В общем, молодцы. Хорошие специалисты, а главное - честные!</div>

@@ -26,7 +26,7 @@ $this->params['navbar']= false;
 <div class="content shortcodes gray-content" style="padding-bottom: 10px;">
 	<div class="container" style="padding-bottom: 1px;">
 		<!-- Наши услуги -->
-		<section class="iq-services">
+		<section class="bmstu-services">
 			<div class="bs-row">
 				<div class="col-ms-6 col-sm-6 col-md-3 col-lg-3">
 					<div class="b-service">
@@ -65,7 +65,7 @@ $this->params['navbar']= false;
 <div class="content">
 	<div class="container">
 		<!-- Наши преимущества -->
-		<section class="iq-advantages margin-20">
+		<section class="bmstu-advantages margin-20">
 			<div class="bs-row">
 				<div class="col-sm-6 col-md-6 col-lg-6">
 					<div class="icon-box medium" style="padding-bottom:10px;">
@@ -102,7 +102,7 @@ $this->params['navbar']= false;
 			</div>
 		</section>
 		<!-- Главный текст -->
-		<h1 class="iq-page-heading text-xs-center">iQСервис- ремонт мобильной, компьютерной и цифровой техники в Москве</h1>
+		<h1 class="bmstu-page-heading text-xs-center">iQСервис- ремонт мобильной, компьютерной и цифровой техники в Москве</h1>
 		<div class="content-text">
 			<p>Если дело заходит о ремонте компьютерной и цифровой техники, перед пользователем встает вопрос, где починить сломанный гаджет в Москве? Однозначно это должен быть надежный мастер или специализированный сервисный центр, где сделают диагностику, а после произведут ремонт. Сервисный центр «iQСервис» предлагает Вам профессиональный ремонт телефонов, планшетов и ноутбуков.</p><div class="collapsible collapse-xs collapsed">
 				<div class="collapse-container">

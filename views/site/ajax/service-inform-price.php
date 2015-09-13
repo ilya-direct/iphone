@@ -15,7 +15,7 @@ use yii\helpers\Html;
 	</div>
 	<div class="centered">
 		<h4 class="lined">Форма заявки</h4>
-		<?=Html::beginForm('/ajax/service-inform-price/','post',['class'=>"b-form iq-service-inform-price service-form"]); ?>
+		<?=Html::beginForm('/ajax/service-inform-price/','post',['class'=>"b-form bmstu-service-inform-price service-form"]); ?>
 			<input type="hidden" name="deviceassign_id" value="<?=$da?>">
 			<div class="input-wrap m-full-width">
 				<i class="icon-user"></i>
