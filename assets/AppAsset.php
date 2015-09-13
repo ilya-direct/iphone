@@ -18,11 +18,11 @@ class AppAsset extends AssetBundle
     public $basePath = '@webroot';
     public $baseUrl = '@web';
     public $css = [
-	    'assets/css/bootstrap.css'
+	    'css/bootstrap.css'
     ];
     public $js = [
-	    'assets/js/jquery-1.9.1.js',
-	    'assets/js/bootstrap.js'
+	    'js/jquery-1.9.1.js',
+	    'js/bootstrap.js'
     ];
     public $depends = [
     ];

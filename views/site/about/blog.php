@@ -18,7 +18,7 @@ use yii\helpers\Html;
 			<div class="col-sm-5 col-md-4">
 				<div class="post-image-wrap" style="max-width:100%;float:none;none;margin:0 auto;">
 					<a href="about/blog/kak-zamenit-sensornoe-steklo-na-ipad-air/" class="post-image">
-						<img src="/assets/images/ios_hero_1.64d4a8e5.jpg" alt="">
+						<img src="/images/blog/ios_hero_1.64d4a8e5.jpg" alt="">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 				</div>
@@ -46,7 +46,7 @@ use yii\helpers\Html;
 			<div class="col-sm-5 col-md-4">
 				<div class="post-image-wrap" style="max-width:100%;float:none;none;margin:0 auto;">
 					<a href="about/blog/menyaem-steklo-displej-na-iphone-5s/" class="post-image">
-						<img src="/assets/images/4_5.64d4a8e5.jpg" alt="">
+						<img src="/images/blog/4_5.64d4a8e5.jpg" alt="">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 				</div>
@@ -74,7 +74,7 @@ use yii\helpers\Html;
 			<div class="col-sm-5 col-md-4">
 				<div class="post-image-wrap" style="max-width:100%;float:none;none;margin:0 auto;">
 					<a href="about/blog/kak-zamenit-akkumulyator-na-macbook-air-11-2012/" class="post-image">
-						<img src="/assets/images/5_3.64d4a8e5.jpg" alt="">
+						<img src="/images/blog/5_3.64d4a8e5.jpg" alt="">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 				</div>
@@ -102,7 +102,7 @@ use yii\helpers\Html;
 			<div class="col-sm-5 col-md-4">
 				<div class="post-image-wrap" style="max-width:100%;float:none;none;margin:0 auto;">
 					<a href="about/blog/kak-zamenit-zhestkij-disk-na-imac/" class="post-image">
-						<img src="/assets/images/imac_1.64d4a8e5.jpg" alt="">
+						<img src="/images/blog/imac_1.64d4a8e5.jpg" alt="">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 				</div>
@@ -130,7 +130,7 @@ use yii\helpers\Html;
 			<div class="col-sm-5 col-md-4">
 				<div class="post-image-wrap" style="max-width:100%;float:none;none;margin:0 auto;">
 					<a href="about/blog/menyaem-matriczu-na-noutbuke-macbook-air-13-2010/" class="post-image">
-						<img src="/assets/images/364705206_7.64d4a8e5.jpg" alt="">
+						<img src="/images/blog/364705206_7.64d4a8e5.jpg" alt="">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 				</div>
@@ -158,7 +158,7 @@ use yii\helpers\Html;
 			<div class="col-sm-5 col-md-4">
 				<div class="post-image-wrap" style="max-width:100%;float:none;none;margin:0 auto;">
 					<a href="about/blog/razbiraem-iphone-5/" class="post-image">
-						<img src="/assets/images/361783406_7.64d4a8e5.jpg" alt="">
+						<img src="/images/blog/361783406_7.64d4a8e5.jpg" alt="">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 				</div>
@@ -186,7 +186,7 @@ use yii\helpers\Html;
 			<div class="col-sm-5 col-md-4">
 				<div class="post-image-wrap" style="max-width:100%;float:none;none;margin:0 auto;">
 					<a href="about/blog/kak-snyat-steklo-ipad-2/" class="post-image">
-						<img src="/assets/images/354824206_7.64d4a8e5.jpg" alt="">
+						<img src="/images/blog/354824206_7.64d4a8e5.jpg" alt="">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 				</div>
