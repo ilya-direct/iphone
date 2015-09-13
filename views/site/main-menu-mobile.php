@@ -162,17 +162,17 @@ use yii\helpers\Url;
 			<ul class="mob-submenu">
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-a/a7/">Samsung Galaxy A7</a>
+						<a href="/remont-telefonov/samsung/galaxy-a/7/">Samsung Galaxy A7</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-a/a5/">Samsung Galaxy A5</a>
+						<a href="/remont-telefonov/samsung/galaxy-a/5/">Samsung Galaxy A5</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-a/a3/">Samsung Galaxy A3</a>
+						<a href="/remont-telefonov/samsung/galaxy-a/3/">Samsung Galaxy A3</a>
 					</div>
 				</li>
 			</ul>
@@ -184,32 +184,32 @@ use yii\helpers\Url;
 			<ul class="mob-submenu">
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-s/s6-edge/">Samsung Galaxy S6 EDGE</a>
+						<a href="/remont-telefonov/samsung/galaxy-s/6-edge/">Samsung Galaxy S6 EDGE</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-s/s6/">Samsung Galaxy S6</a>
+						<a href="/remont-telefonov/samsung/galaxy-s/6/">Samsung Galaxy S6</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-s/s5/">Samsung Galaxy S5</a>
+						<a href="/remont-telefonov/samsung/galaxy-s/5/">Samsung Galaxy S5</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-s/s4/">Samsung Galaxy S4</a>
+						<a href="/remont-telefonov/samsung/galaxy-s/4/">Samsung Galaxy S4</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-s/s3/">Samsung Galaxy S3</a>
+						<a href="/remont-telefonov/samsung/galaxy-s/3/">Samsung Galaxy S3</a>
 					</div>
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-s/s2/">Samsung Galaxy S2</a>
+						<a href="/remont-telefonov/samsung/galaxy-s/2/">Samsung Galaxy S2</a>
 					</div>
 				</li>
 			</ul>
@@ -221,7 +221,7 @@ use yii\helpers\Url;
 			<ul class="mob-submenu">
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-note/remont-samsung-galaxy-note-5/">Samsung Galaxy Note 5</a>
+						<a href="/remont-telefonov/samsung/galaxy-note/5/">Samsung Galaxy Note 5</a>
 					</div>
 				</li>
 				<li>
@@ -241,7 +241,7 @@ use yii\helpers\Url;
 				</li>
 				<li>
 					<div>
-						<a href="/remont-telefonov/samsung/galaxy-note/remont-samsung-galaxy-note-edge/">Samsung Galaxy Note Edge</a>
+						<a href="/remont-telefonov/samsung/galaxy-note/edge/">Samsung Galaxy Note Edge</a>
 					</div>
 				</li>
 			</ul>
@@ -277,7 +277,7 @@ use yii\helpers\Url;
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont-telefonov/meizu/remont-meizu-mx5/">Meizu MX5</a>
+				<a href="/remont-telefonov/meizu/mx5/">Meizu MX5</a>
 			</div>
 		</li>
 		<li>
@@ -319,7 +319,7 @@ use yii\helpers\Url;
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont-telefonov/oneplus/remont-oneplus-2/">OnePlus 2</a>
+				<a href="/remont-telefonov/oneplus/2/">OnePlus 2</a>
 			</div>
 		</li>
 		<li>
@@ -336,7 +336,7 @@ use yii\helpers\Url;
 	<ul class="mob-submenu">
 		<li>
 			<div>
-				<a href="/remont-telefonov/huawei/remont-huawei-g8/">Huawei G8</a>
+				<a href="/remont-telefonov/huawei/g8/">Huawei G8</a>
 			</div>
 		</li>
 		<li>
@@ -419,21 +419,6 @@ use yii\helpers\Url;
 				<a href="/remont-telefonov/huawei/ascend-mate/">Huawei Ascend Mate</a>
 			</div>
 		</li>
-		<li>
-			<div>
-				<a href="/remont-telefonov/huawei/ascend-d2/">Huawei Ascend D2</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="/remont-telefonov/huawei/ascend-p2/">Huawei Ascend P2</a>
-			</div>
-		</li>
-		<li>
-			<div>
-				<a href="/remont-telefonov/huawei/ascend-p1/">Huawei Ascend P1</a>
-			</div>
-		</li>
 	</ul>
 </li>
 <li>
@@ -478,7 +463,7 @@ use yii\helpers\Url;
 		</li>
 		<li>
 			<div>
-				<a href="/remont-telefonov/sony/xperia-z-l36/">Sony Xperia Z</a>
+				<a href="/remont-telefonov/sony/xperia-z/">Sony Xperia Z</a>
 			</div>
 		</li>
 		<li>

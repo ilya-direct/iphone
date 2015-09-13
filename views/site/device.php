@@ -8,7 +8,7 @@ use yii\helpers\Html;
 		<!-- Главное изображение -->
 		<div class="element-wrap content-text">
 			<div class="img-wrap">
-				<img class="centered" src="/assets/images/devices/<?=$model->device->imagename?>" alt="<?=$this->title?>">
+				<img class="centered" src="/images/devices/<?=$model->device->imagename?>" alt="<?=$this->title?>">
 			</div>
 		</div>
 	</div>

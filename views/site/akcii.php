@@ -13,7 +13,7 @@ $this->params['breadcrumbs']= [];
 			<div class="col-sm-6 col-md-4 col-lg-4 identity photography tehnology">
 				<div class="work">
 					<a href="<?=Url::to(['akcii/privedi-druga'])?>" class="work-image">
-						<img src="/assets/images/skidki_Sankt_Peterburg_1384966201.61caae2a.jpg" alt="Приведи друга!">
+						<img src="/images/akcii/skidki_Sankt_Peterburg_1384966201.61caae2a.jpg" alt="Приведи друга!">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 					<a href="<?=Url::to(['akcii/privedi_druga'])?>" class="work-name">Приведи друга!</a>
@@ -25,7 +25,7 @@ $this->params['breadcrumbs']= [];
 			<div class="col-sm-6 col-md-4 col-lg-4 identity photography tehnology">
 				<div class="work">
 					<a href="" class="work-image">
-						<img src="/assets/images/meizu.61caae2a.jpg" alt="Ремонт смартфонов Meizu">
+						<img src="/images/akcii/meizu.61caae2a.jpg" alt="Ремонт смартфонов Meizu">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 					<a href="" class="work-name">Ремонт смартфонов Meizu</a>
@@ -34,7 +34,7 @@ $this->params['breadcrumbs']= [];
 			<div class="col-sm-6 col-md-4 col-lg-4 identity photography tehnology">
 				<div class="work">
 					<a href="" class="work-image">
-						<img src="/assets/images/refurbished_mac.61caae2a.jpg" alt="Ремонт техники Apple">
+						<img src="/images/akcii/refurbished_mac.61caae2a.jpg" alt="Ремонт техники Apple">
 						<div class="link-overlay icon-chevron-right"></div>
 					</a>
 					<a href="" class="work-name">Ремонт техники Apple</a>

@@ -16,7 +16,7 @@
 			<div class="b-service">
 				<div class="image-wrap">
 					<a href="<?=$item['link']?>" tabindex="-1">
-						<img class="lazy" data-original="/assets/images/<?=$item['imagename']?>" <?=($i==0) ? 'src="/assets/images/'.$item['imagename'].'"': '';?> alt="Ремонт <?=$item['name']?>">
+						<img class="lazy" data-original="/images/<?=$item['imagename']?>" <?=($i==0) ? 'src="/images/'.$item['imagename'].'"': '';?> alt="Ремонт <?=$item['name']?>">
 					</a>
 				</div>
 				<h3 class="title centered">

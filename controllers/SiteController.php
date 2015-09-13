@@ -152,17 +152,18 @@ class SiteController extends Controller
 					'samsung'=>[
 						'name'=>'Samsung',
 						'type'=>'category2',
+						'breadcrumb'=>'Samsung',
 						'title'=>'Ремонт Samsung',
 						'items'=>[
 							'galaxy-alpha'=>[
 								'type'=>'device',
 								'name'=>'Samsung Galaxy Alpha',
-								'title'=>'Samsung Galaxy Alpha',
 							],
 
 							'galaxy-a'=>[
 								'type'=>'category2',
 								'name'=>'Samsung Galaxy A',
+								'breadcrumb'=>'Galaxy A',
 								'img'=>'devices/samsung-galaxy-a.jpg',
 								'items'=>[
 									'7'=>[
@@ -183,6 +184,7 @@ class SiteController extends Controller
 								'type'=>'category2',
 								'name'=>'Samsung Galaxy S',
 								'title'=>'Samsung Galaxy S',
+								'breadcrumb'=>'Galaxy S',
 								'img'=>'devices/samsung-galaxy-s.jpg',
 								'article_name'=>'Ремонт Samsung Galaxy S всего модельного ряда',
 								'items'=>[
@@ -219,6 +221,7 @@ class SiteController extends Controller
 							'galaxy-note'=>[
 								'type'=>'category2',
 								'name'=>'Samsung Galaxy Note',
+								'breadcrumb'=>'Galaxy Note',
 								'img'=>'devices/samsung-galaxy-note.jpg',
 								'items'=>[
 									'5'=>[
@@ -248,6 +251,7 @@ class SiteController extends Controller
 					'nexus'=>[
 						'type'=>'category2',
 						'name'=>'Ремонт Nexus',
+						'breadcrumb'=>'Nexus',
 						'items'=>[
 							'6'=>[
 								'name'=>'Nexus 6',
@@ -266,6 +270,7 @@ class SiteController extends Controller
 					'meizu'=>[
 						'type'=>'category2',
 						'title'=>'Ремонт Meizu',
+						'breadcrumb'=>'Meizu',
 						'name'=>'Meizu',
 						'items'=>[
 							'mx5'=>[
@@ -500,12 +505,12 @@ class SiteController extends Controller
 					],
 					'zamena-matrici'=>[
 						'type'=>'device',
-						'name'=>'Matrisa noutbuka',
+						'name'=>'Замена матрицы ноутбука',
 						'title'=>'Замена матрицы ноутбука',
 					],
 					'remont-klaviaturi'=>[
 						'type'=>'device',
-						'name'=>'Klaviatura noutbuka',
+						'name'=>'Ремонт клавиатуры ноутбука',
 						'title'=>'Ремонт клавиатуры ноутбука',
 					],
 
@@ -615,7 +620,7 @@ class SiteController extends Controller
 			    $link.=$parts[$i].'/';
 			    $breadcrumb->link=$link;
 			    $breadcrumb->title=empty($urlobj['breadcrumb']) ?
-				    (empty($urlobj['title']) ? $urlobj['name'] : $urlobj['title']) :
+				    (empty($urlobj['name']) ? $urlobj['title'] : $urlobj['name']) :
 				    $urlobj['breadcrumb'];
 			    $breadcrumbs[]=clone $breadcrumb;
 			    $urlobj=$urlobj['items'];
