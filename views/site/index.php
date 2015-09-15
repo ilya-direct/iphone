@@ -4,9 +4,9 @@ $this->params['navbar']= false;
 
 ?>
 <ul class="slider bxslider">
-	<li><a href="http://iphone/remont-telefonov/meizu/"><img alt="" src="/images/1-banner.jpg" title=""></a></li>
-	<li><a href="http://iphone/remont-telefonov/"><img alt="" src="/images/2-banner.jpg" title=""></a></li>
-	<li><a href="http://iphone/remont-apple/macbook/"><img alt="" src="/images/3-banner.jpg" title=""></a></li>
+	<li><a href="/remont-telefonov/meizu/"><img alt="" src="/images/1-banner.jpg" title=""></a></li>
+	<li><a href="/remont-telefonov/"><img alt="" src="/images/2-banner.jpg" title=""></a></li>
+	<li><a href="/remont-apple/macbook/"><img alt="" src="/images/3-banner.jpg" title=""></a></li>
 </ul>
 <div class="content-featured">
 	<div class="container">
@@ -16,7 +16,7 @@ $this->params['navbar']= false;
 				<div class="hidden-md hidden-lg" style="padding:0 0 12px;"></div>
 			</div>
 			<div class="col-md-3 col-md-3 text-xs-center text-sm-center text-md-right text-lg-right ">
-				<a href="http://iphone/about/">
+				<a href="/about/">
 					Подробнее<i class="icon-chevron-sign-right" style="margin: 0 0 0 7px;"></i>
 				</a>
 			</div>
@@ -30,30 +30,30 @@ $this->params['navbar']= false;
 			<div class="bs-row">
 				<div class="col-ms-6 col-sm-6 col-md-3 col-lg-3">
 					<div class="b-service">
-						<a href="http://iphone/remont-apple/"><i class="icon-apple m-square"></i></a>
-						<h3 class="centered"><a href="http://iphone/remont-apple/" class="dark-link">Ремонт Apple</a></h3>
+						<a href="/remont-apple/"><i class="icon-apple m-square"></i></a>
+						<h3 class="centered"><a href="/remont-apple/" class="dark-link">Ремонт Apple</a></h3>
 						<p class="centered">Если Вам понадобился профессиональный ремонт Apple, обращайтесь к нам.</p>
 					</div>
 				</div>
 				<div class="col-ms-6 col-sm-6 col-md-3 col-lg-3">
 					<div class="b-service">
-						<a href="http://iphone/remont-telefonov/"><i class="icon-mobile-phone m-square"></i></a>
-						<h3 class="centered"><a href="http://iphone/remont-telefonov/" class="dark-link">Ремонт телефонов</a></h3>
+						<a href="/remont-telefonov/"><i class="icon-mobile-phone m-square"></i></a>
+						<h3 class="centered"><a href="/remont-telefonov/" class="dark-link">Ремонт телефонов</a></h3>
 						<p class="centered">Так же наш сервисный центр предлагает услугу по ремонту смартфонов.</p>
 					</div>
 				</div>
 				<div class="clearfix visible-sm visible-ms"></div>
 				<div class="col-ms-6 col-sm-6 col-md-3 col-lg-3">
 					<div class="b-service">
-						<a href="http://iphone/remont-planshetov/"><i class="icon-tablet m-square"></i></a>
-						<h3 class="centered"><a href="http://iphone/remont-planshetov/" class="dark-link">Ремонт планшетов</a></h3>
+						<a href="/remont-planshetov/"><i class="icon-tablet m-square"></i></a>
+						<h3 class="centered"><a href="/remont-planshetov/" class="dark-link">Ремонт планшетов</a></h3>
 						<p class="centered">Наш сервисный центр рад предложить Вам профессиональный ремонт планшетов.</p>
 					</div>
 				</div>
 				<div class="col-ms-6 col-sm-6 col-md-3 col-lg-3">
 					<div class="b-service">
-						<a href="http://iphone/remont-noutbukov/"><i class="icon-laptop m-square"></i></a>
-						<h3 class="centered"><a href="http://iphone/remont-noutbukov/" class="dark-link">Ремонт ноутбуков</a></h3>
+						<a href="/remont-noutbukov/"><i class="icon-laptop m-square"></i></a>
+						<h3 class="centered"><a href="/remont-noutbukov/" class="dark-link">Ремонт ноутбуков</a></h3>
 						<p class="centered">Наш сервис осуществляет ремонт ноутбуков известных производителей.</p>
 					</div>
 				</div>
@@ -119,7 +119,7 @@ $this->params['navbar']= false;
 		<div class="gap" style="height: 10px;"></div>
 		<!-- Промо блок -->
 		<section class="b-promo margin-30">
-			<a href="http://iphone/about/vyiezd-mastera-i-kurera/" class="btn big colored">Подробнее</a>
+			<a href="/about/vyezd-mastera-i-kurera/" class="btn big colored">Подробнее</a>
 			<h3>Курьерская доставка или выезд мастера!</h3>
 			<p>Вам не обязательно приезжать к нам в сервис, чтобы отремонтировать сломанное устройство</p>
 		</section>
