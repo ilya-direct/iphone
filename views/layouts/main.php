@@ -146,9 +146,9 @@ AppAsset::register($this);
 				<hr class="dashed hidden-md hidden-lg" style="margin-top: 0px;clear:both;">
 				<div class="col-md-4 col-lg-4">
 					<section class="b-widgets-wrap">
-						<div class="feedback-form xform" id="form-feedback" data-url="/ajax/feedback/">
+						<div class="feedback-form xform" id="form-feedback" data-url="/ajax/contact-us/">
 							<h3>Напишите нам</h3>
-							<?=Html::beginForm('/ajax/feedback/','post',['class'=> "b-form bmstu-feedback-form ajax-form"]); ?>
+							<?=Html::beginForm('/ajax/contact-us/','post',['class'=> "b-form bmstu-feedback-form ajax-form"]); ?>
 								<input type="hidden" name="form-feedback" value="1">
 								<div class="row bs-row">
 									<div class="col-xs-12">

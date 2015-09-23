@@ -7,6 +7,7 @@ use app\models\db\Category;
 use app\models\db\Device;
 use app\models\db\Deviceassign;
 use app\models\db\Service;
+use app\models\db\Feedback;
 use app\models\db\ApplicationForm;
 use Yii;
 use yii\filters\AccessControl;
@@ -545,6 +546,7 @@ class SiteController extends Controller
 					],
 					'otzivi'=>[
 						'type'=>'link',
+						'custom_action'=>'otzivi',
 						'title'=>'Отзывы'
 					],
 					'vyezd-mastera-i-kurera'=>[
@@ -644,18 +646,35 @@ class SiteController extends Controller
 		    return $this->actionCategory2($urlobj,$url);
 	    }
 	    $viewpath=isset($urlobj['viewpath']) ? $urlobj['viewpath'] : $url;
-        return $this->render('/site/'.$viewpath);
+	    if(empty($urlobj['custom_action']))
+            return $this->render('/site/'.$viewpath);
+	    else
+		    return $this->{$urlobj['custom_action']}($viewpath);
     }
 
     public function actionAjax($param=null)
     {
 	    switch($param){
 	        case 'feedback':
-			case 'contacts-feedback':
-		    if(!Yii::$app->request->method==="POST") return '';
+		        $form=new Feedback();
+		        if(yii::$app->request->isPost){
+			        $form->load(\Yii::$app->request->post());
+			        if ($form->validate()) {
+				        $msg='<div class="b-message success-message">';
+				        $msg.='Спасибо! Ваш отзыв отправлен и будет отображён после проверки модератором';
+				        $msg.='</div>';
+				        $form->date=date('Y-m-d H:i:s');
+				        $form->save();
+				        return $msg;
+			        }
+		        }
+
+			    break;
+			case 'contact-us':
+		    if(!Yii::$app->request->isPost) return '';
 		    $post=Yii::$app->request->post();
 		    $topics=[
-				    'feedback' => ['subject'=>'Напишите нам',
+				    'contact-us' => ['subject'=>'Напишите нам',
 					    'msg_success'=>'Спасибо! Ваше сообщение успешно отправлено.',
 					    'msg_fail'=>'Извините, произошла ошибка! Попробуйте позже.'],
 					'service-order' => ['subject'=>'Оформление заявки',
@@ -863,6 +882,12 @@ class SiteController extends Controller
 		}
 		if(empty($text)) $text='';
 		return $this->render('/site/category2',['devices'=>$devices,'text'=>$text]);
+	}
+
+	private function otzivi($viewpath){
+		$form=new Feedback();
+		$feedbacks=Feedback::find()->where(['publish'=>1])->orderBy(['date'=>SORT_DESC])->all();
+		return $this->render($viewpath,['feedbackForm'=>$form,'feedbacks'=>$feedbacks]);
 	}
 
 }

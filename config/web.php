@@ -1,12 +1,14 @@
 <?php
 
 $params = require(__DIR__ . '/params.php');
-
+date_default_timezone_set('Europe/Moscow');
+//date_default_timezone_set('Europe/Kiev');
 $config = [
     'id' => 'basic',
     'basePath' => dirname(__DIR__),
     'bootstrap' => ['log'],
 	'language' => 'ru-RU',
+	'timeZone' => 'Europe/Moscow',
     'components' => [
         'request' => [
             // !!! insert a secret key in the following (if it is empty) - this is required by cookie validation

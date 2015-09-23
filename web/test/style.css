@@ -1,0 +1,44 @@
+body{
+    background: #b3dccc;
+}
+
+#abbr{
+   font: normal normal normal 14px/1.4em 'open sans',sans-serif;
+   color:#848282;
+}
+#caf_name{
+    font: normal normal normal 33px/1.4em anton,sans-serif;
+    font-family: tahoma,tahoma-w01-regular,tahoma-w02-regular,tahoma-w10-regular,tahoma-w15--regular,tahoma-w99-regular,sans-serif;
+    font-size:24px;
+    color:#396F5A;
+    font-weight: bold;
+
+}
+
+header{
+    width: 950px;
+    padding: 10px 15px;
+    margin: 0 auto;
+    background: black;
+}
+
+.content_wrap{
+    display:block;
+    margin-left: auto;
+    margin-right: auto;
+    margin-top: 20px;
+
+    width: 980px;
+    background-color:rgba(255, 255, 255, 0.65);
+
+}
+
+#content{
+   /* position: relative;*/
+    margin: 20px 20px;
+    background-color: rgba(255, 255, 255, 1);
+}
+
+#logo{
+    float:left;
+}
