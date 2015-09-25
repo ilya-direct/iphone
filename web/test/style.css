@@ -124,7 +124,7 @@ header{
     background: url(/test/IMG_1046.JPG) !important;
 }
 
-#desc_banner{
+#greeting_banner{
     position: absolute;
     width: 337px;
     left: 631px;
@@ -135,11 +135,19 @@ header{
     border-top-color: rgba(99, 98, 98, 1);
     border-left-width: 0;
     right: 0;
+
     position: absolute;
-    bottom: -webkit-calc(-1 * (0px + 10px));
-    bottom: calc(-1 * (0px + 10px));
-    height: 0;
-    width: 0;
-    border: -webkit-calc(0px + 10px) solid transparent;
-    border: calc(0px + 10px) solid transparent;
+    bottom: -10px;
+    border: 10px solid transparent;
+}
+
+
+#greeting_background{
+    background-color: rgba(79, 214, 162, 1);
+    box-shadow: 0 2px 4px 0 rgba(0,0,0,0.5);
+    position: absolute;
+    top: 0;
+    right: 0;
+    left: 0;
+    bottom: 10px;
 }
