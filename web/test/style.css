@@ -39,7 +39,7 @@ header{
 #content{
     position: relative;
     margin: 20px 20px 20px 20px;
-    padding: 10px 10px;
+    padding: 10px 0;
     background-color: rgba(255, 255, 255, 1);
 }
 
@@ -76,7 +76,8 @@ header{
 }
 
 #left_menu{
-    left: 0;
+    margin-top: 45px;
+    left: 30px;
     top: 45px;
     height: 252px;
     width: 152px;
@@ -105,6 +106,40 @@ header{
 
 }
 
+#slider_box{
+    overflow: hidden;
+    position: absolute;
+    left: 178px;
+    top: 45px;
+    height: 272px;
+    width: 409px;
+    box-shadow: 0 1px 3px rgba(0, 0, 0, 0.5);
+    background: rgba(255, 255, 255, 1);
+}
 
+#slider{
+    height: 256px;
+    border-radius: 0;
+    border: 8px solid rgba(255, 255, 255, 1);
+    background: url(/test/IMG_1046.JPG) !important;
+}
 
-
+#desc_banner{
+    position: absolute;
+    width: 337px;
+    left: 631px;
+    top: 58px;
+    height: 74px;
+}
+#ribbon{
+    border-top-color: rgba(99, 98, 98, 1);
+    border-left-width: 0;
+    right: 0;
+    position: absolute;
+    bottom: -webkit-calc(-1 * (0px + 10px));
+    bottom: calc(-1 * (0px + 10px));
+    height: 0;
+    width: 0;
+    border: -webkit-calc(0px + 10px) solid transparent;
+    border: calc(0px + 10px) solid transparent;
+}
