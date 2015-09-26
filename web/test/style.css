@@ -57,6 +57,12 @@ header{
     cursor: pointer !important;
 }
 
+#top_menu li:hover {
+    transition: border-color 0.4s ease 0s, background-color 0.4s ease 0s;
+    background-color: rgba(35, 112, 83, 1);
+    border-color: rgba(11, 17, 137, 1);
+}
+
 
 #top_menu li:nth-child(1){
     left: 150px;
@@ -127,18 +133,18 @@ header{
 #greeting_banner{
     position: absolute;
     width: 337px;
-    left: 631px;
+    left: 614px;
     top: 58px;
     height: 74px;
 }
 #ribbon{
+    border: 10px solid transparent;
     border-top-color: rgba(99, 98, 98, 1);
     border-left-width: 0;
     right: 0;
 
     position: absolute;
     bottom: -10px;
-    border: 10px solid transparent;
 }
 
 
