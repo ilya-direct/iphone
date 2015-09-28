@@ -26,11 +26,11 @@ header{
 }
 
 #content_wrap{
-    border: 1px solid rgba(255, 255, 255, 0.65);
     margin-left: auto;
     margin-right: auto;
     margin-top: 5px;
     margin-bottom: 20px;
+    padding: 20px 20px 20px 20px;
     width: 980px;
     background-color:rgba(255, 255, 255, 0.65);
 
@@ -38,7 +38,6 @@ header{
 
 #content{
     position: relative;
-    margin: 20px 20px 20px 20px;
     padding: 10px 0;
     background-color: rgba(255, 255, 255, 1);
 }
@@ -127,7 +126,7 @@ header{
     height: 256px;
     border-radius: 0;
     border: 8px solid rgba(255, 255, 255, 1);
-    background: url(/test/IMG_1046.JPG) !important;
+    background: url(/test/slider/slider1.jpg) !important;
 }
 
 #greeting_banner{
@@ -157,3 +156,18 @@ header{
     left: 0;
     bottom: 10px;
 }
+
+/*
+.b-dropdown{
+    position: relative;
+}
+
+#b-dropdown-submenu {
+    background: #525252;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    z-index: 999 !important;
+}
+*/
