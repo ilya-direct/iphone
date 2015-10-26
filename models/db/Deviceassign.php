@@ -22,7 +22,7 @@ class Deviceassign extends \yii\db\ActiveRecord
      */
     public static function tableName()
     {
-        return 'Deviceassign';
+        return 'deviceassign';
     }
 
     /**
