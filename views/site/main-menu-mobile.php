@@ -1440,7 +1440,7 @@ use yii\helpers\Url;
 </li>
 <li>
 	<div>
-		<a href="/akcii/">Акции</a>
+		<a href="/akcii/">Скидки</a>
 	</div>
 </li>
 <li>

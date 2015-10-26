@@ -186,7 +186,7 @@ use yii\helpers\Url;
 	</ul>
 </li>
 <li>
-	<a href="/akcii/" >Акции</a>
+	<a href="/akcii/" >Скидки</a>
 </li>
 <li>
 	<a href="/about/" >О нас</a>
